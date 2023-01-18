@@ -1,10 +1,10 @@
 @import 'compiler/colors_fonts';
 
 @function create-stars($n) {
-  $stars: "#{random(2560)}px #{random(2560)}px #FFF";
+  $stars: "#{random(2000)}px #{random(3300)}px #FFF";
 
   @for $i from 2 through $n {
-    $stars: "#{$stars} , #{random(2560)}px #{random(2560)}px #FFF";
+    $stars: "#{$stars} , #{random(2000)}px #{random(3300)}px #FFF";
   }
   @return unquote($stars);
 }
@@ -69,10 +69,10 @@
 }
 @keyframes animStar {
   from {
-    transform: translateY(-210vh);
+    transform: translateY(0);
   }
   to {
-    transform: translateY(-330vh) translateX(-100vw);
+    transform: translateY(0) translateX(0);
   }
 }
 @keyframes animShootingStar {
@@ -100,6 +100,15 @@
   }
 }
 
+::-webkit-scrollbar {
+  width: 0.5vw;
+  background: $Orange1;
+}
+::-webkit-scrollbar-thumb {
+  background: $Orange4;
+  border-radius: 5vw;
+}
+
 *, *::after, *::before {
     padding: 0;
     margin: 0;
@@ -109,106 +118,121 @@
 }
 
 body {
-    display: flex;
-    flex-wrap: wrap;
-    font-family: $Main-font;
-    &::before{
-      content: '';
-      background-color: $Blue5;
-      bottom: -101vh;
-      left: 0;
-      width: 100%;
-      height: 1vh;
-      position: absolute;
-    }
-    .toTop {
-        display: none;
-        position: fixed;
-        right: 1vw;
-        bottom: 1vh;
-        z-index: 998;
-        background: $Blue3;
-        border-radius: 50%;
-        padding: 1vh;
-        cursor: pointer;
-        width: 3vw;
-        height: 6vh;
-        box-shadow: 0px 5px 5px rgba(19, 15, 32, 0.5);
-        svg {
-            width: 100%;
-            height: 100%;
-            transform: rotate(180deg);
-            path {
-                fill: $White;
-            }
-        }
-    }
-    .stars {
-      @include star-template(1700, 1px, 60s);
-    }
-    .stars2 {
-      @include star-template(700, 2px, 90s);
-    }
-    .stars3 {
-      @include star-template(200, 3px, 125s);
-    }
-    .comet {
-      @include shooting-star-template(50, 5px, 7s);
-    }
-    .comet2 {
-      @include shooting-star-template2(50, 5px, 8s);
-    }
-
-    header {
-      top: 0;
-      position: absolute;
-      height: 12vh;
-      width: 90%;
-      left: 5%;
-      top: 1vh;
-      z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: $Main-font;
+  background-color: $Blue5;
+  .toTop {
+      display: none;
+      position: fixed;
+      right: 1vw;
+      bottom: 1vh;
+      z-index: 998;
+      background: $Blue3;
+      border-radius: 50%;
       padding: 1vh;
-      ul {
-        display: flex;
-        height: 100%;
-        justify-content: right;
-        align-items: center;
-        position: relative;
-        li {
-          padding: 1vh 1vw;
-          margin: 0 1vw;
-          a {
-              font-family: $Main-font;
-              color: $White;
-              font-size: 1.25vw;
-              &:hover{
-                  color: $White;
-              }
+      cursor: pointer;
+      width: 3vw;
+      height: 6vh;
+      box-shadow: 0px 5px 5px rgba(19, 15, 32, 0.5);
+      svg {
+          width: 100%;
+          height: 100%;
+          transform: rotate(180deg);
+          path {
+              fill: $White;
           }
-        }
-        .logo {
-            height: 100%;
-            padding: 0;
-            position: absolute;
-            left: 1vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            a {
-                img{
-                    width: 3vw;
-                }
+      }
+  }
+
+  .stars {
+    @include star-template(1700, 1px, 60s);
+  }
+  .stars2 {
+    @include star-template(700, 2px, 90s);
+  }
+  .stars3 {
+    @include star-template(200, 3px, 125s);
+  }
+  .comet {
+    @include shooting-star-template(50, 5px, 7s);
+  }
+  .comet2 {
+    @include shooting-star-template2(50, 5px, 8s);
+  }
+
+  header {
+    top: 0;
+    position: fixed;
+    height: 12vh;
+    width: 90%;
+    left: 5%;
+    top: 1vh;
+    z-index:13;
+    padding: 1vh;
+    ul {
+      display: flex;
+      height: 100%;
+      justify-content: right;
+      align-items: center;
+      position: relative;
+      li {
+        padding: 1vh 1vw;
+        margin: 0 1vw;
+        a {
+            font-family: $Main-font;
+            color: $White;
+            font-size: 1.25vw;
+            &:hover{
+                color: $White;
             }
         }
       }
+      .logo {
+          height: 100%;
+          padding: 0;
+          position: absolute;
+          left: 1vw;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          a {
+              img{
+                  width: 3vw;
+              }
+          }
+      }
     }
+  }
 
-    .block{
-        width: 100%;
-        height: 200vh;
-        background-color: $Blue5;
+  section {
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  .two {
+    opacity: 0;
+    height: 150vh;
+  }
+  .three{
+    z-index: 11;
+    background-color: $Blue5;
+  }
+  .zoom {
+    position: relative;
+    overflow: hidden;
+    img {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      width: 100%;
+      transform: translateX(-50%);
+      z-index: 10;
     }
+  }
 
+  
 }
 
 
