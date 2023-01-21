@@ -6,16 +6,19 @@
   @for $i from 2 through $n {
     $stars: "#{$stars} , #{random(2000)}px #{random(3300)}px #FFF";
   }
+
   @return unquote($stars);
 }
+
 @mixin star-template($numStars, $starSize, $scrollSpeed) {
-  z-index: 10;
+  z-index: 1;
   width: $starSize;
   height: $starSize;
   border-radius: 50%;
   background: transparent;
   box-shadow: create-stars($numStars);
   animation: animStar $scrollSpeed linear infinite;
+
   &:after {
     content: " ";
     top: -600px;
@@ -27,8 +30,9 @@
     box-shadow: create-stars($numStars);
   }
 }
+
 @mixin shooting-star-template($numStars, $starSize, $speed) {
-  z-index: 10;
+  z-index: 2;
   width: $starSize;
   height: $starSize + 80px;
   border-top-left-radius: 50%;
@@ -37,20 +41,20 @@
   bottom: 0;
   right: 0;
   animation: animShootingStar $speed linear infinite;
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 1)
-  );
+  background: linear-gradient(to top,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1));
 }
+
 @mixin shooting-star-template2($numStars, $starSize, $speed) {
-  z-index: 10;
+  z-index: 2;
   width: 100%;
   height: 100vh;
   position: absolute;
   bottom: -100vh;
   overflow: hidden;
-  &::after{
+
+  &::after {
     content: '';
     width: $starSize;
     height: $starSize + 80px;
@@ -60,39 +64,43 @@
     bottom: 0;
     right: 0;
     animation: animShootingStar2 $speed linear infinite;
-    background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 1)
-    );
+    background: linear-gradient(to top,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 1));
   }
 }
+
 @keyframes animStar {
   from {
     transform: translateY(0);
   }
+
   to {
-    transform: translateY(0) translateX(0);
+    transform: translateY(-120vh) translateX(-50vw);
   }
 }
+
 @keyframes animShootingStar {
   from {
     transform: translateY(0px) translateX(0px) rotate(-45deg);
     opacity: 1;
     height: 0;
   }
+
   to {
     transform: translateY(-100vh) translateX(-100vw) rotate(-60deg);
     opacity: 1;
     height: 50vh;
   }
 }
+
 @keyframes animShootingStar2 {
   from {
     transform: translateY(-110vh) translateX(-150vw) rotate(120deg);
     opacity: 1;
     height: 0;
   }
+
   to {
     transform: translateY(0) translateX(10vw) rotate(120deg);
     opacity: 1;
@@ -104,17 +112,18 @@
   width: 0.5vw;
   background: $Orange1;
 }
+
 ::-webkit-scrollbar-thumb {
   background: $Orange4;
   border-radius: 5vw;
 }
 
-*, *::after, *::before {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box !important;
-    list-style: none;
-    text-decoration: none !important;
+*,*::after,*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+  list-style: none;
+  text-decoration: none !important;
 }
 
 body {
@@ -122,29 +131,31 @@ body {
   flex-wrap: wrap;
   font-family: $Main-font;
   background-color: $Blue5;
-  .toTop {
-      display: none;
-      position: fixed;
-      right: 1vw;
-      bottom: 1vh;
-      z-index: 998;
-      background: $Blue3;
-      border-radius: 50%;
-      padding: 1vh;
-      cursor: pointer;
-      width: 3vw;
-      height: 6vh;
-      box-shadow: 0px 5px 5px rgba(19, 15, 32, 0.5);
-      svg {
-          width: 100%;
-          height: 100%;
-          transform: rotate(180deg);
-          path {
-              fill: $White;
-          }
-      }
-  }
 
+  .toTop {
+    display: none;
+    position: fixed;
+    right: 1vw;
+    bottom: 1vh;
+    z-index: 998;
+    background: $Blue3;
+    border-radius: 50%;
+    padding: 1vh;
+    cursor: pointer;
+    width: 3vw;
+    height: 6vh;
+    box-shadow: 0px 5px 5px rgba(19, 15, 32, 0.5);
+
+    svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(180deg);
+
+      path {
+        fill: $White;
+      }
+    }
+  }
   .stars {
     @include star-template(1700, 1px, 60s);
   }
@@ -154,9 +165,11 @@ body {
   .stars3 {
     @include star-template(200, 3px, 125s);
   }
+
   .comet {
     @include shooting-star-template(50, 5px, 7s);
   }
+
   .comet2 {
     @include shooting-star-template2(50, 5px, 8s);
   }
@@ -168,71 +181,137 @@ body {
     width: 90%;
     left: 5%;
     top: 1vh;
-    z-index:13;
+    z-index: 13;
     padding: 1vh;
+
     ul {
       display: flex;
       height: 100%;
       justify-content: right;
       align-items: center;
       position: relative;
+
       li {
         padding: 1vh 1vw;
         margin: 0 1vw;
+
         a {
-            font-family: $Main-font;
+          font-family: $Main-font;
+          color: $White;
+          font-size: 1.25vw;
+
+          &:hover {
             color: $White;
-            font-size: 1.25vw;
-            &:hover{
-                color: $White;
-            }
+          }
         }
       }
+
       .logo {
-          height: 100%;
-          padding: 0;
-          position: absolute;
-          left: 1vw;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          a {
-              img{
-                  width: 3vw;
-              }
+        height: 100%;
+        padding: 0;
+        position: absolute;
+        left: 1vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+          img {
+            width: 3vw;
           }
+        }
       }
     }
   }
 
-  section {
-    padding: 0;
-    width: 100%;
+  .zoomer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
     height: 100vh;
-    position: relative;
-  }
-  .two {
-    opacity: 0;
-    height: 150vh;
-  }
-  .three{
-    z-index: 11;
-    background-color: $Blue5;
-  }
-  .zoom {
-    position: relative;
     overflow: hidden;
-    img {
-      position: fixed;
-      bottom: 0;
-      left: 50%;
+    z-index: 10;
+    .images {
       width: 100%;
-      transform: translateX(-50%);
-      z-index: 10;
+      height: 100vh;
+      overflow: hidden;
+      img {
+        position: absolute;
+        width: 100%;
+      }
+    }
+    .Banner_Text {
+      text-align: right;
+      position: absolute;
+      right: 5vw;
+      margin-top: -5vh;
+      padding: 1vw;
+      padding-bottom: 6vh;
+      font-family: $Title-font;
+      .Banner{
+        line-height: 5vh;
+        font-size: 2.5vw;
+        color: $White;
+        font-weight: 900;
+        font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
+        &:nth-child(4){
+          margin-top: 1.5vh;
+        }
+      }
+      .sub{
+        line-height: 3vh;
+        font-size: 1.2vw;
+        font-weight: 100;
+        font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
+        
+      }
+      a{
+        font-size: 1vw !important;
+        color: $White;
+        background-color: $Orange2;
+        border-radius: 1vw;
+        font-weight: 900;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 30%;
+        height: 13%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+    }
+    .Text_Block {
+      text-align: right;
+      position: absolute;
+      right: 5vw;
+      margin-top: -10vh;
+      padding: 1vw;
+      font-family: $Main-font;
+      .Text{
+        opacity: 0;
+        font-size: 2.25vw;
+        color: $White;
+      }
+
     }
   }
 
-  
+  .servicos{
+    width: 100%;
+    height: 100vh;
+    margin-top: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vw;
+    color: $White;
+  }
+
+
 }
 
 
@@ -240,12 +319,20 @@ body {
 
 
 
+
+
+
+
 @media only screen and (min-width: 1200px) {}
+
 /* Medium Device = 1200px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {}
+
 /* Wide Mobile = 480px */
 @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
 /* Small Device = 320px */
 @media only screen and (max-width: 479px) {}
