@@ -1,4 +1,4 @@
-@import 'compiler/colors_fonts';
+@import 'colors_fonts';
 
 @function create-stars($n) {
   $stars: "#{random(2000)}px #{random(3300)}px #FFF";
