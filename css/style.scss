@@ -165,11 +165,9 @@ body {
   .stars3 {
     @include star-template(200, 3px, 125s);
   }
-
   .comet {
     @include shooting-star-template(50, 5px, 7s);
   }
-
   .comet2 {
     @include shooting-star-template2(50, 5px, 8s);
   }
@@ -311,15 +309,7 @@ body {
     color: $White;
   }
 
-
 }
-
-
-
-
-
-
-
 
 
 
