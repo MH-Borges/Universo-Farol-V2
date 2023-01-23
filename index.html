@@ -9,29 +9,26 @@
     <meta name="keywords" content="">
     <title>Universo Farol</title>
 
-    <link rel="icon" href="assets/branco.png" />
+    <link rel="icon" href="assets/lg_branco.png" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
+    <!-- Gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
 
+    <!-- Svg Inject -->
     <script src="js/svg-inject.min.js"></script>
-    <script src="js/infiniteslidev2.min.js"></script>
 
+    <!-- Main files -->
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
-
 </head>
 
 <body>
@@ -50,16 +47,14 @@
         <ul>
             <li><a href="">Farol</a></li>
             <li><a href="">Serviços</a></li>
-            <li><a href="">Duvidas</a></li>
             <li><a href="">Contato</a></li>
         </ul>
     </header>
 
     <div class="zoomer">
         <div class="images">
-            <img src="assets/Farol.png">
-            <img class="tempes" src="assets/Tempestade.png">
-            <img src="assets/Luz.png">
+            <img src="assets/Farol_luz.svg">
+            <img class="tempes" src="assets/Tempestade.svg">
         </div>
         <div class="Banner_Text">
             <div class="Banner">Em meio a tempestade</div>
@@ -81,9 +76,78 @@
     </div>
 
     <div class="servicos">
-        <div>area serviços</div>
+        <div class="Block_serv">
+            <h2>DESIGN</h2>
+            <p>uma engenharia criativa trabalhando no desenvolvimento da <br> personalidade de sua marca</p>
+            <a href="">Veja Mais</a>        
+        </div>
+        <div class="Block_serv">
+            <h2>WEB</h2>
+            <p>transformando ideias em projetos digitais fazendo sua marca <br> alcançar ainda mais lugares</p>
+            <a href="">Veja Mais</a>        
+        </div>
+        <div class="Block_serv">
+            <h2>DESIGN + WEB</h2>
+            <p>profissionalização da sua marca</p>
+            <a href="">Veja Mais</a>        
+        </div>
     </div>
 
+    <div class="duvidas">
 
+        <h3>Duvidas frequentes dos navegantes</h3>
+
+        <div class="accordion">
+            <div class="card">
+                <button data-target="#cl-One" data-toggle="collapse" >
+                    Quanto tempo leva para se concluir o projeto da minha empresa?
+                </button>
+                <p id="cl-One" class="collapse">
+                    Precisamos analisar a complexidade, mas projetos de tamanho mediano levam de 4 a 5 semanas.
+                </p>
+            </div>
+
+            <div class="card">
+                <button data-target="#cl-Two" data-toggle="collapse" >
+                    Eu consigo parcelar o valor final do projeto? Em até quantas vezes?
+                </button>
+                <p id="cl-Two" class="collapse">
+                    Dependendo do tamanho do projeto parcelamos em até 12X.
+                </p>
+            </div>
+
+            <div class="card">
+                <button data-target="#cl-Three" data-toggle="collapse" >
+                    Eu posso dar opnião na evolução do meu projeto? E em que etapa posso começar a usar as artes?
+                </button>
+                <p id="cl-Three" class="collapse">
+                    Durante todo o processo apresentamos versões para sua aprovação, com isso, você acompanha toda a evolução da sua marca.
+                    Você pode começar a usar as artes após a entrega final. 
+                </p>
+            </div>
+
+            <div class="card">
+                <button data-target="#cl-Four" data-toggle="collapse" >
+                    Eu consigo editar os arquivos após a entrega? E em quais formatos são disponibilizados?
+                </button>
+                <p id="cl-Four" class="collapse">
+                    Sim, São entregues três tipos de arquivos: PNG, PDF e AI (arquivos abertos no Illustrator). 
+                    O contratante, ao iniciar o projeto pode indicar sua preferência de entrega. Também, são disponibilizados: links do Canva 
+                    (para o pacote com layouts para o Instagram) e link do Drive (todos os elementos do projeto).
+                </p>
+            </div>
+
+            <div class="card">
+                <button data-target="#cl-Five" data-toggle="collapse" >
+                    As alterações no projeto tem custo adicional?
+                </button>
+                <p id="cl-Five" class="collapse">
+                    Para os trabalhos de Design, qualquer possível retrabalho pedido, passando de duas vezes, será cobrado a parte, e o valor dependerá do item a ser alterado.
+                    Para os trabalhos de Web, você tem até 6 mesês para pequenas alterações (mudanças de cor, imagem ou texto), para alterações de media ou grande escala será cobrado valor adicional.
+                </p>
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>
