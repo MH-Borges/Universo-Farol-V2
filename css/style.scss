@@ -45,13 +45,58 @@
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 1));
 }
-
 @mixin shooting-star-template2($numStars, $starSize, $speed) {
   z-index: 2;
   width: 100%;
   height: 100vh;
   position: absolute;
   bottom: -100vh;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    width: $starSize;
+    height: $starSize + 80px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: animShootingStar2 $speed linear infinite;
+    background: linear-gradient(to top,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 1));
+  }
+}
+@mixin shooting-star-template3($numStars, $starSize, $speed) {
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  bottom: -200vh;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    width: $starSize;
+    height: $starSize + 80px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: animShootingStar $speed linear infinite;
+    background: linear-gradient(to top,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 1));
+  }
+}
+@mixin shooting-star-template4($numStars, $starSize, $speed) {
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  bottom: -400vh;
   overflow: hidden;
 
   &::after {
@@ -170,6 +215,12 @@ body {
   }
   .comet2 {
     @include shooting-star-template2(50, 5px, 8s);
+  }
+  .comet3 {
+    @include shooting-star-template3(50, 5px, 8s);
+  }
+  .comet4 {
+    @include shooting-star-template4(50, 5px, 8s);
   }
 
   header {
@@ -369,10 +420,9 @@ body {
   .duvidas {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
     z-index: 5;
     padding: 1vw;
     overflow: hidden;
@@ -382,71 +432,173 @@ body {
         align-items: center;
         flex-direction: column;
         .card {
-            background: none;
-            border: none;
-            width: 80%;
-            padding: 1vh 0;
-            button {
-                background: none;
-                position: relative;
-                display: flex;
-                align-items: center;
-                padding: 1vh 1.5vw;
-                border-radius: 3vw;
-                color: $White;
-                min-height: 10vh;
-                font-size: 1.25vw;
-                border: none;
-                &::before {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    background-color: $White;
-                    opacity: 0.15;
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 2vw;
-                    z-index: -1;
-                }
+          background: none;
+          border: none;
+          width: 90%;
+          padding: 1vh 0;
+          position: relative;
+          button {
+              background: none;
+              position: relative;
+              display: flex;
+              align-items: center;
+              padding: 1vh 1.5vw;
+              border-radius: 3vw;
+              color: $White;
+              min-height: 10vh;
+              font-size: 1.2vw;
+              border: none;
+              &::before {
+                  content: '';
+                  display: block;
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  background-color: $White;
+                  opacity: 0.15;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 2vw;
+                  z-index: -1;
+              }
+          }
+          p {
+              padding: 2vh 1vw;
+              margin: 0;
+              width: 95.5%;
+              margin-left: 2vw;
+              position: relative;
+              color: $White;
+              font-size: 0.85vw;
+              font-family: $Title-font;
+              font-weight: 700;
+              &::before {
+                  content: '';
+                  display: block;
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  background-color: $White;
+                  opacity: 0.3;
+                  width: 100%;
+                  height: 100%;
+                  border-bottom-right-radius: 1vw;
+                  border-bottom-left-radius: 1vw;
+                  z-index: -1;
+              }
+          }
+          &:nth-child(1){
+            margin-top: 3vh;
+          }
+          .cross{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 2vw;
+            top: 6vh;
+            transform: translateY(-50%);
+          
+            &::after,
+            &::before{
+              content: "";
+              display: block;
+              position: absolute;
+              height: 4px;
+              background-color: $Orange1;
+              width: 1.3vw;
+              top: 50%;
+              transition: all .2s ease-in-out; 
+              right: 0;
+              border-radius: 1vw;
             }
-            p {
-                padding: 1vw;
-                margin: 0;
-                width: 94.5%;
-                margin-left: 2vw;
-                z-index: 3;
-                position: relative;
-                color: $White;
-                font-size: 0.9vw;
-                &::before {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    background-color: $White;
-                    opacity: 0.3;
-                    width: 100%;
-                    height: 100%;
-                    border-bottom-right-radius: 1vw;
-                    border-bottom-left-radius: 1vw;
-                    z-index: -1;
-                }
+            &::after{
+              transform: rotate(90deg);
             }
+          }
+          &.active{
+            .cross{
+              &::before{
+                transform: rotate(45deg);
+                right: -2px;
+                width: 15px;
+          
+              }
+              &::after{
+                width: 15px;
+                transform: rotate(-45deg);
+                left: -2px;
+              }
+            }
+          }
         }
     }
-    h3{
-      margin-top: 2vh;
-      margin-bottom: 3vh;
+    h2{
       width: 100%;
+      height: 15vh;
+      padding: 2vw;
+      padding-left: 3vw;
       color: $White;
       text-align: left;
-      font-size: 2.5vw;
+      font-size: 2vw;
     }
-}
+  }
 
+  .contato{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    color: $White;
+    z-index: 5;
+    h2{
+      font-size: 3.5vw;
+      padding: 0.5vh 0;
+    }
+    p{
+      font-family: $Title-font;
+      font-weight: 700;
+      font-size: 1.8vw;
+    }
+    .icons{
+      padding: 2vh 0;
+      a{
+        i{
+          margin: 0 1vw;
+          color: $Orange1;
+          font-size: 3.5vw;
+          transition: 0.5s ease-in-out;
+          &:hover{
+            transform: translateY(-10px);
+          }
+        }
+      }
+      
+    }
+    .orca{
+      font-size: 1.5vw;
+      color: $White;
+      background-color: $Orange1;
+      padding: 0.5vh 1.5vw;
+      font-family: $Title-font;
+      font-weight: 900;
+      border-radius: 1vw;
+      border: solid $Orange3 2px;
+      margin-top: 2vh;
+      transition: 0.5s ease-in-out;
+      &:hover{
+        font-size: 1.8vw;
+        transform: translateY(10px);
+      }
+    }
+    img{
+      position: absolute;
+      width: 8%;
+      bottom: 2vh;
+    }
+  }
 }
 
 

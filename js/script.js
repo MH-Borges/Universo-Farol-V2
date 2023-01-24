@@ -10,6 +10,12 @@ $(window).scroll(function () {
   $(document).on("click", ".toTop", function () {
     $("html, body").animate({ scrollTop: 0 }, 400);
   });
+
+  $(document).ready(function(){
+    $('.card').on('click', function(){
+      $(this).toggleClass('active')
+    });
+  });
   
   
   var images = gsap.utils.toArray(".images");
