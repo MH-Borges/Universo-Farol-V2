@@ -1,10 +1,10 @@
 @import 'colors_fonts';
 
 @function create-stars($n) {
-  $stars: "#{random(3500)}px #{random(5500)}px #FFF";
+  $stars: "#{random(3000)}px #{random(6500)}px #FFF";
 
   @for $i from 2 through $n {
-    $stars: "#{$stars} , #{random(3500)}px #{random(5500)}px #FFF";
+    $stars: "#{$stars} , #{random(3000)}px #{random(6500)}px #FFF";
   }
 
   @return unquote($stars);
@@ -243,6 +243,7 @@ body {
       li {
         padding: 1vh 1vw;
         margin: 0 1vw;
+        text-transform: uppercase;
 
         a {
           font-family: $Main-font;
@@ -281,7 +282,8 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    z-index: 10;
+    z-index: 11;
+
     .images {
       width: 100%;
       height: 100vh;
@@ -289,28 +291,31 @@ body {
       img {
         position: absolute;
         width: 100%;
+        z-index: 10;
+      }
+      .tempes{
+        z-index: 9;
       }
     }
     .Banner_Text {
       text-align: right;
       position: absolute;
-      right: 6.5vw;
-      margin-top: -3.5vh;
-      padding: 1vw;
-      padding-bottom: 7vh;
+      right: 7.5vw;
+      margin-top: 8vh;
+      padding-bottom: 8vh;
       font-family: $Title-font;
       .Banner{
         line-height: 6vh;
-        font-size: 2.8vw;
+        font-size: 3.3vw;
         color: $White;
         font-weight: 900;
         font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
         &:nth-child(4){
-          margin-top: 2vh;
+          margin-top: 3.5vh;
         }
       }
       .sub{
-        line-height: 4vh;
+        line-height: 3vh;
         font-size: 1.35vw;
         font-weight: 100;
         font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
@@ -323,8 +328,8 @@ body {
         font-weight: 900;
         position: absolute;
         bottom: 0;
-        right: 1vh;
-        width: 28%;
+        right: 0;
+        width: 20%;
         height: 10%;
         display: flex;
         justify-content: center;
@@ -336,9 +341,11 @@ body {
       text-align: right;
       position: absolute;
       right: 6vw;
-      margin-top: -10vh;
+      margin-top: -6vh;
       padding: 1vw;
-      font-family: $Main-font;
+      font-family: $Title-font;
+      font-weight: 400;
+      font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
       .Text{
         opacity: 0;
         font-size: 2vw;
@@ -372,14 +379,15 @@ body {
         animation-iteration-count: infinite;
       }
       p{
-        width: 35%;
+        width: 49%;
         text-align: center;
         line-height: 3vh;
         padding: 1vh 0;
         font-weight: 100;
-        font-size: 0.9vw;
+        font-size: 1.2vw;
         animation: floater 3s ease-in-out;
         animation-iteration-count: infinite;
+        letter-spacing: 0.1vw;
       }
       a{
         color: $White;
@@ -387,7 +395,6 @@ body {
         padding: 1vh 1vw;
         border-radius: 0.75vw;
         font-weight: 900;
-        border: 2px $Orange3 solid;
         animation: floater 3s ease-in-out;
         animation-iteration-count: infinite;
       }
@@ -425,7 +432,23 @@ body {
     flex-direction: column;
     z-index: 5;
     padding: 1vw;
-    overflow: hidden;
+    h2{
+      width: 100%;
+      color: $White;
+      text-align: left;
+      font-size: 2.5vw;
+      line-height: 5vh;
+      padding: 2vh 0 0 7.5vw;
+    }
+    .SubTitle{
+      padding-left: 7.5vw;
+      width: 100%;
+      text-align: left;
+      color: $White;
+      font-size: 1.5vw;
+      font-family: $Title-font;
+      padding-bottom: 2vh;
+    }
     .accordion {
         width: 100%;
         display: flex;
@@ -434,7 +457,7 @@ body {
         .card {
           background: none;
           border: none;
-          width: 90%;
+          width: 87%;
           padding: 1vh 0;
           position: relative;
           button {
@@ -447,6 +470,7 @@ body {
               color: $White;
               min-height: 10vh;
               font-size: 1.2vw;
+              letter-spacing: 0.05vw;
               border: none;
               &::before {
                   content: '';
@@ -532,15 +556,7 @@ body {
           }
         }
     }
-    h2{
-      width: 100%;
-      height: 15vh;
-      padding: 2vw;
-      padding-left: 3vw;
-      color: $White;
-      text-align: left;
-      font-size: 2vw;
-    }
+    
   }
 
   .contato{
@@ -567,7 +583,7 @@ body {
       a{
         i{
           margin: 0 1vw;
-          color: $Orange1;
+          color: $White;
           font-size: 3.5vw;
           transition: 0.5s ease-in-out;
           &:hover{
@@ -585,7 +601,6 @@ body {
       font-family: $Title-font;
       font-weight: 900;
       border-radius: 1vw;
-      border: solid $Orange3 2px;
       margin-top: 2vh;
       transition: 0.5s ease-in-out;
       &:hover{
@@ -599,6 +614,8 @@ body {
       bottom: 2vh;
     }
   }
+
+  @import 'contato';
 }
 
 
