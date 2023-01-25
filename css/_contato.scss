@@ -1,0 +1,212 @@
+.contact_page {
+    header {
+        ul {
+            .logo {
+                height: 100%;
+                padding: 0;
+                position: absolute;
+                left: 1vw;
+                display: flex;
+                align-items: center;
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        width: 85%;
+                        height: 85%;
+                    }
+                }
+            }
+        }
+    }
+    .contato_Wrapper{ 
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        .contato_Block{
+            width: 85%;
+            height: 80vh;
+            margin-top: 13vh;
+            background-color: $White;
+            padding: 2vw;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            position: relative;
+            border-radius: 2vw;
+            .text_Block{
+                width: 50%;
+                height: 95%;
+                h2{
+                    color: $Orange2;
+                    font-size: 2.5vw;
+                }
+                p{
+                    color: $Blue4;
+                    margin-left: 2vw;
+                    font-size: 1.15vw;
+                    font-family: $Title-font;
+                    font-weight: 900;
+                }
+                .info_block{
+                    width: 100%;
+                    padding: 3vh 0;
+                    color: $Blue4;
+                    p{
+                        font-size: 1vw;
+                        margin-right: 9vw;
+                        font-weight: 900;
+                        line-height: 1.5vw;
+                    }
+                    h3{
+                        font-size: 1.6vw;
+                        margin-top: 5vh;
+                        color: $Orange2;
+                    }
+                    span{
+                        font-size: 1vw;
+                        margin-left: 2vw;
+                        font-family: $Title-font;
+                        font-weight: 900;
+                    }
+                    a{
+                        position: relative;
+                        color: $Blue4;
+                        padding: 0.5vw;
+                        transition: all ease-in-out 0.3s;
+                        i{
+                            transition: all ease-in-out 0.3s;
+                            margin-top: 1vh;
+                            font-size: 2vw;
+                        }
+                        &:nth-child(5){
+                            margin-left: 1.5vw;
+                        }
+                        &:hover{
+                            padding: 0.75vw;
+                            i{
+                                font-size: 2.2vw;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            .form{
+                width: 50%;
+                height: 95%;
+                padding: 1vw;
+                display: flex;
+                align-items: center;
+                .labels{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 1vw;
+                    padding-bottom: 7vh;
+                    position: relative;
+                    justify-content: space-between;
+                    .BlockBox{
+                        width: 100%;
+                        height: 6vh;
+                        position: relative;
+                        margin: 2.5vh 0;
+                        background-color: $Gray;
+                        border-radius: 1vw;
+                        &:nth-child(5){
+                            height: 12vh;
+                        }
+                        input, textarea{
+                            width: 85% !important;
+                            margin-left: 2.5%;
+                            font-size: 0.75vw;
+                            color: $Blue4;
+                            border: none;
+                            background: none;
+                            outline: none;
+                            padding: 1vh 0 2.5vh 0;
+                        }
+                        textarea{
+                            min-height: 11vh !important;
+                            resize: none;
+                        }
+                        span{
+                            font-family: $Main-font;
+                            position: absolute;
+                            font-style: italic;
+                            left: 1vw;
+                            top: 0.75vw;
+                            font-size: 1.1vw;
+                            color: $Blue4;
+                            transition: 0.5s;
+                            pointer-events: none;
+                        }
+                        &:nth-child(1), &:nth-child(2){
+                            width: 48.5%;
+                        }
+                    }
+                    
+                    .BlockBox input:focus ~ span, textarea:focus ~ span, input:valid ~ span, textarea:valid ~ span{
+                        transform:translate(-0.5vw, -4.2vh);
+                        font-size: 1.1vw;
+                        color:$Blue4;
+                    }
+                    #btn-enviar-contato{
+                        position: absolute;
+                        font-size: 1vw;
+                        background: $Blue4;
+                        color: $White;
+                        padding: 1vh 1vw;
+                        border-radius: 1vw;
+                        letter-spacing: 0.05vw;
+                        bottom: -1vh;
+                        right: 1vw;
+                        border: none;
+                    }
+                }
+            }
+            .footerBlock{
+                position: absolute;
+                bottom: -2vh;
+                left: 0;
+                width: 100%;
+                height: 10vh;
+                background: $Blue1;
+                border-bottom-left-radius: 2vw;
+                border-bottom-right-radius: 2vw;
+                padding: 2vh 2vw;
+                color: $White;
+                h3{
+                    font-size: 1.5vw;
+                    font-family: $Main-font;
+                    letter-spacing: 0.05vw;
+                }
+                p{
+                    font-size: 0.8vw;
+                    font-family: $Title-font;
+                    font-weight: 700;
+                }
+                a{
+                    position: absolute;
+                    background: $Blue4;
+                    padding: 1vh 1vw;
+                    border-radius: 1vw;
+                    font-family: $Main-font;
+                    letter-spacing: 0.05vw;
+                    color: $White;
+                    right: 2vw;
+                    top: 30%;
+                    font-size: 0.8vw;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{ font-size: 0.9vw; }
+                }
+            }
+        }
+    } 
+}

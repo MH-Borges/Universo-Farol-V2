@@ -9,7 +9,7 @@
     <meta name="keywords" content="">
     <title>Contato</title>
 
-    <link rel="icon" href="assets/lg_branco.png" />
+    <link rel="icon" href="assets/icon.png" />
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
@@ -31,7 +31,7 @@
     <script defer src="js/script.js"></script>
 </head>
 
-<body>
+<body class="contact_page">
 
     <div class="stars"></div>
     <div class="stars2"></div>
@@ -40,12 +40,63 @@
 
     <header>
         <ul>
-            <li class="logo"><a href="index.html"><img src="assets/lg_branco.png" alt=""></a></li>
+            <li class="logo"><a href="index.html"><img src="assets/Lg_Bc.svg" alt=""></a></li>
             <li><a href="farol.html">Farol</a></li>
             <li><a href="servicos.html">Serviços</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
     </header>
+
+    <div class="contato_Wrapper">
+        <div class="contato_Block">
+            <div class="text_Block">
+                <h2>Vamos conversar?</h2>
+                <p>Fale conosco! Estamos a sua disposição</p>
+                <div class="info_block">
+                    <p>Preencha o formulário e marcaremos um bate-papo
+                        para identificar a sua necessidade
+                        e se preferir, entre em contato pelo email ou whatsapp.
+                        Entraremos em contato o mais rapido e assim que possivel</p>
+                    <h3>Atendimento comercial </h3>
+                    <span>De Segunda a Sexta das 9h00 as 18h00</span>
+                    <h3>Siga-nos tambem nas redes sociais</h3>
+                    <a href="" target="_blank"><i class="fa-brands fa-square-behance"></i></a>
+                    <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="form">
+                <form class="labels" method="post">
+                    <div class="BlockBox">
+                        <input type="text" name="nome" id="nome" required>
+                        <span>Nome Completo</span>
+                    </div>
+                    <div class="BlockBox">
+                        <input type="text" name="telefone" id="telefone" required>
+                        <span>Telefone</span>
+                    </div>
+                    <div class="BlockBox">
+                        <input type="text" name="email" id="email" required>
+                        <span>E-mail</span>
+                    </div>
+                    <div class="BlockBox">
+                        <input type="text" name="email" id="email" required>
+                        <span>Assunto</span>
+                    </div>
+                    <div class="BlockBox">
+                        <textarea type="text" name="mensagem" id="mensagem" required></textarea>
+                        <span>Como podemos te ajudar??</span>
+                    </div>
+                    <button name="btn-enviar-contato" id="btn-enviar-contato" type="button">Enviar mensagem</button>
+                </form>
+            </div>
+            <div class="footerBlock">
+                <h3>Solicite agora mesmo um orçamento!</h3>
+                <p>Entre em contato conosco e com uma boa conversa podemos te passar um orçamento, rapido e sem burocracia!</p>
+                <a href="">Solicite um orçamento</a>       
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
