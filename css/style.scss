@@ -184,18 +184,10 @@ body {
     cursor: pointer;
     width: 3vw;
     height: 6vh;
-    box-shadow: 0px 5px 5px rgba(19, 15, 32, 0.5);
-
-    svg {
-      width: 100%;
-      height: 100%;
-      transform: rotate(180deg);
-
-      path {
-        fill: $White;
-      }
-    }
+    box-shadow: 0px -5px 5px rgba(19, 15, 32, 0.5);
+    transform: rotate(180deg);
   }
+
   .stars {
     @include star-template(1700, 1px, 60s);
   }
@@ -217,6 +209,10 @@ body {
   .comet4 {
     @include shooting-star-template4(50, 5px, 8s);
   }
+  .hide{ 
+    opacity: 0; 
+    display: none; 
+  }
 
   header {
     top: 0;
@@ -227,370 +223,375 @@ body {
     top: 1vh;
     z-index: 13;
     padding: 1vh;
-
-    ul {
+    nav {
       display: flex;
       height: 100%;
       justify-content: right;
       align-items: center;
       position: relative;
-
-      li {
+      a {
         padding: 1vh 1vw;
         margin: 0 1vw;
         text-transform: uppercase;
-
-        a {
-          font-family: $Main-font;
-          color: $White;
-          font-size: 1.25vw;
-
-          &:hover {
-            color: $White;
-          }
+        font-family: $Main-font;
+        color: $White;
+        font-size: 1.25vw;
+        &:hover{
+          color: $Orange1;
         }
       }
     }
   }
 
-  .zoomer {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  main{
     width: 100vw;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
     overflow: hidden;
-    z-index: 11;
 
-    .images {
-      width: 100%;
+    .Banner_zoom {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
       height: 100vh;
       overflow: hidden;
-      img {
-        position: absolute;
+      z-index: 11;
+      .images {
         width: 100%;
-        z-index: 10;
-      }
-      .tempes{
-        z-index: 9;
-      }
-    }
-    .Banner_Text {
-      text-align: right;
-      position: absolute;
-      right: 7.5vw;
-      margin-top: 8vh;
-      padding-bottom: 8vh;
-      font-family: $Title-font;
-      .Banner{
-        line-height: 6vh;
-        font-size: 3.3vw;
-        color: $White;
-        font-weight: 900;
-        font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
-        &:nth-child(4){
-          margin-top: 3.5vh;
+        height: 100vh;
+        overflow: hidden;
+        img {
+          position: absolute;
+          width: 100%;
+          z-index: 10;
+        }
+        .tempes{
+          z-index: 9;
         }
       }
-      .sub{
-        line-height: 3vh;
-        font-size: 1.35vw;
-        font-weight: 100;
-        font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
-      }
-      a{
-        font-size: 1vw !important;
-        color: $White;
-        background-color: $Orange2;
-        border-radius: 1vw;
-        font-weight: 900;
+      .Banner_Text {
+        text-align: right;
         position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 20%;
-        height: 10%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        right: 7.5vw;
+        margin-top: 8vh;
+        padding-bottom: 8vh;
+        font-family: $Title-font;
+        .Banner{
+          line-height: 6vh;
+          font-size: 3.3vw;
+          color: $White;
+          font-weight: 900;
+          font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
+          &:nth-child(4){
+            margin-top: 3.5vh;
+          }
+        }
+        .sub{
+          line-height: 3vh;
+          font-size: 1.35vw;
+          font-weight: 100;
+          font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
+        }
+        a{
+          font-size: 1vw !important;
+          color: $White;
+          background-color: $Orange2;
+          border-radius: 1vw;
+          font-weight: 900;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 20%;
+          height: 10%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+  
       }
-
-    }
-    .Text_Block {
-      text-align: right;
-      position: absolute;
-      right: 6vw;
-      margin-top: -6vh;
-      padding: 1vw;
-      font-family: $Title-font;
-      font-weight: 400;
-      font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
-      .Text{
-        opacity: 0;
-        font-size: 2vw;
-        color: $White;
-        line-height: 6vh;
+      .Text_Block {
+        text-align: right;
+        position: absolute;
+        right: 6vw;
+        margin-top: -6vh;
+        padding: 1vw;
+        font-family: $Title-font;
+        font-weight: 400;
+        font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
+        .Text{
+          opacity: 0;
+          font-size: 2vw;
+          color: $White;
+          line-height: 6vh;
+        }
+  
       }
-
     }
-  }
-
-  .servicos{
-    width: 100%;
-    height: 100vh;
-    margin-top: 100vh;
-    display: flex;
-    color: $White;
-    flex-wrap: wrap;
-    padding: 3vw;
-    z-index: 5;
-    .Block_serv{
-      font-family: $Title-font;
-      width: 50%;
+  
+    .servicos{
+      width: 100%;
+      height: 100vh;
+      margin-top: 100vh;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      h2{
-        font-family: $Main-font;
-        font-size: 2.5vw;
-        animation: floater 3s ease-in-out;
-        animation-iteration-count: infinite;
-      }
-      p{
-        width: 49%;
-        text-align: center;
-        line-height: 3vh;
-        padding: 1vh 0;
-        font-weight: 100;
-        font-size: 1.2vw;
-        animation: floater 3s ease-in-out;
-        animation-iteration-count: infinite;
-        letter-spacing: 0.1vw;
-      }
-      a{
-        color: $White;
-        background-color: $Orange1;
-        padding: 1vh 1vw;
-        border-radius: 0.75vw;
-        font-weight: 900;
-        animation: floater 3s ease-in-out;
-        animation-iteration-count: infinite;
-      }
-      &:nth-child(3){
-        width: 100%;
+      color: $White;
+      flex-wrap: wrap;
+      padding: 3vw;
+      z-index: 5;
+      .Block_serv{
+        font-family: $Title-font;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         h2{
-          
-          animation: floater 2s ease-in-out;
+          font-family: $Main-font;
+          font-size: 2.5vw;
+          animation: floater 3s ease-in-out;
           animation-iteration-count: infinite;
         }
         p{
-          
-          animation: floater 2s ease-in-out;
-          animation-iteration-count: infinite;
-        }
-        a{
-          
-          animation: floater 2s ease-in-out;
-          animation-iteration-count: infinite;
-        }
-      }
-      @keyframes floater {
-        0%{transform: translateY(0px)}
-        50%{transform: translateY(10px)}
-        100%{transform: translateY(0px)}
-      }
-    }
-  }
-
-  .duvidas {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    z-index: 5;
-    padding: 1vw;
-    h2{
-      width: 100%;
-      color: $White;
-      text-align: left;
-      font-size: 2.5vw;
-      line-height: 5vh;
-      padding: 2vh 0 0 7.5vw;
-    }
-    .SubTitle{
-      padding-left: 7.5vw;
-      width: 100%;
-      text-align: left;
-      color: $White;
-      font-size: 1.5vw;
-      font-family: $Title-font;
-      padding-bottom: 2vh;
-    }
-    .accordion {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        .card {
-          background: none;
-          border: none;
-          width: 87%;
+          width: 49%;
+          text-align: center;
+          line-height: 3vh;
           padding: 1vh 0;
-          position: relative;
-          button {
-              background: none;
-              position: relative;
-              display: flex;
-              align-items: center;
-              padding: 1vh 1.5vw;
-              border-radius: 3vw;
-              color: $White;
-              min-height: 10vh;
-              font-size: 1.2vw;
-              letter-spacing: 0.05vw;
-              border: none;
-              &::before {
-                  content: '';
-                  display: block;
-                  position: absolute;
-                  left: 0;
-                  top: 0;
-                  background-color: $White;
-                  opacity: 0.15;
-                  width: 100%;
-                  height: 100%;
-                  border-radius: 2vw;
-                  z-index: -1;
-              }
+          font-weight: 100;
+          font-size: 1.2vw;
+          animation: floater 3s ease-in-out;
+          animation-iteration-count: infinite;
+          letter-spacing: 0.1vw;
+        }
+        button{
+          color: $White;
+          background-color: $Orange1;
+          padding: 1vh 1vw;
+          border-radius: 0.75vw;
+          font-weight: 900;
+          animation: floater 3s ease-in-out;
+          animation-iteration-count: infinite;
+          border: none;
+        }
+        &:nth-child(3){
+          width: 100%;
+          h2{
+            
+            animation: floater 2s ease-in-out;
+            animation-iteration-count: infinite;
           }
-          p {
-              padding: 2vh 1vw;
-              margin: 0;
-              width: 95.5%;
-              margin-left: 2vw;
-              position: relative;
-              color: $White;
-              font-size: 0.85vw;
-              font-family: $Title-font;
-              font-weight: 700;
-              &::before {
-                  content: '';
-                  display: block;
-                  position: absolute;
-                  left: 0;
-                  top: 0;
-                  background-color: $White;
-                  opacity: 0.3;
-                  width: 100%;
-                  height: 100%;
-                  border-bottom-right-radius: 1vw;
-                  border-bottom-left-radius: 1vw;
-                  z-index: -1;
-              }
+          p{
+            
+            animation: floater 2s ease-in-out;
+            animation-iteration-count: infinite;
           }
-          &:nth-child(1){
-            margin-top: 3vh;
+          a{
+            
+            animation: floater 2s ease-in-out;
+            animation-iteration-count: infinite;
           }
-          .cross{
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            right: 2vw;
-            top: 6vh;
-            transform: translateY(-50%);
-          
-            &::after,
-            &::before{
-              content: "";
-              display: block;
-              position: absolute;
-              height: 4px;
-              background-color: $Orange1;
-              width: 1.3vw;
-              top: 50%;
-              transition: all .2s ease-in-out; 
-              right: 0;
-              border-radius: 1vw;
+        }
+        @keyframes floater {
+          0%{transform: translateY(0px)}
+          50%{transform: translateY(10px)}
+          100%{transform: translateY(0px)}
+        }
+      }
+    }
+  
+    .duvidas {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      z-index: 5;
+      padding: 1vw;
+      h2{
+        width: 100%;
+        color: $White;
+        text-align: left;
+        font-size: 2.5vw;
+        line-height: 5vh;
+        padding: 2vh 0 0 7.5vw;
+      }
+      .SubTitle{
+        padding-left: 7.5vw;
+        width: 100%;
+        text-align: left;
+        color: $White;
+        font-size: 1.5vw;
+        font-family: $Title-font;
+        padding-bottom: 2vh;
+      }
+      .accordion {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          .card {
+            background: none;
+            border: none;
+            width: 87%;
+            padding: 1vh 0;
+            position: relative;
+            button {
+                background: none;
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding: 1vh 1.5vw;
+                border-radius: 3vw;
+                min-height: 10vh;
+                border: none;
+                h3{
+                  font-size: 1.2vw;
+                  letter-spacing: 0.05vw;
+                  color: $White;
+                }
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background-color: $White;
+                    opacity: 0.15;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 2vw;
+                    z-index: -1;
+                }
             }
-            &::after{
-              transform: rotate(90deg);
+            p {
+                padding: 2vh 1vw;
+                margin: 0;
+                width: 95.5%;
+                margin-left: 2vw;
+                position: relative;
+                color: $White;
+                font-size: 1vw;
+                font-family: $Title-font;
+                font-weight: 700;
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background-color: $White;
+                    opacity: 0.3;
+                    width: 100%;
+                    height: 100%;
+                    border-bottom-right-radius: 1vw;
+                    border-bottom-left-radius: 1vw;
+                    z-index: -1;
+                }
             }
-          }
-          &.active{
+            &:nth-child(1){
+              margin-top: 3vh;
+            }
             .cross{
+              width: 20px;
+              height: 20px;
+              position: absolute;
+              right: 2vw;
+              top: 6vh;
+              transform: translateY(-50%);
+            
+              &::after,
               &::before{
-                transform: rotate(45deg);
-                right: -2px;
-                width: 15px;
-          
+                content: "";
+                display: block;
+                position: absolute;
+                height: 4px;
+                background-color: $Orange1;
+                width: 1.3vw;
+                top: 50%;
+                transition: all .2s ease-in-out; 
+                right: 0;
+                border-radius: 1vw;
               }
               &::after{
-                width: 15px;
-                transform: rotate(-45deg);
-                left: -2px;
+                transform: rotate(90deg);
+              }
+            }
+            &.active{
+              .cross{
+                &::before{
+                  transform: rotate(45deg);
+                  right: -2px;
+                  width: 15px;
+            
+                }
+                &::after{
+                  width: 15px;
+                  transform: rotate(-45deg);
+                  left: -2px;
+                }
               }
             }
           }
-        }
-    }
-    
-  }
-
-  .contato{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    color: $White;
-    z-index: 5;
-    h2{
-      font-size: 3.5vw;
-      padding: 0.5vh 0;
-    }
-    p{
-      font-family: $Title-font;
-      font-weight: 700;
-      font-size: 1.8vw;
-    }
-    .icons{
-      padding: 2vh 0;
-      a{
-        i{
-          margin: 0 1vw;
-          color: $White;
-          font-size: 3.5vw;
-          transition: 0.5s ease-in-out;
-          &:hover{
-            transform: translateY(-10px);
-          }
-        }
       }
       
     }
-    .orca{
-      font-size: 1.5vw;
+  
+    .contato{
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
       color: $White;
-      background-color: $Orange1;
-      padding: 0.5vh 1.5vw;
-      font-family: $Title-font;
-      font-weight: 900;
-      border-radius: 1vw;
-      margin-top: 2vh;
-      transition: 0.5s ease-in-out;
-      &:hover{
-        font-size: 1.8vw;
-        transform: translateY(10px);
+      z-index: 5;
+      h2{
+        font-size: 3.5vw;
+        padding: 0.5vh 0;
       }
-    }
-    img{
-      position: absolute;
-      width: 10%;
-      bottom: 2vh;
+      p{
+        font-family: $Title-font;
+        font-weight: 700;
+        font-size: 1.8vw;
+      }
+      .icons{
+        padding: 2vh 0;
+        a{
+          i{
+            margin: 0 1vw;
+            color: $White;
+            font-size: 3.5vw;
+            transition: 0.5s ease-in-out;
+            &:hover{
+              transform: translateY(-10px);
+            }
+          }
+        }
+        
+      }
+      .orca{
+        font-size: 1.5vw;
+        color: $White;
+        background-color: $Orange1;
+        padding: 0.5vh 1.5vw;
+        font-family: $Title-font;
+        font-weight: 900;
+        border-radius: 1vw;
+        margin-top: 2vh;
+        border: none;
+        transition: 0.5s ease-in-out;
+        &:hover{
+          font-size: 1.8vw;
+          transform: translateY(10px);
+        }
+      }
+      img{
+        position: absolute;
+        width: 10%;
+        bottom: 2vh;
+      }
     }
   }
 
