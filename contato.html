@@ -5,16 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Universo Farol / MHBorges / Julia Vitoria">
-    <meta name="description" content="Pagina de contato do Universo Farol / links para nossas redes e horarios de funcionamento.">
-    <meta name="keywords" content="Pagina de contato universo farol, Pagina de contato, email universo farol, orçamento universo farol, Links redes sociais, horarios">
-    
+    <meta name="description"
+        content="Pagina de contato do Universo Farol / links para nossas redes e horarios de funcionamento.">
+    <meta name="keywords"
+        content="Pagina de contato universo farol, Pagina de contato, email universo farol, orçamento universo farol, Links redes sociais, horarios">
+
     <meta name="og:title" property="og:title" content="Contato - Universo Farol">
     <meta name="og:type" property="og:type" content="website">
     <meta name="og:image" property="og:image" content="assets/Ilust_Farol.jpg">
-    <meta name="og:description" property="og:description" content="Pagina de contato do Universo Farol / links para nossas redes e horarios de funcionamento.">
+    <meta name="og:description" property="og:description"
+        content="Pagina de contato do Universo Farol / links para nossas redes e horarios de funcionamento.">
     <title>Contato - Universo Farol</title>
 
-    <link rel="icon" href="assets/icon.png"/>
+    <link rel="icon" href="assets/icon.png" />
+
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
@@ -28,6 +32,10 @@
     <!-- Main files -->
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
+    <script defer src="js/contato.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
 </head>
 
 <body class="contact_page">
@@ -66,7 +74,7 @@
             </div>
 
             <div class="form">
-                <form class="labels" method="post">
+                <form class="labels" method="POST">
                     <div class="BlockBox">
                         <input type="text" name="nome" id="nome" required>
                         <span>Nome Completo</span>
@@ -80,19 +88,20 @@
                         <span>E-mail</span>
                     </div>
                     <div class="BlockBox">
-                        <input type="text" name="email" id="email" required>
+                        <input type="text" name="assunto" id="assunto" required>
                         <span>Assunto</span>
                     </div>
                     <div class="BlockBox">
                         <textarea type="text" name="mensagem" id="mensagem" required></textarea>
                         <span>Como podemos te ajudar??</span>
                     </div>
-                    <button name="btn-enviar-contato" id="btn-enviar-contato" type="button">Enviar mensagem</button>
+                    <input id="Enviar_Contato" type="button" value="Enviar mensagem"></input>
+                    <div class="col-md-12 text-right" id="Alertmsg"></div> 
                 </form>
             </div>
-           
         </div>
     </main>
 
+  
 </body>
 </html>
