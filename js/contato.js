@@ -23,7 +23,7 @@ $('#Enviar_Contato').click(function (e) {
                 $('#telefone').val('');
                 $('#assunto').val('');
                 $('#mensagem').val('');
-                setTimeout(() => { $('#Alertmsg').remove(); }, 5000)
+                setTimeout(() => { window.location.reload(); }, 5000)
             }
             else if (Alert.trim() == 'Preencha o Campo de Nome') {
                 $('#Alertmsg').addClass('text-danger');

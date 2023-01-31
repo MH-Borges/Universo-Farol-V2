@@ -9,6 +9,13 @@ $(window).scroll(function () {
   
   $(document).on("click", ".toTop", function () {
     $("html, body").animate({ scrollTop: 0 }, 400);
+    $('.Anc').addClass('hide');
+    $('.Anc_Q').removeClass('hide');
+    $('.Anc_Q').addClass('caindo');
+    setTimeout(() => { 
+      $('.Anc_Q').addClass('hide');
+      $('.Anc').removeClass('hide');
+    }, 1000)
   });
 
   $(document).ready(function(){
