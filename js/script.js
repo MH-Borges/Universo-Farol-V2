@@ -15,6 +15,7 @@ $(window).scroll(function () {
     setTimeout(() => { 
       $('.Anc_Q').addClass('hide');
       $('.Anc').removeClass('hide');
+      $('.Anc_Q').removeClass('caindo');
     }, 1000)
   });
 
