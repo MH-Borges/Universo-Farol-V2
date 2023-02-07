@@ -34,7 +34,7 @@
     <script defer src="js/contato.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
-
+    <script src="js/svg-inject.min.js"></script>
 </head>
 
 <body class="contact_page">
@@ -66,9 +66,24 @@
                     <h3>Atendimento comercial</h3>
                     <span>De Segunda a Sexta das 9h00 as 18h00</span>
                     <h1>Siga-nos tambem nas redes sociais</h1>
-                    <a href="" target="_blank"><i class="fa-brands fa-square-behance"></i></a>
-                    <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <div class="icons">
+                        <a class="Whats_Link" target="_blank" href="https://wa.me/5541995080219">
+                            <img class="Whats" src="assets/Whats_AZ.svg" onload="SVGInject(this)" alt="Icone de Whatsapp">
+                            <img class="Whats_P hide" src="assets/Whats_Lar.svg" onload="SVGInject(this)" alt="Icone de Whatsapp">
+                        </a>
+                        <a class="Insta_Link" target="_blank" href="https://www.instagram.com/universofarol/">
+                            <img class="Insta" src="assets/Insta_AZ.svg" onload="SVGInject(this)" alt="Icone de Instagram">
+                            <img class="Insta_P hide" src="assets/Insta_Lar.svg" onload="SVGInject(this)" alt="Icone de Instagram">
+                        </a>
+                        <a class="Behance_Link" target="_blank" href="">
+                            <img class="Behance" src="assets/Beh_AZ.svg" onload="SVGInject(this)" alt="Icone de Bahance">
+                            <img class="Behance_P hide" src="assets/Beh_Lar.svg" onload="SVGInject(this)" alt="Icone de Behance">
+                        </a>
+                        <a class="Email_Link" target="_blank" href="mailto:contato@universofarol.com.br">
+                            <img class="Email" src="assets/Email_AZ.svg" onload="SVGInject(this)" alt="Icone de Email">
+                            <img class="Email_P hide" src="assets/Email_Lar.svg" onload="SVGInject(this)" alt="Icone de Email">
+                        </a>
+                    </div>
                 </div>
             </div>
 

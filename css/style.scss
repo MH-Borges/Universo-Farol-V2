@@ -1,4 +1,11 @@
 @import 'colors_fonts';
+*,*::after,*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+  list-style: none;
+  text-decoration: none !important;
+}
 
 @function create-stars($n) {
   $stars: "#{random(3000)}px #{random(6500)}px #FFF";
@@ -147,7 +154,6 @@
     height: 50vh;
   }
 }
-
 @keyframes Anc_caindo {
   from {
     transform: translateY(0);
@@ -164,18 +170,9 @@
   width: 0.5vw;
   background: $Orange1;
 }
-
 ::-webkit-scrollbar-thumb {
   background: $Orange4;
   border-radius: 5vw;
-}
-
-*,*::after,*::before {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box !important;
-  list-style: none;
-  text-decoration: none !important;
 }
 
 body {
@@ -183,39 +180,6 @@ body {
   flex-wrap: wrap;
   font-family: $Main-font;
   background-color: $Blue5;
-
-  .toTop {
-    display: none;
-    position: fixed;
-    right: 1vw;
-    bottom: 2vh;
-    z-index: 998;
-    cursor: pointer;
-    width: 3vw;
-    height: 11vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    .Anc{
-      width: 100%;
-      height: 100%;
-      path{
-        fill: $White;
-      }
-    }
-    .Anc_Q{
-        width: 100%;
-        height: 80%;
-        margin-top: 2.5vh;
-        path{
-          fill: $White;
-        }
-      }
-    .caindo{
-      animation: Anc_caindo 1.5s;
-    }
-  }
 
   .stars {
     @include star-template(1700, 1px, 60s);
@@ -238,9 +202,39 @@ body {
   .comet4 {
     @include shooting-star-template4(50, 5px, 8s);
   }
+
   .hide{ 
     opacity: 0; 
     display: none; 
+  }
+
+  .toTop {
+    display: none;
+    position: fixed;
+    right: 1vw;
+    bottom: 2vh;
+    z-index: 998;
+    cursor: pointer;
+    width: 3vw;
+    height: 11vh;
+    .Anc{
+      width: 100%;
+      height: 100%;
+      path{
+        fill: $White;
+      }
+    }
+    .Anc_Q{
+        width: 100%;
+        height: 80%;
+        margin-top: 2.5vh;
+        path{
+          fill: $White;
+        }
+      }
+    .caindo{
+      animation: Anc_caindo 1.5s;
+    }
   }
 
   header {
@@ -250,7 +244,7 @@ body {
     width: 90%;
     left: 5%;
     top: 1vh;
-    z-index: 13;
+    z-index: 99;
     padding: 1vh;
     nav {
       display: flex;
@@ -264,19 +258,20 @@ body {
         text-transform: uppercase;
         font-family: $Main-font;
         color: $White;
-        font-size: 1.25vw;
+        font-size: 1.15vw;
         &:hover{
           color: $Orange1;
         }
       }
       .logo {
-        width: 7%;
         height: 100%;
         position: absolute;
         left: 0;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0 0.5vw;
+        margin: 0;
         img {
             width: 100%;
             height: 100%;
@@ -591,7 +586,6 @@ body {
       z-index: 5;
       h2{
         font-size: 3.5vw;
-        padding: 0.5vh 0;
       }
       p{
         font-family: $Title-font;
@@ -600,15 +594,17 @@ body {
       }
       .icons{
         padding: 2vh 0;
+        display: flex;
         a{
-          i{
-            margin: 0 1vw;
-            color: $White;
-            font-size: 3.5vw;
-            transition: 0.5s ease-in-out;
-            &:hover{
-              transform: translateY(-10px);
-            }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 5vw;
+          height: 10vh;
+          margin: 3vh 1vw;
+          svg{
+            width: 100%;
+            height: 100%;
           }
         }
         
@@ -637,9 +633,26 @@ body {
     }
   }
 
+  footer{
+    width: 100%;
+    height: 11vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5vh 0 1.5vh;
+    img{
+        height: 100%;
+        width: auto;
+    }
+  }
+
 }
 
 @import 'contato';
+@import 'servico';
+@import 'pacotes';
+@import 'design';
+@import 'web';
 
 
 @media only screen and (min-width: 1200px) {}

@@ -1,0 +1,180 @@
+.servicos_fil{
+    color: $White;
+    width: 100%;
+    min-height: 100vh;
+    h1{
+        text-align: center;
+        margin-top: 16vh;
+        font-size: 2.5vw;
+        padding-bottom: 3vh;
+        width: 90%;
+        margin-left: 5%;
+    }
+    h3{
+        width: 90%;
+        margin-left: 5%;
+        text-align: center;
+        font-family: $Title-font;
+        font-weight: 900;
+        font-size: 1.35vw;
+        line-height: 4vh;
+        padding: 0 5vw;
+        
+    }
+    .controls{
+        display: flex;
+        padding: 1vh 0 2vh 2vw;
+        width: 90%;
+        margin: 5vh 0 0 5%;
+        li{
+            padding: 1.5vh 0.5vw;
+            font-size: 1.5vw;
+            margin: 0 5vw 0 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 20;
+            span{
+                opacity: 0;
+                display: none;
+                z-index: 10;
+            }
+            &.active{
+                span{
+                    display: flex;
+                    position: absolute;
+                    width: 1.2vw;
+                    height: 5vh;
+                    opacity: 1;
+                    bottom: -31%;
+                    svg{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 60%;
+                    height: 4px;
+                    position: absolute;
+                    background: $Orange2;
+                    transform: skew(50deg);
+                    bottom: 0;
+                    left: 0;
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 60%;
+                    height: 4px;
+                    position: absolute;
+                    background: $Orange2;
+                    transform: skew(-50deg);
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+    .filter{
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 1vw;
+        margin: 0 0 12vh 5%;
+        .mix{
+            z-index: 10;
+            border: 2px solid $Orange1;
+            width: 23%;
+            height: 50vh;
+            margin: 2vh 0.87vw;
+            background-color: $Gray;
+            border-radius: 2.5vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5vw;
+            position: relative;
+            .icon{
+                background-color: $Blue1;
+                width: 6vw;
+                height: 11vh;
+                border-radius: 50%;
+                margin: 2vh 0;
+            }
+            h2{
+                color: $Blue5;
+                margin: 1.4vh 0;
+                font-size: 1.75vw;
+                width: 100%;
+                text-align: center;
+                .space{
+                    margin-left: -3vw;
+                    &:nth-child(2){
+                        margin-left: -6vw;
+                    }
+                }
+                .spacee{
+                    margin-left: 3vw;
+                    
+                }
+                .Sinal{
+                    position: absolute;
+                    width: 1.75vw;
+                    height: 0.8vh;
+                    border-radius: 0.5vw;
+                    background-color: $Orange4;
+                    display: block;
+                    &::before{
+                        content: '';
+                        display: block;
+                        width: 1.75vw;
+                        height: 0.8vh;
+                        border-radius: 0.5vw;
+                        background-color: $Orange4;
+                        transform: rotate(90deg);
+                    }
+                }
+                .Insta_land{
+                    right: 21%;
+                    top: 38.5%;
+                }
+                .Logo_Site{
+                    left: 21%;
+                    top: 46%;
+                }
+                .IdParc_Blog{
+                    left: 13%;
+                    top: 46%;
+                }
+                .IdComp_Blog{
+                    left: 7%;
+                    top: 46%;
+                }
+            }
+            h4{
+                color: $Blue5;
+                text-align: center;
+                font-family: $Title-font;
+                font-weight: 900;
+                font-size: 1vw;
+                width: 90%;
+                margin: 1.5vh 0;
+            }
+            a{
+                position: absolute;
+                color: $White;
+                background-color: $Blue1;
+                padding: 0.5vh 1vw;
+                border-radius: 0.75vw;
+                bottom: 3%;
+                font-size: 1vw;
+                font-family: $Title-font;
+                font-weight: 900;
+            }
+        }
+    }
+}

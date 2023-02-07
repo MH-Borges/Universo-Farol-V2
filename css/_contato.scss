@@ -55,23 +55,23 @@
                         font-family: $Title-font;
                         font-weight: 900;
                     }
-                    a{
-                        position: relative;
-                        color: $Blue4;
-                        padding: 0.5vw;
-                        i{
-                            margin-top: 1.5vh;
-                            font-size: 2vw;
-                        }
-                        &:nth-child(5){
+                    .icons{
+                        display: flex;
+                        a{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 3.5vw;
+                            height: 7vh;
                             margin-left: 1vw;
-                        }
-                        &:hover{
-                            i{
-                                color: $Orange4;
+                            &:nth-child(1){
+                                margin-left: 1.5vw;
+                            }
+                            svg{
+                                width: 100%;
+                                height: 100%;
                             }
                         }
-                        
                     }
                 }
             }
@@ -120,7 +120,7 @@
                             font-family: $Main-font;
                             position: absolute;
                             left: 1vw;
-                            top: 1vw;
+                            top: 1.1vw;
                             font-size: 1.1vw;
                             color: $Blue4;
                             transition: 0.5s;
