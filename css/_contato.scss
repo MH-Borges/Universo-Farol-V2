@@ -70,6 +70,14 @@
                             svg{
                                 width: 100%;
                                 height: 100%;
+                                path{
+                                    fill: $Blue5;
+                                }
+                            }
+                            .Whats_P, .Insta_P, .Behance_P, .Email_P{
+                                path{
+                                    fill: $Orange4;
+                                }
                             }
                         }
                     }

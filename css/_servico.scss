@@ -100,10 +100,17 @@
             position: relative;
             .icon{
                 background-color: $Blue1;
-                width: 6vw;
-                height: 11vh;
+                width: 7vw;
+                height: 13vh;
                 border-radius: 50%;
-                margin: 2vh 0;
+                margin: 1.5vh 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 85%;
+                    height: 85%;
+                }
             }
             h2{
                 color: $Blue5;
@@ -119,7 +126,6 @@
                 }
                 .spacee{
                     margin-left: 3vw;
-                    
                 }
                 .Sinal{
                     position: absolute;
@@ -128,6 +134,7 @@
                     border-radius: 0.5vw;
                     background-color: $Orange4;
                     display: block;
+                    top: 48%;
                     &::before{
                         content: '';
                         display: block;
@@ -138,22 +145,10 @@
                         transform: rotate(90deg);
                     }
                 }
-                .Insta_land{
-                    right: 21%;
-                    top: 38.5%;
-                }
-                .Logo_Site{
-                    left: 21%;
-                    top: 46%;
-                }
-                .IdParc_Blog{
-                    left: 13%;
-                    top: 46%;
-                }
-                .IdComp_Blog{
-                    left: 7%;
-                    top: 46%;
-                }
+                .Insta_land{ right: 21%; top: 40.5%; }
+                .Logo_Site{ left: 21%; }
+                .IdParc_Blog{ left: 13%; }
+                .IdComp_Blog{ left: 7%; }
             }
             h4{
                 color: $Blue5;
