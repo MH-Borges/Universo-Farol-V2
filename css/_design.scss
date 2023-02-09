@@ -52,7 +52,7 @@
             padding: 1vw;
             flex-direction: column;
             justify-content: center;
-            padding-right: 18vw;
+            padding-right: 15vw;
             border: 2px solid purple;
             h4{
                 font-size: 2vw;
@@ -76,6 +76,16 @@
                     margin: 1.5vh 0;
                     position: relative;
                     border: solid red;
+                    span{
+                        position: absolute;
+                        height: 3.5vh;
+                        left: -3.2vw;
+                        top: -1.1vh;
+                        img{
+                            width: auto;
+                            height: 100%;
+                        }
+                    }
                     a{
                         color: $Orange1;
                         &:hover{
@@ -92,7 +102,6 @@
                         height: 2.75vh;
                         border: 0.15vw solid $White;
                         border-radius: 0.5vw;
-                        background-color:$Orange1;
                     }
                 }
                 .aspas{
@@ -107,11 +116,12 @@
         }
     }
 
+
     #InstaPack, #IdVisuParc{
         .Wrap_text{
-            padding-left: 21vw;
+            padding-left: 15vw;
             padding-right: 0;
         }
-    }
+    } 
   
 }
