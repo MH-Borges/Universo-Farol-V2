@@ -31,7 +31,7 @@
           scale: 2.3,
           ease: "none",
           xPercent: 33,
-          yPercent: 18,
+          yPercent: 24,
           scrollTrigger: {
             pin: jQuery(image).parent(),
             trigger: jQuery(image).parent(),
