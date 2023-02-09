@@ -87,10 +87,9 @@
         margin: 0 0 12vh 5%;
         .mix{
             z-index: 10;
-            border: 2px solid $Orange1;
             width: 23%;
             height: 50vh;
-            margin: 2vh 0.87vw;
+            margin: 9vh 0.87vw 5vh;
             background-color: $Gray;
             border-radius: 2.5vw;
             display: flex;
@@ -99,10 +98,9 @@
             padding: 0.5vw;
             position: relative;
             .icon{
-                width: 7vw;
-                height: 13vh;
-                border-radius: 50%;
-                margin: 1.5vh 0;
+                width: auto;
+                height: 21vh;
+                margin-top: -14vh;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -113,7 +111,7 @@
             }
             h2{
                 color: $Blue5;
-                margin: 1.4vh 0;
+                margin: 4vh 0 3vh;
                 font-size: 1.75vw;
                 width: 100%;
                 text-align: center;
@@ -128,26 +126,26 @@
                 }
                 .Sinal{
                     position: absolute;
-                    width: 1.75vw;
-                    height: 0.8vh;
+                    width: 1.6vw;
+                    height: 0.65vh;
                     border-radius: 0.5vw;
                     background-color: $Orange4;
                     display: block;
-                    top: 48%;
+                    top: 35%;
                     &::before{
                         content: '';
                         display: block;
-                        width: 1.75vw;
-                        height: 0.8vh;
+                        width: 1.6vw;
+                        height: 0.65vh;
                         border-radius: 0.5vw;
                         background-color: $Orange4;
                         transform: rotate(90deg);
                     }
                 }
-                .Insta_land{ right: 21%; top: 40.5%; }
-                .Logo_Site{ left: 21%; }
-                .IdParc_Blog{ left: 13%; }
-                .IdComp_Blog{ left: 7%; }
+                .Insta_land{ right: 25%; top: 27.5%; }
+                .Logo_Site{ left: 23%; }
+                .IdParc_Blog{ left: 15%; }
+                .IdComp_Blog{ left: 10%; }
             }
             h4{
                 color: $Blue5;
@@ -155,10 +153,9 @@
                 font-family: $Title-font;
                 font-weight: 700;
                 font-size: 1vw;
-                width: 90%;
+                width: 80%;
                 margin: 1.5vh 0;
                 font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
-
             }
             a{
                 position: absolute;
@@ -166,7 +163,7 @@
                 background-color: $Blue1;
                 padding: 0.5vh 1vw;
                 border-radius: 0.75vw;
-                bottom: 3%;
+                bottom: 7%;
                 font-size: 1vw;
                 font-family: $Title-font;
                 font-weight: 900;
