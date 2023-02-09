@@ -321,12 +321,12 @@ body {
         right: 7.5vw;
         height: 42vh;
         font-family: $Title-font;
+        font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
         .Banner{
           line-height: 6.5vh;
           font-size: 3.3vw;
           color: $White;
-          font-weight: 600;
-          font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
+          font-weight: 700;
           &:nth-child(4){
             margin-top: 3.5vh;
           }
@@ -334,8 +334,7 @@ body {
         .sub{
           line-height: 3vh;
           font-size: 1.35vw;
-          font-weight: 400;
-          font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
+          font-weight: 500;
         }
         a{
           font-size: 1vw !important;
@@ -389,6 +388,7 @@ body {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
         h2{
           font-family: $Main-font;
           font-size: 2.5vw;
@@ -467,6 +467,7 @@ body {
         font-family: $Title-font;
         font-weight: 600;
         padding-bottom: 2vh;
+        font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
       }
       .accordion {
           width: 100%;
@@ -517,6 +518,7 @@ body {
                 font-size: 1vw;
                 font-family: $Title-font;
                 font-weight: 700;
+                font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
                 &::before {
                     content: '';
                     display: block;
@@ -597,6 +599,7 @@ body {
         font-family: $Title-font;
         font-weight: 600;
         font-size: 1.8vw;
+        font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
       }
       .icons{
         padding: 2vh 0;
@@ -629,6 +632,7 @@ body {
         margin-top: 2vh;
         border: none;
         transition: 0.5s ease-in-out;
+        font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
         &:hover{
           font-size: 1.8vw;
           transform: translateY(10px);

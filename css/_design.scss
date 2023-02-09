@@ -1,6 +1,114 @@
 .main_design{
     color: $White;
-    text-align: center;
     margin-top: 15vh;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: 5%;
+    z-index: 20;
+    margin-bottom: 10vh;
+    border: 2px solid green;
 
+    .head_Text{
+        text-align: center;
+        padding: 1vh 0;
+        h1{
+            font-size: 2.5vw;
+            font-weight: 500;
+            font-family: $Main-font;
+            margin-bottom: 3vh;
+        }
+        h3{
+            padding: 0 5vw;
+            font-family: $Title-font;
+            font-weight: 600;
+            font-size: 2vh;
+            font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
+        }
+    }
+    
+    .Descricoes{
+        display: flex;
+        position: relative;
+        margin: 4vh 0;
+        padding: 2vw;
+        width: 100%;
+        border: 2px solid red;
+        .icon{
+            width: 30%;
+            padding: 1vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid yellow;
+            img{
+                width: 100%;
+            }
+        }
+        .Wrap_text{
+            width: 70%;
+            display: flex;
+            padding: 1vw;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 18vw;
+            border: 2px solid purple;
+            h4{
+                font-size: 2vw;
+                font-weight: 500;
+            }
+            p, ul{
+                font-family: $Title-font;
+                font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
+                font-size: 1vw;
+                margin: 2vh 0;
+                border: solid greenyellow;
+            }
+            p{
+                line-height: 3vh;
+                font-size: 1.1vw;
+            }
+            ul{
+                margin-left: 3vw;
+                li{
+                    margin: 1.5vh 0;
+                    position: relative;
+                    a{
+                        color: $Orange1;
+                        &:hover{
+                            color: $Orange4;
+                        }
+                    }
+                    &::before{
+                        display: block;
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -3vw;
+                        width: 1.5vw;
+                        height: 2.75vh;
+                        border: 0.15vw solid $White;
+                        border-radius: 0.5vw;
+                        background-color:$Orange1;
+                    }
+                }
+                .aspas{
+                    font-size: 0.8vw;
+                    margin: 0;
+                    margin-top: -1vh;
+                    &::before{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    #InstaPack, #IdVisuParc{
+        .Wrap_text{
+            padding-left: 21vw;
+            padding-right: 0;
+        }
+    }
+  
 }

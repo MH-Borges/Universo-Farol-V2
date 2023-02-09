@@ -29,7 +29,8 @@
                     margin-left: 2vw;
                     font-size: 1.1vw;
                     font-family: $Title-font;
-                    font-weight: 900;
+                    font-weight: 700;
+                    font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
                 }
                 .info_block{
                     width: 100%;
@@ -38,8 +39,10 @@
                     p{
                         font-size: 1.1vw;
                         margin-right: 7vw;
-                        font-weight: 900;
                         line-height: 1.8vw;
+                        font-family: $Title-font;
+                        font-weight: 700;
+                        font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
                     }
                     h1{
                         margin-top: 8vh !important;
@@ -50,10 +53,11 @@
                         color: $Orange2;
                     }
                     span{
-                        font-size: 1vw;
+                        font-size: 1.1vw;
                         margin-left: 2vw;
                         font-family: $Title-font;
-                        font-weight: 900;
+                        font-weight: 700;
+                        font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
                     }
                     .icons{
                         display: flex;
@@ -118,7 +122,8 @@
                             outline: none;
                             padding: 2vh 0.5vw;
                             font-family: $Title-font;
-                            font-weight: 900;
+                            font-weight: 800;
+                            font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
                         }
                         textarea{
                             min-height: 11vh !important;
