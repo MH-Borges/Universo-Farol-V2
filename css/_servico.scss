@@ -15,11 +15,11 @@
         margin-left: 5%;
         text-align: center;
         font-family: $Title-font;
-        font-weight: 900;
+        font-weight: 600;
         font-size: 1.35vw;
         line-height: 4vh;
         padding: 0 5vw;
-        
+        font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
     }
     .controls{
         display: flex;
@@ -153,10 +153,12 @@
                 color: $Blue5;
                 text-align: center;
                 font-family: $Title-font;
-                font-weight: 900;
+                font-weight: 700;
                 font-size: 1vw;
                 width: 90%;
                 margin: 1.5vh 0;
+                font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
+
             }
             a{
                 position: absolute;

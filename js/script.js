@@ -28,9 +28,9 @@
           scale: 1,
         },
         {
-          scale: 2.3,
+          scale: 2.2,
           ease: "none",
-          xPercent: 33,
+          xPercent: 31,
           yPercent: 24,
           scrollTrigger: {
             pin: jQuery(image).parent(),

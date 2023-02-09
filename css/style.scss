@@ -326,7 +326,7 @@ body {
           line-height: 6vh;
           font-size: 3.3vw;
           color: $White;
-          font-weight: 900;
+          font-weight: 800;
           font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
           &:nth-child(4){
             margin-top: 3.5vh;
@@ -335,7 +335,7 @@ body {
         .sub{
           line-height: 3vh;
           font-size: 1.35vw;
-          font-weight: 100;
+          font-weight: 400;
           font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
         }
         a{
@@ -353,25 +353,24 @@ body {
           justify-content: center;
           align-items: center;
         }
-  
       }
 
       .Text_Block {
         text-align: right;
         position: absolute;
         right: 6vw;
-        top: 28%;
+        top: 27%;
         padding: 1vw;
         font-family: $Title-font;
-        font-weight: 400;
+        font-weight: 500;
         font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
         .Text{
           opacity: 0;
           font-size: 2vw;
           color: $White;
           line-height: 6vh;
+          font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
         }
-  
       }
     }
   
@@ -402,7 +401,7 @@ body {
           text-align: center;
           line-height: 3vh;
           padding: 1vh 0;
-          font-weight: 100;
+          font-weight: 400;
           font-size: 1.2vw;
           animation: floater 3s ease-in-out;
           animation-iteration-count: infinite;
@@ -467,6 +466,7 @@ body {
         color: $White;
         font-size: 1.5vw;
         font-family: $Title-font;
+        font-weight: 600;
         padding-bottom: 2vh;
       }
       .accordion {
@@ -596,7 +596,7 @@ body {
       }
       p{
         font-family: $Title-font;
-        font-weight: 700;
+        font-weight: 600;
         font-size: 1.8vw;
       }
       .icons{
