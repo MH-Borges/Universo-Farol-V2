@@ -323,10 +323,10 @@ body {
         padding-bottom: 8vh;
         font-family: $Title-font;
         .Banner{
-          line-height: 6vh;
+          line-height: 6.5vh;
           font-size: 3.3vw;
           color: $White;
-          font-weight: 800;
+          font-weight: 600;
           font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
           &:nth-child(4){
             margin-top: 3.5vh;
@@ -354,13 +354,13 @@ body {
           align-items: center;
         }
       }
-
       .Text_Block {
         text-align: right;
         position: absolute;
-        right: 6vw;
-        top: 27%;
+        right: 5.5vw;
+        top: 23.5%;
         padding: 1vw;
+        line-height: 5vh;
         font-family: $Title-font;
         font-weight: 500;
         font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;

@@ -30,8 +30,8 @@
         {
           scale: 2.2,
           ease: "none",
-          xPercent: 31,
-          yPercent: 24,
+          xPercent: 37,
+          yPercent: 20,
           scrollTrigger: {
             pin: jQuery(image).parent(),
             trigger: jQuery(image).parent(),
@@ -71,8 +71,8 @@
       });
     
       tl
-        .to(elem, { opacity: 1, duration: 0.5, y: 0 })
-        .to(elem, { opacity: 0, duration: 0.5, y: -50 }, 0.8);
+        .to(elem, { opacity: 1, duration: 0.5, })
+        .to(elem, { opacity: 0, duration: 0.5, }, 0.8);
         ;
     
     });
@@ -83,11 +83,10 @@
         scrollTrigger: {
           trigger: elemt,
           start: "top top",
-          end: "+=400 top",
+          end: "+=400 20%",
           scrub: true,
         }
       });
-    
       tl
         .to(elemt, { opacity: 0, duration: 0.5 })
         .to(elemt, { opacity: 1, duration: 0.5 });
