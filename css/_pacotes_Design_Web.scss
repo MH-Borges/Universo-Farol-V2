@@ -54,6 +54,12 @@
             h4{
                 font-size: 2vw;
                 font-weight: 500;
+                a{
+                    color: $Orange1;
+                    &:hover{
+                        color: $Orange4;
+                    }
+                }
             }
             p, ul{
                 font-family: $Title-font;
