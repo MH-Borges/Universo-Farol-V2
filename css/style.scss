@@ -322,6 +322,7 @@ body {
         height: 42vh;
         font-family: $Title-font;
         font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
+        z-index: 12;
         .Banner{
           line-height: 6.5vh;
           font-size: 3.3vw;
@@ -392,8 +393,7 @@ body {
         h2{
           font-family: $Main-font;
           font-size: 2.5vw;
-          animation: floater 3s ease-in-out;
-          animation-iteration-count: infinite;
+          animation: floater 4s ease-in-out infinite;
         }
         p{
           width: 49%;
@@ -402,41 +402,33 @@ body {
           padding: 1vh 0;
           font-weight: 400;
           font-size: 1.2vw;
-          animation: floater 3s ease-in-out;
-          animation-iteration-count: infinite;
+          animation: floater 4s ease-in-out infinite;
           letter-spacing: 0.1vw;
         }
-        button{
+        a{
           color: $White;
-          background-color: $Orange1;
+          background-color: $Orange2;
           padding: 1vh 1vw;
           border-radius: 0.75vw;
           font-weight: 900;
-          animation: floater 3s ease-in-out;
-          animation-iteration-count: infinite;
+          animation: floater 4s ease-in-out infinite;
           border: none;
         }
         &:nth-child(3){
           width: 100%;
           h2{
-            
-            animation: floater 2s ease-in-out;
-            animation-iteration-count: infinite;
+            animation: floater 2.5s ease-in-out infinite;
           }
           p{
-            
-            animation: floater 2s ease-in-out;
-            animation-iteration-count: infinite;
+            animation: floater 2.5s ease-in-out infinite;
           }
           a{
-            
-            animation: floater 2s ease-in-out;
-            animation-iteration-count: infinite;
+            animation: floater 2.5s ease-in-out infinite;
           }
         }
         @keyframes floater {
           0%{transform: translateY(0px)}
-          50%{transform: translateY(10px)}
+          50%{transform: translateY(15px)}
           100%{transform: translateY(0px)}
         }
       }
@@ -624,7 +616,7 @@ body {
       .orca{
         font-size: 1.5vw;
         color: $White;
-        background-color: $Orange1;
+        background-color: $Orange2;
         padding: 0.5vh 1.5vw;
         font-family: $Title-font;
         font-weight: 900;
@@ -634,8 +626,8 @@ body {
         transition: 0.5s ease-in-out;
         font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
         &:hover{
-          font-size: 1.8vw;
-          transform: translateY(10px);
+          font-size: 1.75vw;
+          transform: translateY(5px);
         }
       }
       img{
@@ -653,19 +645,22 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0.5vh 0 1.5vh;
-    img{
+    a{
+      width: auto;
+      height: 100%;
+      img{
         height: 90%;
         width: auto;
     }
+    }
+    
   }
 
 }
 
 @import 'contato';
 @import 'servico';
-@import 'pacotes';
-@import 'design';
-@import 'web';
+@import 'pacotes_Design_Web';
 
 
 @media only screen and (min-width: 1200px) {}

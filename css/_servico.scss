@@ -89,7 +89,7 @@
             z-index: 10;
             width: 23%;
             height: 50vh;
-            margin: 10vh 0.87vw 7vh;
+            margin: 11vh 0.87vw 9vh;
             background-color: $Gray;
             border-radius: 2.5vw;
             display: flex;
@@ -97,6 +97,7 @@
             align-items: center;
             padding: 0.5vw;
             position: relative;
+            transition: 0.5s ease-in-out;
             .icon{
                 width: auto;
                 height: 21vh;
@@ -167,6 +168,13 @@
                 font-size: 1vw;
                 font-family: $Title-font;
                 font-weight: 900;
+                &:hover{
+                    color: $Blue1;
+                    background-color: $Blue4;
+                }
+            }
+            &:hover{
+                transform: translateY(-10px);
             }
         }
     }
