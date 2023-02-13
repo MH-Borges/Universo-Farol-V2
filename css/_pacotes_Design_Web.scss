@@ -74,6 +74,7 @@
             ul{
                 margin-left: 3vw;
                 li{
+                    font-size: 1.25vw;
                     margin: 3vh 0;
                     position: relative;
                     span{
@@ -133,13 +134,127 @@
             }
         }
     }
-}
 
-.main_design, .main_web, .main_pacotes{
     #InstaPack, #IdVisuParc, #Land_Pag, #Blog, #Seo, #Insta_land, #IdParc_Blog, #Custom{
         .Wrap_text{
             padding-left: 15vw;
             padding-right: 0;
         }
     }
+}
+
+/* Medium Device = 1200px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Tablet Device = 768px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+/* Wide Mobile = 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Small Device = 320px */
+@media only screen and (max-width: 479px) {
+
+    .main_design, .main_web, .main_pacotes {
+        margin: 11vh 0 2vh 5%;
+    
+        .head_Text{
+            text-align: center;
+            padding: 0;
+            h1{
+                font-size: 7vw;
+                margin: 0;
+                padding: 2vh 0;
+            }
+            h3{
+                padding: 2vh 5vw 4vh;
+                font-size: 1.7vh;
+                margin: 0;
+            }
+        }
+        
+        .Descricoes{
+            flex-wrap: wrap;
+            margin: 2vh 0;
+            padding: 2vw;
+            
+            .icon{
+                width: 100%;
+                height: 20vh;
+                order: 1;
+                margin: 1vh 0 3vh;
+                img{
+                    height: 100%;
+                }
+            }
+
+            .Wrap_text{
+                width: 100%;
+                padding: 3vh 1vw;
+                order: 2;
+                align-items: center;
+                h4{
+                    text-align: center;
+                    font-size: 6vw;
+                    margin: 0;
+                    padding: 1vh 0 3vh;
+                    width: 100%;
+                }
+                p, ul{
+                    font-size: 3vw;
+                    margin: 0;
+                }
+                p{
+                    line-height: 3vh;
+                    font-size: 3.5vw;
+                    padding: 1vh 5vw 3vh;
+                }
+
+                ul{
+                    width: 100%;
+                    margin: 0;
+                    padding:  1vh 4vw 3vh 8vw;
+                    li{
+                        margin: 2vh 0;
+                        font-size: 3vw;
+                        span{
+                            height: 2.3vh;
+                            left: -7.5vw;
+                            top: -0.8vh;
+                        }
+                        &::before{
+                            left: -7vw;
+                            width: 4vw;
+                            height: 4vw;
+                            border: 0.5vw solid $White;
+                            border-radius: 1vw;
+                        }
+                    }
+                    .aspas{
+                        font-size: 0.8vw;
+                        margin: 0;
+                        margin-top: -1vh;
+                        &::before{
+                            display: none;
+                        }
+                    }
+                }
+                
+                .Orcamento{
+                    width: 55%;
+                    padding: 0.5vh;
+                    border-radius: 3vw;
+                    font-size: 4vw;
+                    margin: 3vh 0 0;
+                }
+            }
+        }
+    
+        #InstaPack, #IdVisuParc, #Land_Pag, #Blog, #Seo, #Insta_land, #IdParc_Blog, #Custom{
+            .Wrap_text{
+                padding: 3vh 1vw;
+            }
+        }
+    }
+
 }

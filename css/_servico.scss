@@ -224,9 +224,8 @@
                 &.active{
                     span{
                         width: 4vw;
-                        height: 2.5vh;
-                        bottom: -20%;
-                        
+                        height: 2vh;
+                        bottom: -15%;
                     }
                 }
             }
@@ -236,10 +235,10 @@
             margin: 0 0 2vh 5%;
             justify-content: center;
             .mix{
-                width: 90%;
+                width: 80%;
                 height: 42vh;
                 margin: 9vh 0 7vh;
-                border-radius: 5vw;
+                border-radius: 6vw;
                 padding: 1vw;
                 .icon{
                     width: 38vw;
@@ -273,10 +272,10 @@
                             border-radius: 2vw;
                         }
                     }
-                    .Insta_land{ right: 27%; top: 25.5%; }
-                    .Logo_Site{ left: 25%; }
-                    .IdParc_Blog{ left: 18%; }
-                    .IdComp_Blog{ left: 14%; }
+                    .Insta_land{ right: 24%; top: 25.5%; }
+                    .Logo_Site{ left: 22%; }
+                    .IdParc_Blog{ left: 15%; }
+                    .IdComp_Blog{ left: 10%; }
                 }
                 h4{
                     font-size: 3.5vw;
@@ -285,9 +284,9 @@
                 }
                 a{
                     padding: 0.5vh 3vw;
-                    border-radius: 2vw;
+                    border-radius: 3vw;
                     bottom: 5%;
-                    font-size: 4.5vw;
+                    font-size: 4vw;
                 }
                 &:hover{
                     transform: translateY(-10px);
