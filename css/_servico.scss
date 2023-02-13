@@ -186,3 +186,114 @@
         }
     }
 }
+
+@media only screen and (min-width: 1200px) {}
+
+/* Medium Device = 1200px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Tablet Device = 768px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+/* Wide Mobile = 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Small Device = 320px */
+@media only screen and (max-width: 479px) {
+
+    .servicos_fil{
+        h1{
+            margin: 11vh 0 0 5%;
+            font-size: 5.5vw;
+            padding: 3vh 2vw;
+        }
+        h3{
+            font-size: 3vw;
+            line-height: 2.5vh;
+            padding: 2vh 5vw 3vh;
+        }
+        .controls{
+            justify-content: center;
+            padding: 1vh 0 2vh 0;
+            margin: 3vh 0 1vh 5%;
+            li{
+                padding: 1vh 1.5vw;
+                font-size: 4vw;
+                margin: 0 2vw;
+                
+                &.active{
+                    span{
+                        width: 4vw;
+                        height: 2.5vh;
+                        bottom: -20%;
+                        
+                    }
+                }
+            }
+        }
+        .filter{
+            padding: 1vw;
+            margin: 0 0 2vh 5%;
+            justify-content: center;
+            .mix{
+                width: 90%;
+                height: 42vh;
+                margin: 9vh 0 7vh;
+                border-radius: 5vw;
+                padding: 1vw;
+                .icon{
+                    width: 38vw;
+                    height: 20vh;
+                    margin-top: -13.5vh;
+                }
+                .designImg, .webImg{
+                    width: 55vw;
+                    margin-top: -14vh;
+                }
+                h2{
+                    margin: 2vh 0 1vh;
+                    font-size: 6vw;
+                    .space{
+                        margin-left: -10vw;
+                        &:nth-child(2){
+                            margin-left: -22vw;
+                        }
+                    }
+                    .spacee{
+                        margin-left: 9vw;
+                    }
+                    .Sinal{
+                        width: 6vw;
+                        height: 0.75vh;
+                        border-radius: 2vw;
+                        top: 33.5%;
+                        &::before{
+                            width: 6vw;
+                            height: 0.75vh;
+                            border-radius: 2vw;
+                        }
+                    }
+                    .Insta_land{ right: 27%; top: 25.5%; }
+                    .Logo_Site{ left: 25%; }
+                    .IdParc_Blog{ left: 18%; }
+                    .IdComp_Blog{ left: 14%; }
+                }
+                h4{
+                    font-size: 3.5vw;
+                    width: 80%;
+                    margin: 2vh 0;
+                }
+                a{
+                    padding: 0.5vh 3vw;
+                    border-radius: 2vw;
+                    bottom: 5%;
+                    font-size: 4.5vw;
+                }
+                &:hover{
+                    transform: translateY(-10px);
+                }
+            }
+        }
+    }
+
+}

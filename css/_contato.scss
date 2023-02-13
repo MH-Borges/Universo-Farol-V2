@@ -169,3 +169,138 @@
         }
     } 
 }
+
+@media only screen and (min-width: 1200px) {}
+
+/* Medium Device = 1200px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Tablet Device = 768px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+/* Wide Mobile = 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Small Device = 320px */
+@media only screen and (max-width: 479px) {
+
+    .contact_page {
+        main{ 
+            height: auto;
+            min-height: 100vh;
+            .contato_Block{
+                width: 90%;
+                height: auto;
+                min-height: 100vh;
+                margin-top: 11vh;
+                padding: 2vw;
+                flex-wrap: wrap;
+                border-radius: 7vw;
+                .text_Block{
+                    width: 100%;
+                    height: auto;
+                    padding: 1vw;
+                    h2{
+                        text-align: center;
+                        font-size: 6.5vw;
+                        margin: 0;
+                        padding: 1vh 0;
+                    }
+                    p{
+                        text-align: center;
+                        margin-left: 0;
+                        font-size: 3.5vw;
+                        padding: 1vh 0;
+                        margin: 0;
+                    }
+                    .info_block{
+                        width: 100%;
+                        padding: 1vh 1vw;
+                        p{
+                            font-size: 3vw;
+                            margin-right: 0;
+                            line-height: 1.5vh;
+                            padding: 1vh 5vw 3vh;
+                        }
+                        h1{
+                            margin-top: 0 !important;
+                            font-size: 4.5vw !important;
+                        }
+                        h1,h3{
+                            font-size: 5.5vw;
+                            margin: 0;
+                            text-align: center;
+                            padding: 3vh 0 2vh;
+                        }
+                        .icons{
+                            justify-content: center;
+                            align-items: center;
+                            a{
+                                width: 11vw;
+                                height: 6vh;
+                                margin: 1vh 2vw;
+                                &:nth-child(1){
+                                    margin-left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .form{
+                    width: 100%;
+                    padding: 1vw;
+                    display: flex;
+                    align-items: center;
+                    height: auto;
+                    .labels{
+                        width: 100%;
+                        padding: 3vh 1vw 8vh;
+                        justify-content: center;
+                        align-items: center;
+                        .BlockBox{
+                            width: 95%;
+                            height: 8vh;
+                            margin: 2vh 0;
+                            border-radius: 4vw;
+                            &:nth-child(5){
+                                height: 13vh;
+                            }
+                            input, textarea{
+                                width: 95% !important;
+                                margin-left: 1.5%;
+                                font-size: 3.5vw;
+                                padding: 2vh 0.5vw;
+                            }
+                            textarea{
+                                min-height: 12vh !important;
+                            }
+                            span{
+                                left: 3vw;
+                                top: 2.5vh;
+                                font-size: 4vw;
+                            }
+                            &:nth-child(1), &:nth-child(2){
+                                width: 95%;
+                                margin: 2vh 0;
+                            }
+                        }
+                        .BlockBox input:focus ~ span, textarea:focus ~ span, input:valid ~ span, textarea:valid ~ span{
+                            transform:translate(-2vw, -5.5vh);
+                            font-size: 4.4vw;
+                        }
+                        #Enviar_Contato{
+                            font-size: 4vw;
+                            padding: 1vh 2.5vw;
+                            border-radius: 2vw;
+                            letter-spacing: auto;
+                            bottom: 1vh;
+                            right: auto;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+
+}
