@@ -281,7 +281,7 @@ body {
             width: 90%;
             height: 100%;
         }
-    }
+      }
     }
   }
 
@@ -1434,26 +1434,18 @@ body {
     }
   
     header {
-      margin-top: 1vh;
-      width: 95%;
-      left: 2.5%;
-      height: auto;
-      padding: 0.5vh;
+      top: 0;
       nav {
+        justify-content: center;
         a {
-          padding: 1vh 2vw;
-          margin: 0 1vw;
-          font-size: 3vw;
+          padding: 1vh 1vw;
+          margin: 0 2vw;
+          font-size: 3.3vw;
         }
         .logo {
-          position: absolute !important;
-          height: 7.5vh;
-          left: -1vw;
-          top: -1.5vh;
+          position: relative;
+          left: -1.25vw;
         }
-      }
-      .home{
-        justify-content: center;
       }
     }
   
