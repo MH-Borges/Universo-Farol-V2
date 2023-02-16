@@ -194,23 +194,17 @@
         h1{
             border: solid blue;
             text-align: center;
-            margin-top: 16vh;
             font-size: 2.5vw;
             padding-bottom: 3vh;
             width: 90%;
-            margin-left: 5%;
+            margin: 14vh 0 0 5%;
         }
         h3{
             border: solid green;
-            width: 90%;
-            margin-left: 5%;
             text-align: center;
-            font-family: $Title-font;
-            font-weight: 600;
             font-size: 1.35vw;
             line-height: 4vh;
             padding: 0 5vw;
-            font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
         }
         .controls{
             border: solid yellowgreen;
@@ -518,6 +512,7 @@
                 
                 &.active{
                     span{
+                        position: absolute !important;
                         width: 4vw;
                         height: 2vh;
                         bottom: -15%;
@@ -531,7 +526,7 @@
             justify-content: center;
             .mix{
                 width: 80%;
-                height: 42vh;
+                height: 45vh;
                 margin: 9vh 0 7vh;
                 border-radius: 6vw;
                 padding: 1vw;
