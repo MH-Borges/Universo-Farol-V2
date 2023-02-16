@@ -52,13 +52,6 @@
                         margin-top: 6vh;
                         color: $Orange2;
                     }
-                    span{
-                        font-size: 1.1vw;
-                        margin-left: 2vw;
-                        font-family: $Title-font;
-                        font-weight: 700;
-                        font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
-                    }
                     .icons{
                         display: flex;
                         a{
@@ -170,16 +163,262 @@
     } 
 }
 
-@media only screen and (min-width: 1200px) {}
-
-/* Medium Device = 1200px */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {}
 
 /* Tablet Device = 768px */
-@media only screen and (min-width: 768px) and (max-width: 991px) {}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .contact_page {
+        main{ 
+            height: auto;
+            min-height: 100%;
+            .contato_Block{
+                width: 90%;
+                height: auto;
+                min-height: auto;
+                margin-top: 15vh;
+                padding: 2.5vw;
+                border-radius: 5vw;
+                flex-wrap: wrap;
+                .text_Block{
+                    width: 100%;
+                    height: auto;
+                    padding: 0 0 3vh 0;
+                    h2{
+                        font-size: 5vw;
+                        text-align: center;
+                        margin: 0;
+                        padding: 1vh 0 3vh;
+                    }
+                    p{
+                        font-size: 2.5vw;
+                        margin: 0;
+                        text-align: center;
+                        padding: 1vh 0 2vh;
+                    }
+                    .info_block{
+                        width: 100%;
+                        padding: 2vh 0;
+                        p{
+                            text-align: center;
+                            font-size: 2.5vw;
+                            margin: 0;
+                            padding: 1vh 5vw 4vh;
+                            line-height: 2.5vh;
+                        }
+                        h1,h3{
+                            text-align: center;
+                            font-size: 3.5vw;
+                            margin: 0;
+                            padding: 1.5vh 0;
+                        }
+                        h1{
+                            font-size: 4vw;
+                            margin: 0 !important;
+                        }
+                        .icons{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 2vh 0;
+                            a{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 9vw;
+                                height: 7vh;
+                                margin:0 1.5vw;
+                                &:nth-child(1){
+                                    margin:0 1.5vw;
+                                }
+                            }
+                        }
+                    }
+                }
+                .form{
+                    width: 100%;
+                    height: auto;
+                    padding: 1vw;
+                    .labels{
+                        width: 100%;
+                        padding: 1vw 1vw 13vh 1vw;
+                        position: relative;
+                        justify-content: center;
+                        .BlockBox{
+                            width: 95%;
+                            height: 8vh;
+                            margin: 3vh 0;
+                            border-radius: 3vw;
+                            &:nth-child(5){
+                                height: 15vh;
+                            }
+                            input, textarea{
+                                width: 95% !important;
+                                margin-left: 2.5%;
+                                font-size: 3vw;
+                                padding: 2vh 0.5vw;
+                            }
+                            textarea{
+                                min-height: 11vh !important;
+                            }
+                            span{
+                                left: 2vw;
+                                top: 2vh;
+                                font-size: 3.5vw;
+                            }
+                            &:nth-child(1), &:nth-child(2){
+                                width: 95%;
+                            }
+                            &:nth-child(2){
+                                margin: 3vh 0;
+                            }
+                        }
+                        .BlockBox input:focus ~ span, textarea:focus ~ span, input:valid ~ span, textarea:valid ~ span{
+                            transform:translate(-1.5vw, -6.25vh);
+                            font-size: 3.75vw;
+                        }
+                        #Enviar_Contato{
+                            font-size: 3.5vw;
+                            padding: 1vh 3vw;
+                            border-radius: 3vw;
+                            letter-spacing: auto;
+                            right: auto;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+
+}
 
 /* Wide Mobile = 480px */
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+    .contact_page {
+        main{
+            height: auto;
+            min-height: 100vh;
+            .contato_Block{
+                width: 85%;
+                height: auto;
+                min-height: 100vh;
+                margin-top: 15vh;
+                padding: 2vw;
+                flex-wrap: wrap;
+                align-items: center;
+                border-radius: 5vw;
+                .text_Block{
+                    width: 100%;
+                    height: auto;
+                    padding: 1vh 0 2.5vh;
+                    h2{
+                        color: $Orange2;
+                        font-size: 6vw;
+                        text-align: center;
+                        padding: 1vh 0;
+                        margin: 0;
+                    }
+                    p{
+                        text-align: center;
+                        font-size: 3vw;
+                        margin: 0;
+                        padding: 1vh 0 2vh;
+                    }
+                    .info_block{
+                        width: 100%;
+                        padding: 1vh 0 3vh;
+                        color: $Blue4;
+                        p{
+                            font-size: 3vw;
+                            line-height: 2vh;
+                            margin: 0;
+                            padding: 2vh 6vw 4vh;
+                            &:nth-child(3){
+                                padding: 1vh 6vw 5vh;
+
+                            }
+                        }
+                        h1{
+                            margin: 0 !important;
+                            padding: 1vh 7vw 3vh !important;
+                        }
+                        h1,h3{
+                            font-size: 5vw;
+                            margin: 0;
+                            padding: 1vh 0 1vh;
+                            text-align: center;
+                        }
+                        .icons{
+                            justify-content: center;
+                            a{
+                                width: 12vw;
+                                height: 7vh;
+                                margin: 0 2vw;
+                                &:nth-child(1){
+                                    margin: 0 2vw;
+                                }
+                            }
+                        }
+                    }
+                }
+                .form{
+                    width: 100%;
+                    height: auto;
+                    padding: 1vw;
+                    display: flex;
+                    align-items: center;
+                    .labels{
+                        width: 100%;
+                        padding: 2vh 1vw 7vh 1vw;
+                        justify-content: center;
+                        .BlockBox{
+                            width: 95%;
+                            height: 8vh;
+                            margin: 2.5vh 0;
+                            border-radius: 4vw;
+                            &:nth-child(5){
+                                height: 12vh;
+                            }
+                            input, textarea{
+                                width: 95% !important;
+                                margin-left: 2.5%;
+                                font-size: 3.5vw;
+                                padding: 2vh 0.5vw;
+                            }
+                            textarea{
+                                min-height: 11vh !important;
+                            }
+                            span{
+                                left: 2vw;
+                                top: 2.5vh;
+                                font-size: 4vw;
+                            }
+                            &:nth-child(1), &:nth-child(2){
+                                width: 95%;
+                            }
+                            &:nth-child(2){
+                                margin: 2.5vh 0;
+                            }
+                        }
+                        .BlockBox input:focus ~ span, textarea:focus ~ span, input:valid ~ span, textarea:valid ~ span{
+                            transform:translate(-1vw, -6vh);
+                            font-size: 4.25vw;
+                            color:$Blue4;
+                        }
+                        #Enviar_Contato{
+                            font-size: 4vw;
+                            padding: 0.5vh 2.5vw;
+                            border-radius: 2.5vw;
+                            bottom: 1vh;
+                            right: auto;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+
+}
 
 /* Small Device = 320px */
 @media only screen and (max-width: 479px) {

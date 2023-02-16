@@ -187,16 +187,388 @@
     }
 }
 
-@media only screen and (min-width: 1200px) {}
-
-/* Medium Device = 1200px */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {}
-
 /* Tablet Device = 768px */
-@media only screen and (min-width: 768px) and (max-width: 991px) {}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .servicos_fil{
+        color: $White;
+        width: 100%;
+        min-height: 100vh;
+        h1{
+            text-align: center;
+            margin-top: 16vh;
+            font-size: 2.5vw;
+            padding-bottom: 3vh;
+            width: 90%;
+            margin-left: 5%;
+        }
+        h3{
+            width: 90%;
+            margin-left: 5%;
+            text-align: center;
+            font-family: $Title-font;
+            font-weight: 600;
+            font-size: 1.35vw;
+            line-height: 4vh;
+            padding: 0 5vw;
+            font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
+        }
+        .controls{
+            display: flex;
+            padding: 1vh 0 2vh 2vw;
+            width: 90%;
+            margin: 5vh 0 0 5%;
+            li{
+                padding: 1.5vh 0.5vw;
+                font-size: 1.5vw;
+                margin: 0 5vw 0 0;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 20;
+                span{
+                    opacity: 0;
+                    display: none;
+                    z-index: 10;
+                }
+                &.active{
+                    span{
+                        display: flex;
+                        position: absolute;
+                        width: 1.2vw;
+                        height: 5vh;
+                        opacity: 1;
+                        bottom: -31%;
+                        svg{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 60%;
+                        height: 4px;
+                        position: absolute;
+                        background: $Orange2;
+                        transform: skew(50deg);
+                        bottom: 0;
+                        left: 0;
+                    }
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 60%;
+                        height: 4px;
+                        position: absolute;
+                        background: $Orange2;
+                        transform: skew(-50deg);
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+        .filter{
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 1vw;
+            margin: 0 0 12vh 5%;
+            .mix{
+                z-index: 10;
+                width: 23%;
+                height: 50vh;
+                margin: 10vh 0.87vw 9vh;
+                background-color: $Gray;
+                border-radius: 2.5vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0.5vw;
+                position: relative;
+                transition: 0.5s ease-in-out;
+                .icon{
+                    width: 13vw;
+                    height: 22vh;
+                    margin-top: -15vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        width: auto;
+                        height: 100%;
+                    }
+                }
+                .designImg, .webImg{
+                    margin-top: -16vh;
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                h2{
+                    color: $Blue5;
+                    margin: 4vh 0 3vh;
+                    font-size: 1.75vw;
+                    width: 100%;
+                    text-align: center;
+                    .space{
+                        margin-left: -3vw;
+                        &:nth-child(2){
+                            margin-left: -6vw;
+                        }
+                    }
+                    .spacee{
+                        margin-left: 3vw;
+                    }
+                    .Sinal{
+                        position: absolute;
+                        width: 1.6vw;
+                        height: 0.65vh;
+                        border-radius: 0.5vw;
+                        background-color: $Orange4;
+                        display: block;
+                        top: 35%;
+                        &::before{
+                            content: '';
+                            display: block;
+                            width: 1.6vw;
+                            height: 0.65vh;
+                            border-radius: 0.5vw;
+                            background-color: $Orange4;
+                            transform: rotate(90deg);
+                        }
+                    }
+                    .Insta_land{ right: 25%; top: 27.5%; }
+                    .Logo_Site{ left: 23%; }
+                    .IdParc_Blog{ left: 15%; }
+                    .IdComp_Blog{ left: 10%; }
+                }
+                h4{
+                    color: $Blue5;
+                    text-align: center;
+                    font-family: $Title-font;
+                    font-weight: 700;
+                    font-size: 1vw;
+                    width: 80%;
+                    margin: 1.5vh 0;
+                    font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
+                }
+                a{
+                    position: absolute;
+                    color: $White;
+                    background-color: $Blue1;
+                    padding: 0.5vh 1vw;
+                    border-radius: 0.75vw;
+                    bottom: 7%;
+                    font-size: 1vw;
+                    font-family: $Title-font;
+                    font-weight: 900;
+                    &:hover{
+                        color: $Blue1;
+                        background-color: $Blue4;
+                    }
+                }
+                &:hover{
+                    transform: translateY(-10px);
+                }
+            }
+        }
+    }
+
+}
 
 /* Wide Mobile = 480px */
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+    .servicos_fil{
+        color: $White;
+        min-height: 100vh;
+        border: solid red;
+        h1{
+            margin: 15vh 0 0 5%;
+            font-size: 4.5vw;
+            padding:1vh 5vw 3vh;
+            border: solid yellowgreen;
+        }
+        h3{
+            font-size: 3vw;
+            line-height: 3vh;
+            padding: 1vh 5vw 3vh;
+            margin: 0 0 0 5%;
+            border: solid purple;
+        }
+        .controls{
+            display: flex;
+            padding: 1vh 0 2vh 2vw;
+            width: 90%;
+            margin: 5vh 0 0 5%;
+            border: solid green;
+            align-items: center;
+            justify-content: center;
+            li{
+                padding: 1.5vh 0.5vw;
+                font-size: 1.5vw;
+                margin: 0 5vw 0 0;
+                position: relative;
+                border: solid pink;
+                span{
+                    opacity: 0;
+                    display: none;
+                    z-index: 10;
+                }
+                &.active{
+                    span{
+                        display: flex;
+                        position: absolute;
+                        width: 1.2vw;
+                        height: 5vh;
+                        opacity: 1;
+                        bottom: -31%;
+                        svg{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 60%;
+                        height: 4px;
+                        position: absolute;
+                        background: $Orange2;
+                        transform: skew(50deg);
+                        bottom: 0;
+                        left: 0;
+                    }
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 60%;
+                        height: 4px;
+                        position: absolute;
+                        background: $Orange2;
+                        transform: skew(-50deg);
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+        .filter{
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 1vw;
+            margin: 0 0 2vh 5%;
+            border: solid orangered;
+            .mix{
+                z-index: 10;
+                width: 23%;
+                height: 50vh;
+                margin: 10vh 0.87vw 9vh;
+                background-color: $Gray;
+                border-radius: 2.5vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0.5vw;
+                position: relative;
+                transition: 0.5s ease-in-out;
+                .icon{
+                    width: 13vw;
+                    height: 22vh;
+                    margin-top: -15vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        width: auto;
+                        height: 100%;
+                    }
+                }
+                .designImg, .webImg{
+                    margin-top: -16vh;
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                h2{
+                    color: $Blue5;
+                    margin: 4vh 0 3vh;
+                    font-size: 1.75vw;
+                    width: 100%;
+                    text-align: center;
+                    .space{
+                        margin-left: -3vw;
+                        &:nth-child(2){
+                            margin-left: -6vw;
+                        }
+                    }
+                    .spacee{
+                        margin-left: 3vw;
+                    }
+                    .Sinal{
+                        position: absolute;
+                        width: 1.6vw;
+                        height: 0.65vh;
+                        border-radius: 0.5vw;
+                        background-color: $Orange4;
+                        display: block;
+                        top: 35%;
+                        &::before{
+                            content: '';
+                            display: block;
+                            width: 1.6vw;
+                            height: 0.65vh;
+                            border-radius: 0.5vw;
+                            background-color: $Orange4;
+                            transform: rotate(90deg);
+                        }
+                    }
+                    .Insta_land{ right: 25%; top: 27.5%; }
+                    .Logo_Site{ left: 23%; }
+                    .IdParc_Blog{ left: 15%; }
+                    .IdComp_Blog{ left: 10%; }
+                }
+                h4{
+                    color: $Blue5;
+                    text-align: center;
+                    font-family: $Title-font;
+                    font-weight: 700;
+                    font-size: 1vw;
+                    width: 80%;
+                    margin: 1.5vh 0;
+                    font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
+                }
+                a{
+                    position: absolute;
+                    color: $White;
+                    background-color: $Blue1;
+                    padding: 0.5vh 1vw;
+                    border-radius: 0.75vw;
+                    bottom: 7%;
+                    font-size: 1vw;
+                    font-family: $Title-font;
+                    font-weight: 900;
+                    &:hover{
+                        color: $Blue1;
+                        background-color: $Blue4;
+                    }
+                }
+                &:hover{
+                    transform: translateY(-10px);
+                }
+            }
+        }
+    }
+
+}
 
 /* Small Device = 320px */
 @media only screen and (max-width: 479px) {
