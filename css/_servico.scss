@@ -138,7 +138,7 @@
                     border-radius: 0.5vw;
                     background-color: $Orange4;
                     display: block;
-                    top: 35%;
+                    top: 33.5%;
                     &::before{
                         content: '';
                         display: block;
@@ -149,7 +149,7 @@
                         transform: rotate(90deg);
                     }
                 }
-                .Insta_land{ right: 25%; top: 27.5%; }
+                .Insta_land{ right: 23%; top: 26.5%; }
                 .Logo_Site{ left: 23%; }
                 .IdParc_Blog{ left: 15%; }
                 .IdComp_Blog{ left: 10%; }
@@ -221,13 +221,13 @@
                 align-items: center;
                 justify-content: center;
                 z-index: 20;
-                span{
+                .estrela{
                     opacity: 0;
                     display: none;
                     z-index: 10;
                 }
                 &.active{
-                    span{
+                    .estrela{
                         display: flex;
                         position: absolute;
                         width: 1.2vw;
@@ -404,7 +404,7 @@
                 font-size: 4vw;
                 margin: 0 3vw;
                 &.active{
-                    span{
+                    .estrela{
                         width: 4vw;
                         height: 2.3vh;
                         bottom: -23%;
@@ -509,25 +509,20 @@
             justify-content: center;
             align-items: center;
             li{
-                padding: 1vh 1.5vw;
+                padding: 2vh 1.5vw;
                 font-size: 4vw;
                 margin: 0 2vw;
                 display: flex;
                 justify-content: center;
-                .estrela{
-                    opacity: 0;
-                    display: none;
-                    align-items: center;
-                    z-index: 10;
-                }
+                
                 &.active{
                     .estrela{
+                        display: flex;
+                        align-items: center;
                         position: absolute;
-                        width: 4vw;
+                        width: 100%;
                         height: 3vh;
-                        opacity: 1;
-                        bottom: -1.2vh;
-                        
+                        bottom: -1.1vh;
                     }
                 }
             }
@@ -574,7 +569,7 @@
                             border-radius: 2vw;
                         }
                     }
-                    .Insta_land{ right: 24%; top: 25.5%; }
+                    .Insta_land{ right: 24%; top: 25%; }
                     .Logo_Site{ left: 22%; }
                     .IdParc_Blog{ left: 15%; }
                     .IdComp_Blog{ left: 10%; }
