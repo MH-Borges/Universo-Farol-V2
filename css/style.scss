@@ -457,7 +457,7 @@ body {
         color: $White;
         font-size: 1.5vw;
         font-family: $Title-font;
-        font-weight: 600;
+        font-weight: 500;
         padding-bottom: 2vh;
         font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
       }
@@ -482,9 +482,11 @@ body {
                 min-height: 10vh;
                 border: none;
                 h3{
-                  font-size: 1.2vw;
-                  letter-spacing: 0.05vw;
+                  font-size: 1.3vw;
+                  letter-spacing: 0.025vw;
                   color: $White;
+                  font-family: $Title-font;
+                  font-weight: 700;
                 }
                 &::before {
                     content: '';
@@ -507,9 +509,9 @@ body {
                 margin-left: 2vw;
                 position: relative;
                 color: $White;
-                font-size: 1vw;
+                font-size: 1.1vw;
                 font-family: $Title-font;
-                font-weight: 700;
+                font-weight: 400;
                 font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
                 &::before {
                     content: '';

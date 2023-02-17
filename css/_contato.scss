@@ -123,7 +123,9 @@
                             resize: none;
                         }
                         span{
-                            font-family: $Main-font;
+                            font-family: $Title-font;
+                            font-weight: 700;
+                            font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
                             position: absolute;
                             left: 1vw;
                             top: 1.1vw;
@@ -131,7 +133,6 @@
                             color: $Blue4;
                             transition: 0.5s;
                             pointer-events: none;
-                            font-weight: 100;
                         }
                         &:nth-child(1), &:nth-child(2){
                             width: 38%;
@@ -141,11 +142,12 @@
                         }
                     }
                     .BlockBox input:focus ~ span, textarea:focus ~ span, input:valid ~ span, textarea:valid ~ span{
-                        transform:translate(-0.5vw, -5.2vh);
+                        transform:translate(-1vw, -5.5vh);
                         font-size: 1.25vw;
                         color:$Blue4;
                     }
                     #Enviar_Contato{
+                        font-family: $Title-font;
                         position: absolute;
                         font-size: 1vw;
                         background: $Blue4;
@@ -156,6 +158,7 @@
                         bottom: 0;
                         right: 0;
                         border: none;
+                        font-weight: 700;
                     }
                 }
             }
