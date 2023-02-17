@@ -327,7 +327,7 @@ body {
           line-height: 6.5vh;
           font-size: 3.3vw;
           color: $White;
-          font-weight: 700;
+          font-weight: 700 !important;
           &:nth-child(4){
             margin-top: 3.5vh;
           }
@@ -589,7 +589,7 @@ body {
       }
       p{
         font-family: $Title-font;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 1.8vw;
         font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
       }
@@ -700,6 +700,7 @@ body {
           .Banner{
             line-height: 5vmin;
             font-size: 5.5vmin;
+            font-weight:800 !important;
             &:nth-child(4){
               margin-top: 1.5vh;
             }
@@ -707,10 +708,12 @@ body {
           .sub{
             line-height: 4vmin;
             font-size: 2.8vmin;
+            font-weight: 500 !important;
           }
           a{
             padding: 2vh 3vw;
             font-size: 3vmin !important;
+            font-weight:800 !important;
             border-radius: 2.5vw;
             width: auto;
           }
@@ -718,10 +721,10 @@ body {
         .Text_Block {
           height: auto;
           right: 3vw;
-          bottom: 48.5%;
+          bottom: 50%;
           .Text{
-            font-size: 3.25vmin;
-            line-height: 6vmin;
+            font-size: 3vmin;
+            line-height: 5vmin;
           }
         }
       }
@@ -1066,6 +1069,7 @@ body {
               }
             }
             p {
+              font-weight: 400 !important;
               padding: 2vh 3vw;
               margin: 0;
               width: 85%;
@@ -1088,7 +1092,7 @@ body {
               }
             }
             &.active{
-              .cross{top: 25%;}
+              .cross{top: 5.5vh}
             }
           }
         }
