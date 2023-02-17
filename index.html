@@ -12,25 +12,25 @@
     <meta name="og:type" property="og:type" content="website">
     <meta name="og:image" property="og:image" content="assets/Ilust_Farol.jpg">
     <meta name="og:description" property="og:description" content="Extraímos sua essência, e com criatividade, evoluímos e adaptamos sua marca no mercado.">
+    
     <title>Universo Farol</title>
-
     <link rel="icon" href="assets/logos/icon.png"/>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- Gsap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
     <!-- Main files -->
     <link rel="stylesheet" href="css/style.css">
+
     <script defer src="js/script.js"></script>
+    <script defer src="js/indexScript.js"></script>
 
-    <script src="js/svg-inject.min.js"></script>
-
+    <script defer src="js/svg-inject.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -164,14 +164,17 @@
             <p>entre em contato com o Universo Farol </p>
             <div class="icons">
                 <a class="Whats_Link" target="_blank" href="https://wa.me/5541995080219">
+                    <p class="hide">Whatsapp</p>
                     <img class="Whats" src="assets/Icon_Contato/Whats.svg" onload="SVGInject(this)" alt="Icone de Whatsapp">
                     <img class="Whats_P hide" src="assets/Icon_Contato/Whats_Preenchido.svg" onload="SVGInject(this)" alt="Icone de Whatsapp">
                 </a>
                 <a class="Insta_Link" target="_blank" href="https://www.instagram.com/universofarol/">
+                    <p class="hide">Instagram</p>
                     <img class="Insta" src="assets/Icon_Contato/Insta.svg" onload="SVGInject(this)" alt="Icone de Instagram">
                     <img class="Insta_P hide" src="assets/Icon_Contato/Insta_Preenchido.svg" onload="SVGInject(this)" alt="Icone de Instagram">
                 </a>
                 <a class="Email_Link" target="_blank" href="mailto:contato@universofarol.com.br">
+                    <p class="hide">Email</p>
                     <img class="Email" src="assets/Icon_Contato/Email.svg" onload="SVGInject(this)" alt="Icone de Email">
                     <img class="Email_P hide" src="assets/Icon_Contato/Email_Preenchido.svg" onload="SVGInject(this)" alt="Icone de Email">
                 </a>

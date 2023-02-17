@@ -28,6 +28,7 @@
                     color: $Blue4;
                     margin-left: 2vw;
                     font-size: 1.1vw;
+                    padding: 1vh 0;
                     font-family: $Title-font;
                     font-weight: 700;
                     font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
@@ -45,7 +46,7 @@
                         font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
                     }
                     h1{
-                        margin-top: 8vh !important;
+                        margin-top: 7vh !important;
                     }
                     h1,h3{
                         font-size: 1.75vw;
@@ -54,6 +55,7 @@
                     }
                     .icons{
                         display: flex;
+                        padding: 3vh 0;
                         a{
                             display: flex;
                             align-items: center;
