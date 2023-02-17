@@ -657,7 +657,6 @@ body {
 
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  
 
   body {
 
@@ -1135,6 +1134,7 @@ body {
 
 }
 
+@import 'farol';
 @import 'contato';
 @import 'servico';
 @import 'pacotes_Design_Web';
