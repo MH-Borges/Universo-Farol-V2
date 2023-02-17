@@ -24,7 +24,7 @@
       $(this).toggleClass('active');
     });
 
-    $(".Whats_Link").hover(function(){
+    $(".WhatsappLink").hover(function(){
       $('.Whats').addClass('hide');
       $('.Whats_P').removeClass('hide');
     }, function(){
@@ -32,7 +32,7 @@
       $('.Whats').removeClass('hide');
     });
 
-    $(".Insta_Link").hover(function(){
+    $(".InstagramLink").hover(function(){
       $('.Insta').addClass('hide');
       $('.Insta_P').removeClass('hide');
     }, function(){
@@ -40,7 +40,7 @@
       $('.Insta').removeClass('hide');
     });
 
-    $(".Email_Link").hover(function(){
+    $(".EmailLink").hover(function(){
       $('.Email').addClass('hide');
       $('.Email_P').removeClass('hide');
     }, function(){
@@ -48,7 +48,7 @@
       $('.Email').removeClass('hide');
     });
 
-    $(".Behance_Link").hover(function(){
+    $(".BehanceLink").hover(function(){
       $('.Behance').addClass('hide');
       $('.Behance_P').removeClass('hide');
     }, function(){
