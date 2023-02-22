@@ -24,7 +24,15 @@
                 width: 100%;
                 height: 100%;
                 animation: floater 2.5s ease-in-out infinite;
-
+            }
+            .mumu{
+                position: absolute;
+                width: 4.5vw;
+                height: 20vh;
+                bottom: 15vh;
+                left: 8vw;
+                border: none;
+                background: none;
             }
         }
         .txtAbout{
@@ -64,6 +72,15 @@
                 width: 100%;
                 height: 45vh;
                 padding: 2vh 6vw;
+                .mumu{
+                    position: absolute;
+                    width: 9vw;
+                    height: 14vh;
+                    bottom: 5vh;
+                    left: 25vw;
+                    border: none;
+                    background: none;
+                }
             }
             .txtAbout{
                 order: 2;
@@ -98,6 +115,15 @@
                 width: 100%;
                 height: 50vh;
                 padding: 2vh 4vw;
+                .mumu{
+                    position: absolute;
+                    width: 12vw;
+                    height: 15vh;
+                    bottom:6vh;
+                    left: 17vw;
+                    border: none;
+                    background: none;
+                }
             }
             .txtAbout{
                 order: 2;

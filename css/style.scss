@@ -639,6 +639,7 @@ body {
     width: 100%;
     height: 11vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0.5vh 0 1.5vh;
@@ -649,6 +650,12 @@ body {
         height: 90%;
         width: auto;
     }
+    }
+    p{
+      color: $White;
+      font-family: $Title-font;
+      font-size: 0.75vw;
+      padding: 0.5vh 0;
     }
     
   }
@@ -900,6 +907,10 @@ body {
     footer{
       height: 10vh;
       padding: 1vh 0;
+      p{
+        font-size: 2vw;
+        padding: 1vh 0;
+      }
     }
   
   }
@@ -999,6 +1010,7 @@ body {
             animation: floater 3s ease-in-out infinite;
           }
           a{
+            font-size: 2.25vh;
             padding: 0.5vh 3vw;
             border-radius: 3vw;
             animation: floater 3s ease-in-out infinite;
@@ -1134,6 +1146,10 @@ body {
     footer{
       height: 10vh;
       padding: 1.5vh 0;
+      p{
+        font-size: 2.5vw;
+        padding: 1vh 0;
+      }
     }
   
   }
