@@ -752,7 +752,6 @@ body {
             padding: 1vh 0 2vh;
             text-align: center;
             animation: floater 3.5s ease-in-out infinite;
-            
           }
           p{
             width: 100%;
@@ -1014,6 +1013,7 @@ body {
             padding: 0.5vh 3vw;
             border-radius: 3vw;
             animation: floater 3s ease-in-out infinite;
+            font-size: 4vmin;
           }
           &:nth-child(2){
             h2{
