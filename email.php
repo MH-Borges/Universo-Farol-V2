@@ -1,4 +1,5 @@
 <?php
+
 $nome = addslashes($_POST['nome']);
 $email = filter_var(addslashes($_POST['email']), FILTER_SANITIZE_EMAIL);
 $telefone = addslashes($_POST['telefone']);

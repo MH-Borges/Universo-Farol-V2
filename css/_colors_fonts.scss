@@ -1,12 +1,13 @@
 @font-face{
-    font-family: "Chunk";
-    font-weight: 500;
-    src:url(../assets/fonts/ChunkFive-Regular.otf);
+  font-family: "Chunk";
+  src:url(../assets/fonts/ChunkFive-Regular.otf);
+  font-display: swap;
 }
 @font-face {
   font-family: "Fraunces";
   font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
   src: url(../assets/fonts/Fraunces.woff2) format('woff2');
+  font-display: swap;
 }
 
 $Main-font:'Chunk', sans-serif;
