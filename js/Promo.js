@@ -1,5 +1,26 @@
 $(document).ready(function () {
 
+    $('.toTop').on('click', function(){
+        $("html, body").animate({ scrollTop: 0 }, 400);
+        $('.Anc').addClass('hide');
+        $('.Anc_Q').removeClass('hide');
+        $('.Anc_Q').addClass('caindo');
+        setTimeout(() => { 
+          $('.Anc_Q').addClass('hide');
+          $('.Anc').removeClass('hide');
+          $('.Anc_Q').removeClass('caindo');
+        }, 1000)
+      });
+  
+      $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 100) {
+          $(".toTop").fadeIn();
+        } else {
+          $(".toTop").fadeOut();
+        }
+      });
+
     $('.imgInicio').css('animation', 'imgInicio 0.5s linear 1');
     $('.TituloInicio').css('animation', 'TituloInicio 1s linear 1');
     $('.subTituloIni').css('animation', 'TituloInicio 1.2s linear 1');
