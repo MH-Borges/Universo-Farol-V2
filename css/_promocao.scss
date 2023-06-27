@@ -334,6 +334,8 @@
                     height: auto;
                 }
                 .imgFoco{
+                    opacity: 0;
+                    transform: translateX(20vw);
                     transition: 1.5s ease-in-out;
                 }
             }
