@@ -121,11 +121,26 @@
                 width: 47%;
                 display: flex;
                 align-items: center;
+                position: relative;
                 svg{
                     margin-top: -10vh;
                     width: 100%;
                     height: auto;
                 }
+                .imgInicio{
+                    position: absolute;
+                }
+                @keyframes imgInicio {
+                    from {
+                        transform: scale(0.5);
+                        opacity: 0;
+                    }
+                    to { 
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                }
+
             }
             .textBlock{
                 height: 100%;
@@ -134,6 +149,7 @@
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
+                position: relative;
                 h1{
                     font-size: 2.75vw;
                     text-align: right;
@@ -147,21 +163,37 @@
                         }
                     }
                 }
+                .TituloInicio{
+                    width: 100%;
+                    position: absolute;
+                    top: 25vh;
+                }
                 p{
+                    width: 100%;
                     font-family: $Title-font;
                     font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
                     font-size: 1.1vw;
                     text-align: right;
                     padding-left: 10vw;
-                    margin-top: 5vh;
                     line-height: 3vh;
+                    position: absolute;
+                    top: 49vh;
                     &:nth-child(3){
-                        margin-top: 2vh;
+                        top: 58vh;
+                    }
+                }
+                @keyframes TituloInicio {
+                    from {
+                        left: 10vw;
+                        opacity: 0;
+                    }
+                    to { 
+                        left: 0;
+                        opacity: 1;
                     }
                 }
             }
             a{
-                position: absolute;
                 bottom: 5vh;
                 color: $White;
                 font-size: 1.15vw;
@@ -169,6 +201,19 @@
                 padding: 2vh 2vw;
                 border-radius: 5vw;
                 box-shadow: 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 8px 8px rgba(0, 0, 0, 0.03), 0 18px 18px rgba(0, 0, 0, 0.04), 0 28px 28px rgba(0, 0, 0, 0.05), 0 38px 38px rgba(0, 0, 0, 0.06);
+            }
+            .btnInicio{
+                position: absolute;
+            }
+            @keyframes btnInicio {
+                from {
+                    transform: scale(0.75);
+                    bottom: -4vh;
+                }
+                to{ 
+                    transform: scale(1);
+                    bottom: 5vh;
+                }
             }
         }
         .foco{
@@ -195,6 +240,9 @@
                     }
                 }
             }
+            .tituloFoco{
+                transition: 1s ease-in-out;
+            }
             .listBlock{
                 width: 50%;
                 height: 80%;
@@ -202,17 +250,19 @@
                 align-items: center;
                 ul{
                     width: 100%;
-                    margin-top: -15vh;
+                    height: 55vh;
+                    margin-top: -10vh;
                     li{
                         position: relative;
+                        width: 100%;
                         list-style: none;
                         color: $White;
                         font-family: $Title-font;
                         font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
                         font-size: 1.2vw;
                         font-weight: 200;
-                        margin: 1.5vh 0;
                         padding-left: 6.5vw;
+                        margin: 1.5vh 0;
                         b{
                             font-weight: 600;
                         }
@@ -222,41 +272,46 @@
                             top: 25%;
                             left: 0;
                         }
-                        &:nth-child(1){
-                            margin-top: 0;
-                            svg{
-                                .seta{
-                                    fill: $Blue1;
-                                }
+                    }
+                    .listItem1{
+                        margin-top: 0;
+                        transition: 0.75s ease-in-out;
+                        svg{
+                            .seta{
+                                fill: $Orange4;
                             }
                         }
-                        &:nth-child(2){
-                            svg{
-                                .seta{
-                                    fill: $Blue1;
-                                }
+                    }
+                    .listItem2{
+                        transition: 0.75s ease-in-out;
+                        svg{
+                            .seta{
+                                fill: $Blue1;
                             }
                         }
-                        &:nth-child(3){
-                            svg{
-                                .seta{
-                                    fill: $Orange2;
-                                }
+                    }
+                    .listItem3{
+                        transition: 0.75s ease-in-out;
+                        svg{
+                            .seta{
+                                fill: $Orange2;
                             }
                         }
-                        &:nth-child(4){
-                            svg{
-                                .seta{
-                                    fill: $Blue3;
-                                }
+                    }
+                    .listItem4{
+                        transition: 0.75s ease-in-out;
+                        svg{
+                            .seta{
+                                fill: $Blue3;
                             }
                         }
-                        &:nth-child(5){
-                            margin-bottom: 0;
-                            svg{
-                                .seta{
-                                    fill: $Orange1;
-                                }
+                    }
+                    .listItem5{
+                        margin-bottom: 0;
+                        transition: 0.75s ease-in-out;
+                        svg{
+                            .seta{
+                                fill: $Orange1;
                             }
                         }
                     }
@@ -267,11 +322,14 @@
                 height: 80%;
                 display: flex;
                 align-items: center;
-                padding-left: 4vw;
+                padding: 2vh 0 15vh;
                 svg{
-                    margin-top: -12vh;
+                    padding: 3vw;
                     width: 100%;
                     height: auto;
+                }
+                .imgFoco{
+                    transition: 1.5s ease-in-out;
                 }
             }
             a{
@@ -283,6 +341,7 @@
                 padding: 2vh 2vw;
                 border-radius: 5vw;
                 box-shadow: 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 8px 8px rgba(0, 0, 0, 0.03), 0 18px 18px rgba(0, 0, 0, 0.04), 0 28px 28px rgba(0, 0, 0, 0.05), 0 38px 38px rgba(0, 0, 0, 0.06);
+                transition: 1s ease-in-out;
             }
         }
         .portfolio{
@@ -317,6 +376,7 @@
                     z-index: 10;
                     font-size: 3vw;
                     font-weight: 500;
+                    transition: 1s ease-in-out;
                     span{
                         color: $Blue1;
                     }
@@ -335,6 +395,7 @@
                     color: $White;
                     font-size: 1vw;
                     margin-top: 1.5vh;
+                    transition: 1.5s ease-in-out;
                 }
                 a{
                     z-index: 10;
@@ -344,6 +405,7 @@
                     padding: 1.5vh 2vw;
                     border-radius: 5vw;
                     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 8px 8px rgba(0, 0, 0, 0.03), 0 18px 18px rgba(0, 0, 0, 0.04), 0 28px 28px rgba(0, 0, 0, 0.05), 0 38px 38px rgba(0, 0, 0, 0.06);
+                    transition: 1s ease-in-out;
                 }
                 .showPortfolio{
                     width: 75%;
@@ -427,28 +489,34 @@
                             backdrop-filter: blur(0.02vw);
                             z-index: 8 !important;
                         }
-                        &:nth-child(1){
-                            .imgSite{
-                                &::-webkit-scrollbar-thumb {
-                                    background: #3A008C;
-                                    border-radius: 5vw;
-                                }
+                    }
+                    .site01{
+                        transition: 1s ease-in-out;
+                        .imgSite{
+                            &::-webkit-scrollbar-thumb {
+                                background: #3A008C;
+                                border-radius: 5vw;
                             }
                         }
-                        &:nth-child(3){
-                            .imgSite{
-                                &::-webkit-scrollbar-thumb {
-                                    background: #FF4500;
-                                    border-radius: 5vw;
-                                }
+                    }
+                    .site02{
+                        transition: 1.2s ease-in-out;
+                    }
+                    .site03{
+                        transition: 1.4s ease-in-out;
+                        .imgSite{
+                            &::-webkit-scrollbar-thumb {
+                                background: #FF4500;
+                                border-radius: 5vw;
                             }
                         }
-                        &:nth-child(4){
-                            .imgSite{
-                                &::-webkit-scrollbar-thumb {
-                                    background: #db1010;
-                                    border-radius: 5vw;
-                                }
+                    }
+                    .site04{
+                        transition: 1.6s ease-in-out;
+                        .imgSite{
+                            &::-webkit-scrollbar-thumb {
+                                background: #db1010;
+                                border-radius: 5vw;
                             }
                         }
                     }
@@ -524,6 +592,18 @@
                             justify-content: center;
                         }
                     }
+                    .Insta01{
+                        transition: 1s ease-in-out;
+                    }
+                    .Insta02{
+                        transition: 1.2s ease-in-out;
+                    }
+                    .Insta03{
+                        transition: 1.4s ease-in-out;
+                    }
+                    .Insta04{
+                        transition: 1.6s ease-in-out;
+                    }
                 }
             }
         }
@@ -545,6 +625,7 @@
                 color: $White;
                 font-size: 3vw;
                 font-weight: 500;
+                transition: 1s ease-in-out;
                 span{
                     color: $Orange1;
                     margin-right: 1vw;
@@ -561,6 +642,7 @@
                 font-weight: 500;
                 color: $White;
                 font-size: 1vw;
+                transition: 1s ease-in-out;
             }
             .pontosDeEntrega{
                 width: 100%;
@@ -583,6 +665,7 @@
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
+                    transition: 0.75s ease-in-out;
                     &::before{
                         content: '';
                         position: absolute;
@@ -637,6 +720,7 @@
                 }
             }
             a{
+                transition: 1s ease-in-out;
                 position: absolute;
                 bottom: 5vh;
                 color: $White;
@@ -665,6 +749,7 @@
                 color: $White;
                 font-size: 3vw;
                 font-weight: 500;
+                transition: 1s ease-in-out;
                 span{
                     color: $Blue1;
                     margin-left: 1vw;
@@ -681,6 +766,7 @@
                 font-weight: 500;
                 color: $White;
                 font-size: 1vw;
+                transition: 1s ease-in-out;
             }
             .motivosBonus{
                 margin: 1.5vh 0;
@@ -691,6 +777,7 @@
                 flex-direction: column;
                 align-items: center;
                 padding: 1vh 0;
+                transition: 1s ease-in-out;
                 svg{
                     padding: 1.5vh 0;
                     width: 80%;
@@ -728,6 +815,7 @@
                 }
             }
             a{
+                transition: 1s ease-in-out;
                 position: absolute;
                 bottom: 5vh;
                 color: $White;
@@ -788,8 +876,10 @@
                 font-size: 3.5vw;
                 font-weight: 500;
                 padding: 1vh 0;
+                transition: 1s ease-in-out;
             }
             h3{
+                transition: 1s ease-in-out;
                 position: relative;
                 z-index: 10;
                 width: 75%;
@@ -814,6 +904,7 @@
                 display: flex;
                 flex-direction: column;
                 padding: 1vh 0 1vh 15vw;
+                transition: 1s ease-in-out;
                 &::before{
                     content: '';
                     position: absolute;
@@ -859,6 +950,7 @@
                 }
             }
             a{
+                transition: 1s ease-in-out;
                 z-index: 10;
                 position: absolute;
                 bottom: 17vh;
@@ -887,6 +979,7 @@
                 font-size: 3vw;
                 font-weight: 500;
                 padding-top: 3vh;
+                transition: 1s ease-in-out;
             }
             .imgBox{
                 width: 50%;
@@ -896,6 +989,9 @@
                 align-items: center;
                 justify-content: center;
                 margin-top: -5vh;
+                .imgUniversoFarol{
+                    transition: 1s ease-in-out;
+                }
             }
             p{
                 width: 50%;
@@ -908,6 +1004,7 @@
                 font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
                 line-height: 3.5vh;
                 font-weight: 200;
+                transition: 1s ease-in-out;
                 a{
                     position: relative;
                     background: none;
@@ -924,6 +1021,7 @@
                 }
             }
             a{
+                transition: 1s ease-in-out;
                 position: absolute;
                 bottom: 7vh;
                 color: $White;
@@ -975,6 +1073,7 @@
                     color: $White;
                     font-size: 3vw;
                     font-weight: 500;
+                    transition: 1s ease-in-out;
                 }
                 h3{
                     z-index: 10;
@@ -989,6 +1088,7 @@
                     font-weight: 300;
                     font-family: $Title-font;
                     font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 9;
+                    transition: 1s ease-in-out;
                 }
                 .textFinal{
                     z-index: 10;
@@ -1004,6 +1104,7 @@
                         font-size: 1.25vw;
                         color: $White;
                         font-weight: 200;
+                        transition: 1s ease-in-out;
                         &:nth-child(1){
                             margin-top: 5vh;
                         }
@@ -1019,6 +1120,7 @@
                     flex-direction: column;
                     z-index: 10;
                     h4{
+                        transition: 1s ease-in-out;
                         width: 100%;
                         text-align: center;
                         font-size: 3.5vw;
@@ -1036,11 +1138,10 @@
                             left: 20%;
                             transform: rotate(-4deg);
                         }
-                        span{
-                            font-size: 2.25vw;
-                        }
+                        span{ font-size: 2.25vw; }
                     }
                     h5{
+                        transition: 1s ease-in-out;
                         width: 100%;
                         text-align: center;
                         font-size: 5vw;
@@ -1048,12 +1149,8 @@
                         padding: 1vh 0;
                         color: $Orange2;
                         animation: textAnimate 1.5s linear infinite;
-
-                        span{
-                            font-size: 3vw;
-                        }
+                        span{ font-size: 3vw; }
                     }
-
                     @keyframes textAnimate {
                         0% { transform: scale(1); color: $Orange1; }
                         50% { transform: scale(1.1); color: $Orange4; }
@@ -1062,6 +1159,7 @@
                 }
             }
             a{
+                transition: 1s ease-in-out;
                 z-index: 10;
                 position: absolute;
                 bottom: 7vh;
@@ -1141,6 +1239,7 @@
                         height: 100%;
                     }
                 }
+
                 .textBlock{
                     height: 55%;
                     width: 100%;
@@ -1149,22 +1248,25 @@
                     justify-content: center;
                     flex-direction: column;
                     h1{
-                        margin-top: -13vh;
                         padding: 0 6vw;
                         font-size: 4.5vw;
                         text-align: center;
+                    }
+                    .TituloInicio{
+                        top: 8vh;
                     }
                     p{
                         font-size: 2.75vw;
                         text-align: center;
                         padding: 0;
-                        margin-top: 4vh;
                         line-height: 4vh;
+                        top: 18vh;
                         &:nth-child(3){
-                            margin-top: 3vh;
+                            top: 30vh;
                         }
                     }
                 }
+
                 a{
                     bottom: 4vh;
                     color: $White;
@@ -1214,12 +1316,15 @@
                     }
                 }
                 a{
-
-                    bottom: 3vh;
+                    bottom: 1.5vh;
                     color: $White;
                     font-size: 2.75vw;
                     padding: 1.5vh 5vw;
-
+                }
+                .btnInicio{
+                    position: absolute;
+                    bottom: 1.5vh;
+                    
                 }
             }
             .portfolio{
@@ -1613,6 +1718,9 @@
                         margin-top: 0;
                         height: 100%;
                     }
+                    .imgInicio{
+                        position: relative;
+                    }
                 }
                 .textBlock{
                     height: 65%;
@@ -1628,6 +1736,10 @@
                         text-align: center;
                         padding: 0 9vw;
                         margin-top: 0;
+                        top: 20vh;
+                        &:nth-child(3){
+                            top: 28vh;
+                        }
                     }
                 }
                 a{
@@ -1795,19 +1907,21 @@
                     .cardsEntrega{
                         margin: 2vh 0;
                         width: 60%;
-                        height: 35vh;
-                        padding: 3vw;
+                        min-height: 35vh;
+                        height: auto;
+                        padding: 3vh 1.5vw;
                         border-radius: 7.5vw;
                         svg{
-                            height: 50%;
-                            padding: 2.5vh 0;
+                            height: 15vh;
+                            padding: 2.75vh 0;
                         }
                         h4{
+                            height: 7vh;
                             font-size: 5vw;
                         }
                         h5{
-                            font-size: 3vw;
-                            padding: 0 3vw;
+                            font-size: 3.5vw;
+                            padding: 0 4vw;
                         }
                     }
                 }
@@ -1843,9 +1957,10 @@
                         font-size: 4vw;
                     }
                     h5{
-                        font-size: 2.5vw;
+                        font-size: 3.25vw;
                         width: 100%;
                         padding: 0;
+                        margin-top: 1vh;
                     }
                     
                 }
@@ -1861,6 +1976,7 @@
                 height: auto;
                 margin:0;
                 width: 100%;
+                padding-bottom: 15vh;
                 svg{
                     &:nth-child(1){
                         top: -0.3vh;
@@ -1886,20 +2002,28 @@
                 }
                 .processosBlock{
                     width: 75%;
-                    height: 31vh;
+                    min-height: 32vh;
+                    height: auto;
                     margin: 1.5vh 0;
                     border-radius: 7.5vw;
-                    padding: 8vh 3vw 2vh 3vw;
+                    padding: 2vh 3vw;
+                    display: flex;
+                    flex-direction: column;
                     &::before{
                         border-radius: 7.5vw;
                         background: linear-gradient(180deg, rgba(5, 24, 60, 0.75) 0%, rgba(255, 148, 96, 0.75) 90%);
                     }     
                     span{
+                        position: relative;
                         width: 100%;
-                        height: 8vh;
+                        height: 7vh;
                         font-size: 15vw;
                     }
                     h4{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 6vh;
                         width: 100%;
                         text-align: center;
                         font-size: 5vw;
@@ -1907,30 +2031,19 @@
                         padding: 1vh 0;
                     }
                     h5{
+                        height: auto;
                         width: 100%;
                         text-align: center;
-                        font-size: 2.75vw;
+                        font-size: 3vw;
                         margin:0;
-                        padding: 1vh 4.75vw;
-                    }
-                    &:nth-child(9){
-                        padding: 6vh 3vw 2vh 3vw;
-                        span{
-                            height: 6vh;
-                        }
-                        h4{
-                            padding: 0.5vh 0;
-                        }
-                        h5{
-                            padding: 1vh 1.5vw;
-                        }
+                        padding: 0.5vh 3.5vw;
                     }
                 }
                 a{
                     font-size: 4vw;
                     padding: 1.5vh 5vw;
                     border-radius: 10vw;
-                    bottom: 7vh;
+                    bottom: 6vh;
                 }
 
             }
@@ -1952,7 +2065,7 @@
                     padding: 2vh 9vw;
                     text-align: center;
                     font-size: 3.25vw;
-                    line-height: 3.75vh;
+                    line-height: 3.5vh;
                     a{
                         font-size: 3vw;
                     }
