@@ -1305,6 +1305,9 @@
 
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+    body, html {
+        overflow-x: hidden;
+    }
     .Promo{
         .toTop {
             right: 1.5vw;
@@ -1314,7 +1317,7 @@
         }
 
         header{
-            width: 98%;
+            width: 100%;
             height: 10vh;
             top: 0;
             left: 0;
@@ -1787,8 +1790,12 @@
 
 /* Small Device = 320px // Wide Mobile = 480px */
 @media only screen and (max-width: 767px) {
+    body, html {
+        overflow-x: hidden;
+    }
     .Promo{
-
+        display: flex;
+        justify-content: center;
         .toTop {
             right: 2vw;
             bottom: 2vh;
@@ -1797,13 +1804,15 @@
         }
         
         header{
-            width: 99%;
+            width: 100%;
             height: 10vh;
             top: 0;
-            left: 0;
-            padding: 0 2vw;
+            left: auto;
+            padding: 0;
             margin: 0;
+            position: relative;
             nav{
+                width: 100%;
                 justify-content: center;
                 a{
                     width: 15vw;

@@ -10,16 +10,16 @@ $(document).ready(function () {
           $('.Anc').removeClass('hide');
           $('.Anc_Q').removeClass('caindo');
         }, 1000)
-      });
+    });
   
-      $(window).scroll(function () {
+    $(window).scroll(function () {
         var scroll = $(window).scrollTop();
-        if (scroll >= 100) {
-          $(".toTop").fadeIn();
-        } else {
-          $(".toTop").fadeOut();
+        if(scroll >= 100) {
+            $(".toTop").fadeIn();
+        }else {
+            $(".toTop").fadeOut();
         }
-      });
+    });
 
     $('.imgInicio').css('animation', 'imgInicio 0.5s linear 1');
     $('.TituloInicio').css('animation', 'TituloInicio 1s linear 1');
