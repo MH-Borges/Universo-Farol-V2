@@ -1,0 +1,462 @@
+@import 'colors_fonts';
+@import 'base';
+
+::-webkit-scrollbar {
+    width: 0.75vw;
+    background: $Laranja;
+}
+::-webkit-scrollbar-thumb {
+    background: $AzulEscuro;
+}
+@keyframes flikIcon{
+    0%{transform: rotate(0deg);}
+    16%{transform: rotate(25deg);}
+    32%{transform: rotate(12.5deg);}
+    48%{transform: rotate(0deg);}
+    64%{transform: rotate(-12.5deg);}
+    80%{transform: rotate(-25deg);}
+    100%{transform: rotate(0deg);}
+
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 99.3vw;
+    min-height: 100vh;
+    height: auto;
+    overflow-x: hidden;
+    position: relative;
+    background-color: $AzulEscuro;
+    .btns{
+        font-family: $Second-font;
+        font-size: 1vw;
+        font-weight: 700;
+        padding: 0.65vh 1.5vw 0.75vh;
+        border-radius: 10vw;
+        background-color: $Laranja;
+        color: $Branco;
+        transition: all ease-in-out 0.2s;
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+    .btns_Out{
+        background: none !important;
+        border: 2px solid $Laranja;
+    }
+    header{
+        width: 90%;
+        height: 85px;
+        position: fixed;
+        top: 35px;
+        padding: 10px 0;
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        #logo{
+            height: 100%;
+            width: 10%;
+            display: flex;
+            margin-right: auto;
+            img, svg{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                transition: all ease-in-out 0.2s;
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+        button{
+            margin-left: 3vw;
+            width: 3.5vw;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all ease-in-out 0.2s;
+            &:hover{
+                transform: scale(1.05);
+            }
+            span{
+                width: 100%;
+                height: 5.5px;
+                background-color: $Branco;
+                border-radius: 2vw;
+                position: relative;
+                &::before, &::after{
+                    position: absolute;
+                    content: '';
+                    top: -15px;
+                    left: 0;
+                    width: 65%;
+                    height: 100%;
+                    background-color: $Branco;
+                    border-radius: 2vw;
+                }
+                &::after{
+                    right: 0;
+                    left: auto;
+                    top: 15px;
+                }
+            }
+        }
+        #sideMenu{
+            position: absolute;
+            top: -35px;
+            right: -30vw;
+            width: 25vw;
+            height: 100vh;
+            background-color: $Branco;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: $Laranja;
+                width: 100%;
+                height: 10vh;
+            }
+            button{
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                width: 2.5vw;
+                height: 2.5vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &::before, &::after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 6px;
+                    background-color: $Branco;
+                    border-radius: 3vw;
+                    transform: rotate(45deg);
+                }
+                &::after{
+                    transform: rotate(-45deg);
+                }
+            }
+            .redes{
+                position: absolute;
+                top: 3vh;
+                width: 3vw;
+                height: 4.5vh;
+                left: 37.5%;
+                img, svg{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    path{
+                        stroke-width: 10px;
+                    }
+                    &:hover{
+                        animation: flikIcon 0.75s infinite;
+                    }
+                }
+                &:nth-child(3){
+                    left: 52.5%;
+                }
+            }
+            .link_pgs{
+                &:nth-child(4){
+                    margin-top: -15vh;
+                }
+                width: 50%;
+                font-family: $Main-font;
+                font-size: 1.35vw;
+                font-weight: 900;
+                text-align: left;
+                color: $AzulEscuro;
+                margin: 3vh 0;
+                display: flex;
+                align-items: center;
+                padding: 0.5vh 0 0.15vh;
+                transition: all ease-in-out 0.2s;
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+            #foot{
+                width: 90%;
+                height: 5vh;
+                position: absolute;
+                bottom: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a{
+                    font-family: $Second-font;
+                    font-size: 0.8vw;
+                    font-weight: 700;
+                    color: $AzulEscuro;
+                }
+            }
+        }
+        #background_SideMenu{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: $AzulEscuro;
+            opacity: 0.75;
+            z-index: 110;
+        }
+    }
+    main{
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        section{
+            width: 100%;
+            min-height: 100vh;
+            height: auto;
+            font-family: $Main-font;
+            color: $Branco;
+        }
+        #textura{
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            z-index: -1;
+            mix-blend-mode: hard-light;
+            top: 0;
+            left: 0;
+            opacity: 0.025;
+        }
+        @keyframes Anc_caindo {
+            from {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          
+            to {
+              transform: translateY(25vh);
+              opacity: 0;
+            }
+          }
+        .toTop {
+            display: none;
+            position: fixed;
+            right: 1vw;
+            bottom: 2vh;
+            z-index: 998;
+            cursor: pointer;
+            width: 3vw;
+            height: 11vh;
+            .Anc{
+              width: 100%;
+              height: 100%;
+              path{
+                fill: $Branco;
+              }
+            }
+            .Anc_Q{
+                width: 100%;
+                height: 80%;
+                margin-top: 2.5vh;
+                path{
+                  fill: $Branco;
+                }
+              }
+            .caindo{
+              animation: Anc_caindo 1.5s;
+            }
+          }
+          
+    }
+    footer{
+        width: 100%;
+        height: 55vh;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 5%;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 3px;
+            left: 10%;
+            top: 0;
+            background-color: $Laranja;
+        }
+        #resume{
+            width: 33%;
+            height: 90%;
+            padding: 7.5vh 0;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            #logo_foot{
+                width: 100%;
+                height: 8.5vh;
+                img, svg{
+                    width: auto;
+                    height: 100%;
+                    transition: all ease-in-out 0.2s;
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+                }
+            }
+            h4{
+                font-family: $Second-font;
+                font-size: 1vw;
+                font-weight: 500;
+                color: $Branco;
+                line-height: 3vh;
+                width: 100%;
+                margin-top: 3vh;
+                padding-right: 9.5vw;
+            }
+            #redes{
+                width: 100%;
+                height: 4vh;
+                display: flex;
+                margin-top: 7.5vh;
+                a{
+                    width: 3vw;
+                    height: 100%;
+                    margin-right: 2vw;
+                    img, svg{
+                        width: auto;
+                        height: 100%;
+                        path{
+                            stroke-width: 6px;
+                        }
+                        &:hover{
+                            animation: flikIcon 1s infinite;
+                        }
+                    }
+                }
+            }
+        }
+        #LinksRapido{
+            width: 33%;
+            height: 90%;
+            padding: 7.5vh 0;
+            display: flex;
+            flex-direction: column;
+            h4{
+                font-family: $Main-font;
+                font-size: 1.75vw;
+                font-weight: 900;
+                color: $Branco;
+                width: 100%;
+            }
+            a{
+                &:nth-child(2){ margin-top: 4vh; }
+                font-family: $Second-font;
+                font-size: 1.15vw;
+                font-weight: 400;
+                color: $Branco;
+                width: 50%;
+                margin: 1.75vh 0;
+                transition: all ease-in-out 0.2s;
+                &:hover{
+                    transform: scale(1.05);
+                    margin-left: 0.5vw;
+                    color: $Laranja;
+                }
+            }
+        }
+        p{
+            width: 100%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: $Main-font;
+            font-size: 1vw;
+            font-weight: 700;
+            color: $Branco;
+            span{
+                margin: 0 0.25vw;
+                font-family: $Main-font;
+                font-size: 1vw;
+                font-weight: 700;
+            }
+        }
+    }
+
+    #Main_index{
+        #home{
+            height: 200vh;
+            position: relative;
+
+
+            #test{
+                position: sticky;
+                width: 20vw;
+                height: 10vh;
+                top: 70px;
+                left: 50%;
+                
+                #astronauta{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+
+        #CircularText{
+            height: 300px;
+            width: 300px;
+            position: relative;
+            animation: effect 30s linear infinite;
+        }
+        @keyframes effect {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        // span{
+        //     position: absolute;
+        //     left: 50%;
+        //     transform-origin: 0px 150px;
+        //     font-family: $Main-font;
+        //     text-transform: uppercase;
+        //     font-weight: 900;
+        //     font-size: 1vw;
+        //     color: #fff;
+        // }
+
+       
+          .typer {
+            color: $Laranja;
+          }
+          .blink {
+            color: $Laranja;
+            animation: blink 0.6s infinite alternate;
+          }
+          @keyframes blink {
+            0% {opacity: 1;}
+            45% {opacity: 1;}
+            55% {opacity: 0;}
+            100% {opacity: 0;}
+          }
+    }
+    
+}
+
+@media only screen and (max-width: 479px){
+    
+}

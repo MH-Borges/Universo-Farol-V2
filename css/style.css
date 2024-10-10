@@ -1,0 +1,518 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap");
+@font-face {
+  font-family: "Now";
+  src: url("../fonts/Now-Thin.otf") format("opentype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Now";
+  src: url("../fonts/Now-Light.otf") format("opentype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Now";
+  src: url("../fonts/Now-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Now";
+  src: url("../fonts/Now-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Now";
+  src: url("../fonts/Now-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Now";
+  src: url("../fonts/Now-Black.otf") format("opentype");
+  font-weight: 900;
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  list-style: none;
+}
+
+p, span, ul, li, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.hide {
+  opacity: 0 !important;
+  display: none !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 0.75vw;
+  background: #EA6637;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #01112E;
+}
+
+@keyframes flikIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  16% {
+    transform: rotate(25deg);
+  }
+  32% {
+    transform: rotate(12.5deg);
+  }
+  48% {
+    transform: rotate(0deg);
+  }
+  64% {
+    transform: rotate(-12.5deg);
+  }
+  80% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 99.3vw;
+  min-height: 100vh;
+  height: auto;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #01112E;
+}
+body .btns {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1vw;
+  font-weight: 700;
+  padding: 0.65vh 1.5vw 0.75vh;
+  border-radius: 10vw;
+  background-color: #EA6637;
+  color: #ECECEC;
+  transition: all ease-in-out 0.2s;
+}
+body .btns:hover {
+  transform: scale(1.05);
+}
+body .btns_Out {
+  background: none !important;
+  border: 2px solid #EA6637;
+}
+body header {
+  width: 90%;
+  height: 85px;
+  position: fixed;
+  top: 35px;
+  padding: 10px 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body header #logo {
+  height: 100%;
+  width: 10%;
+  display: flex;
+  margin-right: auto;
+}
+body header #logo img, body header #logo svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: all ease-in-out 0.2s;
+}
+body header #logo img:hover, body header #logo svg:hover {
+  transform: scale(1.05);
+}
+body header button {
+  margin-left: 3vw;
+  width: 3.5vw;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease-in-out 0.2s;
+}
+body header button:hover {
+  transform: scale(1.05);
+}
+body header button span {
+  width: 100%;
+  height: 5.5px;
+  background-color: #ECECEC;
+  border-radius: 2vw;
+  position: relative;
+}
+body header button span::before, body header button span::after {
+  position: absolute;
+  content: "";
+  top: -15px;
+  left: 0;
+  width: 65%;
+  height: 100%;
+  background-color: #ECECEC;
+  border-radius: 2vw;
+}
+body header button span::after {
+  right: 0;
+  left: auto;
+  top: 15px;
+}
+body header #sideMenu {
+  position: absolute;
+  top: -35px;
+  right: -30vw;
+  width: 25vw;
+  height: 100vh;
+  background-color: #ECECEC;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body header #sideMenu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #EA6637;
+  width: 100%;
+  height: 10vh;
+}
+body header #sideMenu button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 2.5vw;
+  height: 2.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body header #sideMenu button::before, body header #sideMenu button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background-color: #ECECEC;
+  border-radius: 3vw;
+  transform: rotate(45deg);
+}
+body header #sideMenu button::after {
+  transform: rotate(-45deg);
+}
+body header #sideMenu .redes {
+  position: absolute;
+  top: 3vh;
+  width: 3vw;
+  height: 4.5vh;
+  left: 37.5%;
+}
+body header #sideMenu .redes img, body header #sideMenu .redes svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body header #sideMenu .redes img path, body header #sideMenu .redes svg path {
+  stroke-width: 10px;
+}
+body header #sideMenu .redes img:hover, body header #sideMenu .redes svg:hover {
+  animation: flikIcon 0.75s infinite;
+}
+body header #sideMenu .redes:nth-child(3) {
+  left: 52.5%;
+}
+body header #sideMenu .link_pgs {
+  width: 50%;
+  font-family: "Now", sans-serif;
+  font-size: 1.35vw;
+  font-weight: 900;
+  text-align: left;
+  color: #01112E;
+  margin: 3vh 0;
+  display: flex;
+  align-items: center;
+  padding: 0.5vh 0 0.15vh;
+  transition: all ease-in-out 0.2s;
+}
+body header #sideMenu .link_pgs:nth-child(4) {
+  margin-top: -15vh;
+}
+body header #sideMenu .link_pgs:hover {
+  transform: scale(1.05);
+}
+body header #sideMenu #foot {
+  width: 90%;
+  height: 5vh;
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body header #sideMenu #foot a {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 0.8vw;
+  font-weight: 700;
+  color: #01112E;
+}
+body header #background_SideMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #01112E;
+  opacity: 0.75;
+  z-index: 110;
+}
+body main {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+}
+body main section {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  font-family: "Now", sans-serif;
+  color: #ECECEC;
+}
+body main #textura {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  mix-blend-mode: hard-light;
+  top: 0;
+  left: 0;
+  opacity: 0.025;
+}
+@keyframes Anc_caindo {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(25vh);
+    opacity: 0;
+  }
+}
+body main .toTop {
+  display: none;
+  position: fixed;
+  right: 1vw;
+  bottom: 2vh;
+  z-index: 998;
+  cursor: pointer;
+  width: 3vw;
+  height: 11vh;
+}
+body main .toTop .Anc {
+  width: 100%;
+  height: 100%;
+}
+body main .toTop .Anc path {
+  fill: #ECECEC;
+}
+body main .toTop .Anc_Q {
+  width: 100%;
+  height: 80%;
+  margin-top: 2.5vh;
+}
+body main .toTop .Anc_Q path {
+  fill: #ECECEC;
+}
+body main .toTop .caindo {
+  animation: Anc_caindo 1.5s;
+}
+body footer {
+  width: 100%;
+  height: 55vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5%;
+  position: relative;
+}
+body footer::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 3px;
+  left: 10%;
+  top: 0;
+  background-color: #EA6637;
+}
+body footer #resume {
+  width: 33%;
+  height: 90%;
+  padding: 7.5vh 0;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+body footer #resume #logo_foot {
+  width: 100%;
+  height: 8.5vh;
+}
+body footer #resume #logo_foot img, body footer #resume #logo_foot svg {
+  width: auto;
+  height: 100%;
+  transition: all ease-in-out 0.2s;
+}
+body footer #resume #logo_foot img:hover, body footer #resume #logo_foot svg:hover {
+  transform: scale(1.05);
+}
+body footer #resume h4 {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1vw;
+  font-weight: 500;
+  color: #ECECEC;
+  line-height: 3vh;
+  width: 100%;
+  margin-top: 3vh;
+  padding-right: 9.5vw;
+}
+body footer #resume #redes {
+  width: 100%;
+  height: 4vh;
+  display: flex;
+  margin-top: 7.5vh;
+}
+body footer #resume #redes a {
+  width: 3vw;
+  height: 100%;
+  margin-right: 2vw;
+}
+body footer #resume #redes a img, body footer #resume #redes a svg {
+  width: auto;
+  height: 100%;
+}
+body footer #resume #redes a img path, body footer #resume #redes a svg path {
+  stroke-width: 6px;
+}
+body footer #resume #redes a img:hover, body footer #resume #redes a svg:hover {
+  animation: flikIcon 1s infinite;
+}
+body footer #LinksRapido {
+  width: 33%;
+  height: 90%;
+  padding: 7.5vh 0;
+  display: flex;
+  flex-direction: column;
+}
+body footer #LinksRapido h4 {
+  font-family: "Now", sans-serif;
+  font-size: 1.75vw;
+  font-weight: 900;
+  color: #ECECEC;
+  width: 100%;
+}
+body footer #LinksRapido a {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1.15vw;
+  font-weight: 400;
+  color: #ECECEC;
+  width: 50%;
+  margin: 1.75vh 0;
+  transition: all ease-in-out 0.2s;
+}
+body footer #LinksRapido a:nth-child(2) {
+  margin-top: 4vh;
+}
+body footer #LinksRapido a:hover {
+  transform: scale(1.05);
+  margin-left: 0.5vw;
+  color: #EA6637;
+}
+body footer p {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Now", sans-serif;
+  font-size: 1vw;
+  font-weight: 700;
+  color: #ECECEC;
+}
+body footer p span {
+  margin: 0 0.25vw;
+  font-family: "Now", sans-serif;
+  font-size: 1vw;
+  font-weight: 700;
+}
+body #Main_index #home {
+  height: 200vh;
+  position: relative;
+}
+body #Main_index #home #test {
+  position: sticky;
+  width: 20vw;
+  height: 10vh;
+  top: 70px;
+  left: 50%;
+}
+body #Main_index #home #test #astronauta {
+  width: 100%;
+  height: auto;
+}
+body #Main_index #CircularText {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  animation: effect 30s linear infinite;
+}
+@keyframes effect {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body #Main_index .typer {
+  color: #EA6637;
+}
+body #Main_index .blink {
+  color: #EA6637;
+  animation: blink 0.6s infinite alternate;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

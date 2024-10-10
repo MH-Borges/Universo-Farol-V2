@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universo Farol</title>
+
+    <link rel="icon" href="assets/icon.svg" />
+    <link rel="canonical" href="https://universofarol.com.br" />
+
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <meta property="og:locale" content="pt_BR">
+    <meta name="og:title" property="og:title" content="">
+    <meta name="og:type" property="og:type" content="website">
+    <meta name="og:image" property="og:image" content="">
+    <meta property="og:description" content="">
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Mask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- SVG Inject -->
+    <script src="js/svg-inject.min.js"></script>
+
+    <!-- Main files -->
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/Base_script.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#home" id="logo" class="links"><img src="assets/Logo_Horizontal.svg" onload="SVGInject(this)"></a>
+        <a href="" class="btns">Agendar uma conversa!</a>
+        <button onclick="sideMenu()"><span></span></button>
+        <span id="background_SideMenu" class="hide" onclick="sideMenu()"></span>
+
+        <div id="sideMenu" class="hide">
+            <button onclick="sideMenu()"></button>
+            <a href="" class="redes" target="_blank"><img src="assets/icons/whatsapp.svg" onload="SVGInject(this)"></a>
+            <a href="" class="redes" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"></a>
+
+            <a href="" class="link_pgs">PORTFÓLIO</a>
+            <a href="" class="link_pgs">O FAROL</a>
+            <a href="" class="link_pgs">CONTATO</a>
+
+            <div id="foot">
+                <a href="">Politicas de privacidade</a>
+            </div>
+        </div>
+    </header>
+    <main id="Main_index">
+        <img src="assets/textura.webp" id="textura" alt="textura de fundo">
+
+        <div class="toTop">
+            <img class="Anc" src="assets/icons/ancora_corrente.svg" onload="SVGInject(this)" alt="Ancora pendurada por correntes">
+            <img class="Anc_Q hide" src="assets/icons/ancora_quebrada.svg" onload="SVGInject(this)" alt="Ancora com corrente quebrada">
+        </div>
+       
+        <section id="home">
+            <img src="assets/bg.webp" id="background_home" alt="background">
+
+            <img src="assets/astronauta.webp" id="astronauta" alt="astronauta de background">
+            <div id="TitleBlock">
+                <h1>Transformamos a sua marca em uma experiência impactante!</h1>
+                <h2>Uma agência criativa especializada na criação de visuais
+                    memoráveis e sites únicos para impulsionar o seu negócio.</h2>
+                <a href="" class="btns">Ver portfólio</a>
+                <a href="" target="_blank" class="btns btns_Out">Converse conosco agora!</a>
+            </div>
+        </section>
+        <section id="cases">
+            <h2>Nossos cases</h2>
+            <h3>Confira alguns dos projetos que já entregamos.</h3>
+            <div class="caseBlock">
+                <div class="infos">
+                    <p>“Realçar a beleza é um ato de amor”</p>
+                    <h3>| Id. Visual I e Materiais Gráficos |</h3>
+                    <a href="" class="btns btns_Out">Conheça esse case</a>
+                </div>
+                <img src="assets/aline_home.webp" alt="Banner do case Aline">
+            </div>
+            <div class="caseBlock">
+                <img src="assets/sicuro_home.webp" alt="Banner do case Sicuro">
+                <div class="infos">
+                    <p>“O lugar seguro para voltar a aprender a voar sozinho.”</p>
+                    <h3>| Id. Visual II e Web Design |</h3>
+                    <a href="" class="btns btns_Out">Conheça esse case</a>
+                </div>
+            </div>
+            <div class="caseBlock">
+                <img src="assets/autoInove_home.webp" alt="Banner do case Auto inove">
+                <div class="infos">
+                    <p>“Potência e alto desempenho para o seu veículo.”</p>
+                    <h3>| Id. Visual II e Web Design |</h3>
+                    <a href="" class="btns btns_Out">Conheça esse case</a>
+                </div>
+            </div>
+            <a href="" class="btns btn_case">Conheça nosso portfólio</a>
+        </section>
+        <section id="fluxo">
+            <div id="stickyHead">
+                <h2>O fluxo que descomplica o nosso trabalho</h2>
+                <h3>Conheça um pouco do processo que nos ajuda a tirar ideias do papel e transformar em projetos hipnotizantes.</h3>
+            </div>
+            <div id="cardsFluxo">
+                <div class="cardFluxo">
+                    <img src="assets/icons/alinhamento.svg" onload="SVGInject(this)">
+                    <h3>1. Alinhamento</h3>
+                    <p>Vamos entender profundamente as suas necessidades, expectativas e o contexto do projeto. Marcamos uma reunião para alinhar o que você espera alcançar com o projeto. O foco é garantir que todos estejam na mesma página sobre o projeto e seus desafios, necessidades e diferenciais.</p>
+                </div>
+                <div class="cardFluxo">
+                    <img src="assets/icons/briefing.svg" onload="SVGInject(this)">
+                    <h3>2. Briefing</h3>
+                    <p>Formalizamos as informações essenciais do projeto através de um formulário. Você fornece detalhes sobre o que precisa ser criado. E nós fazemos perguntas direcionadas para obter informações precisas. Pode incluir coletas de dados e análise de concorrentes e preferências estéticas.</p>
+                </div>
+                <div class="cardFluxo">
+                    <img src="assets/icons/desenvolvimento.svg" onload="SVGInject(this)">
+                    <h3>3. Desenvolvimento</h3>
+                    <p>Criaremos as primeiras versões do projeto com base no briefing e alinhamento. Começamos a desenvolver os conceitos e sketches iniciais. Toda a equipe colabora para criar soluções criativas e funcionais, respeitando o que foi discutido.</p>
+                </div>
+                <div class="cardFluxo">
+                    <img src="assets/icons/refinamento.svg" onload="SVGInject(this)">
+                    <h3>4. Refinamento</h3>
+                    <p>Melhoramos e ajustamos o projeto conforme o seu feedback. Você analisa as propostas e diz o que acha. A equipe de criação revisa os materiais e realiza as alterações necessárias, sempre mantendo o alinhamento com os objetivos e a identidade da marca.</p>
+                </div>
+                <div class="cardFluxo">
+                    <img src="assets/icons/acompanhamento.svg" onload="SVGInject(this)">
+                    <h3>5. Acompanhamento</h3>
+                    <p>Garantimos que o projeto final seja implementado corretamente e continue entregando os resultados esperados. Após a entrega final, acompanhamos a implementação, seja design ou web, verificando o desempenho e corrigindo possíveis problemas e gerando seus resultados desejados.</p>
+                </div>
+            </div>
+        </section>
+        <section id="entrega">
+            <h2>Sempre entregamos nosso melhor!</h2>
+            <h3>Vamos além do simples design, construímos marcas autênticas e hipnotizantes.</h3>
+            <div id="cardsEntrega">
+                <div class="cardEntrega">
+                    <img src="assets/icons/ideias.svg" onload="SVGInject(this)">
+                    <h4>Transformamos ideias em realidades</h4>
+                    <p>Encontramos as melhores formas de criar experiência.</p>
+                </div>
+                <div class="cardEntrega">
+                    <img src="assets/icons/Id.Visual.svg" onload="SVGInject(this)">
+                    <h4>Identidades visuais personalizadas</h4>
+                    <p>Traduzimos a personalidade da sua marca e os seus gostos em visual.</p>
+                </div>
+                <div class="cardEntrega">
+                    <img src="assets/icons/sites.svg" onload="SVGInject(this)">
+                    <h4>Sites desenvolvidos com muita criatividade</h4>
+                    <p>Criamos materiais prontos para impactar o seu público.</p>
+                </div>
+            </div>
+        </section>
+        <section id="nos">
+            <h2>Nós somos reais! <span><img src="assets/icons/underline.svg" onload="SVGInject(this)"></span></h2>
+            <p>Somos preocupados em transformar e tornar hipnotizante as marcas dos nossos navegantes. Focamos na sua essência, enriquecendo a sua identidade e evoluindo a sua realidade no universo digital.</p>
+        
+            <div id="imgNosBlock">
+                <img src="assets/nos.webp" alt="nós">
+                <div id="textDescrJulia">
+                    <h3>Júlia Vitória</h3>
+                    <p>Nossa <b>Artista e Designer</b>, formada pela PUCPR, com muitos anos de experiência. Ama escrever e criar, é organizada e <b>tem como objetivo inspirar.</b></p>
+                </div>
+                <div id="textDescrMatheus">
+                    <h3>Matheus Borges</h3>
+                    <p>Nosso <b>Tech Lead</b> com muitos anos de experiência em criação. É apaixonado por jogos, D&D, cultura geek, <b>adora uma boa discussão e é apaixonado por criar.</b></p>
+                </div>
+            </div>
+        </section>
+        <section id="contato">
+            <h2>Fale com a gente!</h2>
+            <h3>Nos mande uma mensagem! Conheça também todas nossas redes sociais!</h3>
+            <div id="redesContato">
+                <a href="" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"><p>@universofarol</p></a>
+                <a href="" target="_blank"><img src="assets/icons/whatsapp.svg" onload="SVGInject(this)"><p>+55 (41) 99508 - 0219</p></a>
+                <a href="" target="_blank"><img src="assets/icons/Linkedin.svg" onload="SVGInject(this)"><p>contato@universofarol.com.br</p></a>
+                <a href="" target="_blank"><img src="assets/icons/email.svg" onload="SVGInject(this)"><p>universo-farol</p></a>
+            </div>
+            <div id="formBlock">
+                <h3> Se preferir, envie <br> uma mensagem direta! </h3>
+
+                <form id="formulario" method="POST">
+                    <div class="BlockBox">
+                        <input type="text" name="nome" id="nome" required>
+                        <p>Nome completo</p><span>*</span>
+                    </div>
+                    <div class="BlockBox">
+                        <input type="text" name="email" id="email" required>
+                        <p>E-mail</p><span>*</span>
+                    </div>
+                    <div class="BlockBox">
+                        <input type="text" name="telefone" id="telefone" required>
+                        <p>Telefone de contato</p>
+                    </div>
+                    <div class="BlockBox">
+                        <textarea type="text" name="mensagem" id="mensagem" required></textarea>
+                        <p>Como posso te ajudar?</p>
+                    </div>
+                    <button id="btn_form" class="btn" type="submit">Enviar mensagem</button>
+                </form>
+
+                <div id="msg_form"></div> 
+            </div>
+        </section>
+        <section id="faq">
+            <h2>Alguma dúvida? Temos as respostas!</h2>
+            <h3>Uma luz para te ajudar a embarcar no nosso universo!</h3>
+
+            <div class="perguntaBlock">
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#FAQ1" aria-expanded="false" aria-controls="FAQ1">
+                    Em quanto tempo vocês concluem o meu projeto?
+                </button>
+                <div class="collapse" id="FAQ1">
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. Iaculis malesuada ut vitae sem, cursus efficitur quam non. Lacus tristique litora eleifend diam pellentesque risus, facilisis vivamus. Dolor non ut himenaeos ipsum donec. Placerat mattis pretium torquent aliquam; vulputate bibendum ridiculus vehicula netus. 
+                </div>
+            </div>
+            <div class="perguntaBlock">
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#FAQ2" aria-expanded="false" aria-controls="FAQ2">
+                    Como funciona o pagamento?
+                </button>
+                <div class="collapse" id="FAQ2">
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. Iaculis malesuada ut vitae sem, cursus efficitur quam non. Lacus tristique litora eleifend diam pellentesque risus, facilisis vivamus. Dolor non ut himenaeos ipsum donec. Placerat mattis pretium torquent aliquam; vulputate bibendum ridiculus vehicula netus. 
+                </div>
+            </div>
+            <div class="perguntaBlock">
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#FAQ3" aria-expanded="false" aria-controls="FAQ3">
+                    Eu posso sugerir ideias para o design?
+                </button>
+                <div class="collapse" id="FAQ3">
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. Iaculis malesuada ut vitae sem, cursus efficitur quam non. Lacus tristique litora eleifend diam pellentesque risus, facilisis vivamus. Dolor non ut himenaeos ipsum donec. Placerat mattis pretium torquent aliquam; vulputate bibendum ridiculus vehicula netus. 
+                </div>
+            </div>
+            <div class="perguntaBlock">
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#FAQ4" aria-expanded="false" aria-controls="FAQ4">
+                    Vocês oferecem alterações ou suportes?
+                </button>
+                <div class="collapse" id="FAQ4">
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. Iaculis malesuada ut vitae sem, cursus efficitur quam non. Lacus tristique litora eleifend diam pellentesque risus, facilisis vivamus. Dolor non ut himenaeos ipsum donec. Placerat mattis pretium torquent aliquam; vulputate bibendum ridiculus vehicula netus. 
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalResumoFAQ">
+                ?
+                <p id="CircularText"></p>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="ModalResumoFAQ" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="cta">
+            <h3>Ainda <span class="typer">no escuro?</span><span class="blink">|</span></h3>
+            <p>Não perca tempo e entre em contato conosco</p>
+
+            <a href="" class="btns btns_Out">Mande uma mensagem!</a>
+        </section>
+    </main>
+    <footer>
+        <div id="resume">
+            <a href="#home" id="logo_foot" class="links"><img src="assets/Logo_Horizontal.svg" onload="SVGInject(this)"></a>
+            <h4>Agência criativa especializada na criação de visuais memoráveis e sites únicos para impulsionar o seu negócio.</h4>
+            <div id="redes">
+                <a href="" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"></a>
+                <a href="" target="_blank"><img src="assets/icons/whatsapp.svg" onload="SVGInject(this)"></a>
+                <a href="" target="_blank"><img src="assets/icons/Linkedin.svg" onload="SVGInject(this)"></a>
+                <a href="" target="_blank"><img src="assets/icons/email.svg" onload="SVGInject(this)"></a>
+            </div>
+        </div>
+        <div id="LinksRapido">
+            <h4>Links rápidos</h4>
+            <a href="">Início</a>
+            <a href="">Nosso portfólio</a>
+            <a href="">Sobre nós</a>
+            <a href="">Painel de contato</a>
+        </div>
+        <p>© Universo Farol <span id="data_footer"></span> Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        //REVISAR EFEITO DE ANCORA PARA LEVAR PARA O TOPO (Buscar melhor efeito de scroll to top)
+        $('.toTop').on('click', function(){
+            $("html, body").animate({ scrollTop: 0 }, 400);
+            $('.Anc').addClass('hide');
+            $('.Anc_Q').removeClass('hide');
+            $('.Anc_Q').addClass('caindo');
+            setTimeout(() => { 
+                $('.Anc_Q').addClass('hide');
+                $('.Anc').removeClass('hide');
+                $('.Anc_Q').removeClass('caindo');
+            }, 1000)
+        });
+
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 100) {
+                $(".toTop").fadeIn();
+            } else {
+                $(".toTop").fadeOut();
+            }
+        });
+
+        //Efeito de escrita
+        $(function () {
+            var index = 0, count = 0;
+            var word = "";
+            var words = [ "no escuro?", "perdido?", "precisando de ajuda?", "quer saber mais?" ];
+            untype();
+
+            function type(word) {
+                setTimeout(function () {
+                    if (word.length > 0) {
+                        $(".typer").append(word.shift());
+                        type(word);
+                    } else if (word.length === 0) {
+                        pause();
+                    }
+                }, 180);
+            }
+
+            function untype() {
+                setTimeout(function () {
+                    word = $(".typer").html().split("");
+                    word.pop();
+                    if (word.length > 0) {
+                        $(".typer").empty().append(word);
+                        untype();
+                    } else if (word.length === 0) {
+                        $(".typer").empty();
+                        nextWord();
+                    }
+                }, 100);
+            }
+
+            function pause() {
+                setTimeout(function () {
+                    untype();
+                }, 1000);
+            }
+
+            function nextWord() {
+                    index = count % 6;
+                    count++;
+                    word = words[index].split("");
+                    type(word);
+                }
+        });
+
+        //TextoCircular
+        const str = "Informações importantes • Informações importantes •";
+        const text = document.getElementById("CircularText");
+        window.onload = function(){
+            for (let i = 0; i < str.length; i++) {
+                let span = document.createElement('span');
+                span.innerHTML = str[i] 
+                text.appendChild(span);
+                console.log(str[i])
+                span.style.transform = `rotate(${6.9*i}deg)`;
+            }
+        }
+
+        //formulario
+        $(document).ready(function () {
+            $('#telefone').mask('(00) 00000 - 0000');
+
+            $('#btn_form').click(function (e) {
+                $('#nome').prop('required',false);
+                $('#email').prop('required',false);
+                $('#telefone').prop('required',false);
+                $('#mensagem').prop('required',false);
+            });
+
+            $('#formulario').submit(function (e) {
+                e.preventDefault();
+                $('#msg_form').text('');
+                $('#msg_form').removeClass('text-danger');
+                $('#msg_form').removeClass('text-success');
+                $.ajax({
+                    url: "email.php",
+                    method: "post",
+                    data: $('form').serialize(),
+                    dataType: "text",
+                    success: function (msg) {
+                        if (msg.trim() === 'Mensagem enviada com sucesso! Entrarei em contato em breve!') {
+                            $('#msg_form').addClass('text-success');
+                            $('#msg_form').text(msg);
+                            setTimeout(() => { window.location.reload(); }, 5000)
+                        }
+                        else if (msg.trim() == "Preencha o campo de 'Nome completo'" || msg.trim() == 'Preencha o campo de E-mail' || msg.trim() == 'O campo de mensagem está vazio!') {
+                            $('#msg_form').addClass('text-danger');
+                            $('#msg_form').text(msg);
+                        }
+                        else{
+                            $('#msg_form').removeClass('text-success');
+                            $('#msg_form').addClass('text-danger');
+                            $('#msg_form').text('Erro ao enviar o formulario, provaveis problemas com o servidor, você pode tentar me mandar mensagem via Instagram ou Whatsapp');
+                        }
+                    }
+                })
+            });
+        });
+    </script>
+
+</body>
+</html>

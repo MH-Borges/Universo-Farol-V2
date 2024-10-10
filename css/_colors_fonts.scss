@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Now';
+    src: url("../fonts/Now-Thin.otf") format("opentype");
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'Now';
+    src: url("../fonts/Now-Light.otf") format("opentype");
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Now';
+    src: url("../fonts/Now-Regular.otf") format("opentype");
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Now';
+    src: url("../fonts/Now-Medium.otf") format("opentype");
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Now';
+    src: url("../fonts/Now-Bold.otf") format("opentype");
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Now';
+    src: url("../fonts/Now-Black.otf") format("opentype");
+    font-weight: 900;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+
+$Main-font: 'Now', sans-serif;
+$Second-font: "Maven Pro", sans-serif;
+
+/////// Now pesos
+// thin = 200
+// light = 300
+// Regular = 400
+// Medium = 500
+// Bold = 700
+// Black = 900
+
+/////// Maven Pro pesos
+// Regular = 400
+// Medium = 500
+// SemiBold = 600
+// Bold = 700
+// ExtraBold = 800
+// Black = 900
+
+
+$AzulEscuro: #01112E;
+$AzulClaro: #0C327B;
+$Cinzao: #818181;
+$Cinzinha: #C0C0C0;
+$Branco: #ECECEC;
+$Laranja: #EA6637;
