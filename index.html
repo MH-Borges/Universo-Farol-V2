@@ -60,8 +60,7 @@
     </header>
     <main id="Main_index">
         <img src="assets/textura.webp" id="textura" alt="textura de fundo">
-
-        <div class="toTop">
+        <div class="toTop hide" onclick="ancora()">
             <img class="Anc" src="assets/icons/ancora_corrente.svg" onload="SVGInject(this)" alt="Ancora pendurada por correntes">
             <img class="Anc_Q hide" src="assets/icons/ancora_quebrada.svg" onload="SVGInject(this)" alt="Ancora com corrente quebrada">
         </div>
@@ -71,10 +70,10 @@
 
             <img src="assets/astronauta.webp" id="astronauta" alt="astronauta de background">
             <div id="TitleBlock">
-                <h1>Transformamos a sua marca em uma experiência impactante!</h1>
+                <h1>Transformamos <br> a sua marca em uma <br> experiência impactante!</h1>
                 <h2>Uma agência criativa especializada na criação de visuais
                     memoráveis e sites únicos para impulsionar o seu negócio.</h2>
-                <a href="" class="btns">Ver portfólio</a>
+                <a href="" class="btns btn_homePortfolio">Ver portfólio</a>
                 <a href="" target="_blank" class="btns btns_Out">Converse conosco agora!</a>
             </div>
         </section>
@@ -83,7 +82,7 @@
             <h3>Confira alguns dos projetos que já entregamos.</h3>
             <div class="caseBlock">
                 <div class="infos">
-                    <p>“Realçar a beleza é um ato de amor”</p>
+                    <p>“Realçar a beleza <br> é um ato de amor”</p>
                     <h3>| Id. Visual I e Materiais Gráficos |</h3>
                     <a href="" class="btns btns_Out">Conheça esse case</a>
                 </div>
@@ -91,26 +90,26 @@
             </div>
             <div class="caseBlock">
                 <img src="assets/sicuro_home.webp" alt="Banner do case Sicuro">
-                <div class="infos">
-                    <p>“O lugar seguro para voltar a aprender a voar sozinho.”</p>
+                <div class="infos InfoRight">
+                    <p>“O lugar seguro para voltar <br> a aprender a voar sozinho.”</p>
                     <h3>| Id. Visual II e Web Design |</h3>
                     <a href="" class="btns btns_Out">Conheça esse case</a>
                 </div>
             </div>
             <div class="caseBlock">
-                <img src="assets/autoInove_home.webp" alt="Banner do case Auto inove">
                 <div class="infos">
-                    <p>“Potência e alto desempenho para o seu veículo.”</p>
+                    <p>“Potência e alto desempenho <br> para o seu veículo.”</p>
                     <h3>| Id. Visual II e Web Design |</h3>
                     <a href="" class="btns btns_Out">Conheça esse case</a>
                 </div>
+                <img src="assets/autoInove_home.webp" alt="Banner do case Auto inove">
             </div>
             <a href="" class="btns btn_case">Conheça nosso portfólio</a>
         </section>
         <section id="fluxo">
             <div id="stickyHead">
-                <h2>O fluxo que descomplica o nosso trabalho</h2>
-                <h3>Conheça um pouco do processo que nos ajuda a tirar ideias do papel e transformar em projetos hipnotizantes.</h3>
+                    <h2>O fluxo que descomplica o nosso trabalho</h2>
+                    <h3>Conheça um pouco do processo que nos ajuda a tirar ideias do papel e transformar em projetos hipnotizantes.</h3>
             </div>
             <div id="cardsFluxo">
                 <div class="cardFluxo">
@@ -275,7 +274,7 @@
 
         </section>
         <section id="cta">
-            <h3>Ainda <span class="typer">no escuro?</span><span class="blink">|</span></h3>
+            <h3>Ainda <span class="typer"></span><span class="blink">|</span></h3>
             <p>Não perca tempo e entre em contato conosco</p>
 
             <a href="" class="btns btns_Out">Mande uma mensagem!</a>
@@ -303,87 +302,6 @@
     </footer>
 
     <script>
-        //REVISAR EFEITO DE ANCORA PARA LEVAR PARA O TOPO (Buscar melhor efeito de scroll to top)
-        $('.toTop').on('click', function(){
-            $("html, body").animate({ scrollTop: 0 }, 400);
-            $('.Anc').addClass('hide');
-            $('.Anc_Q').removeClass('hide');
-            $('.Anc_Q').addClass('caindo');
-            setTimeout(() => { 
-                $('.Anc_Q').addClass('hide');
-                $('.Anc').removeClass('hide');
-                $('.Anc_Q').removeClass('caindo');
-            }, 1000)
-        });
-
-        $(window).scroll(function () {
-            var scroll = $(window).scrollTop();
-            if (scroll >= 100) {
-                $(".toTop").fadeIn();
-            } else {
-                $(".toTop").fadeOut();
-            }
-        });
-
-        //Efeito de escrita
-        $(function () {
-            var index = 0, count = 0;
-            var word = "";
-            var words = [ "no escuro?", "perdido?", "precisando de ajuda?", "quer saber mais?" ];
-            untype();
-
-            function type(word) {
-                setTimeout(function () {
-                    if (word.length > 0) {
-                        $(".typer").append(word.shift());
-                        type(word);
-                    } else if (word.length === 0) {
-                        pause();
-                    }
-                }, 180);
-            }
-
-            function untype() {
-                setTimeout(function () {
-                    word = $(".typer").html().split("");
-                    word.pop();
-                    if (word.length > 0) {
-                        $(".typer").empty().append(word);
-                        untype();
-                    } else if (word.length === 0) {
-                        $(".typer").empty();
-                        nextWord();
-                    }
-                }, 100);
-            }
-
-            function pause() {
-                setTimeout(function () {
-                    untype();
-                }, 1000);
-            }
-
-            function nextWord() {
-                    index = count % 6;
-                    count++;
-                    word = words[index].split("");
-                    type(word);
-                }
-        });
-
-        //TextoCircular
-        const str = "Informações importantes • Informações importantes •";
-        const text = document.getElementById("CircularText");
-        window.onload = function(){
-            for (let i = 0; i < str.length; i++) {
-                let span = document.createElement('span');
-                span.innerHTML = str[i] 
-                text.appendChild(span);
-                console.log(str[i])
-                span.style.transform = `rotate(${6.9*i}deg)`;
-            }
-        }
-
         //formulario
         $(document).ready(function () {
             $('#telefone').mask('(00) 00000 - 0000');
@@ -424,7 +342,65 @@
                 })
             });
         });
-    </script>
+
+        //TextoCircular
+        $(document).ready(function () {
+            const str = "Informações importantes • Informações importantes •";
+            const text = document.getElementById("CircularText");
+            for (let i = 0; i < str.length; i++) {
+                let span = document.createElement('span');
+                span.innerHTML = str[i] 
+                text.appendChild(span);
+                span.style.transform = `rotate(${6.9*i}deg)`;
+            }
+        });
+   
+        //Efeito de escrita CTA
+        $(function () {
+            var index = 0, count = 0;
+            var word = "";
+            var words = ["no escuro?", "perdido?", "precisando de ajuda?", "quer saber mais?" ];
+            untype();
+
+            function type(word) {
+                setTimeout(function () {
+                    if (word.length > 0) {
+                        $(".typer").append(word.shift());
+                        type(word);
+                    } else if (word.length === 0) {
+                        pause();
+                    }
+                }, 180);
+            }
+
+            function untype() {
+                setTimeout(function () {
+                    word = $(".typer").html().split("");
+                    word.pop();
+                    if (word.length > 0) {
+                        $(".typer").empty().append(word);
+                        untype();
+                    } else if (word.length === 0) {
+                        $(".typer").empty();
+                        nextWord();
+                    }
+                }, 100);
+            }
+
+            function pause() {
+                setTimeout(function () {
+                    untype();
+                }, 500);
+            }
+
+            function nextWord() {
+                index = count % 4;
+                count++;
+                word = words[index].split("");
+                type(word);
+            }
+        });
+   </script>
 
 </body>
 </html>

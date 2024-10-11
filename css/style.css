@@ -60,42 +60,73 @@ button {
 }
 
 ::-webkit-scrollbar {
-  width: 0.75vw;
-  background: #EA6637;
+  width: 0.5vw;
+  background: #0C327B;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #01112E;
+  background: #EA6637;
 }
 
 @keyframes flikIcon {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(15deg);
   }
-  16% {
-    transform: rotate(25deg);
-  }
-  32% {
-    transform: rotate(12.5deg);
-  }
-  48% {
-    transform: rotate(0deg);
-  }
-  64% {
-    transform: rotate(-12.5deg);
-  }
-  80% {
-    transform: rotate(-25deg);
+  50% {
+    transform: rotate(-15deg);
   }
   100% {
+    transform: rotate(15deg);
+  }
+}
+@keyframes Anc_caindo {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(25vh);
+    opacity: 0;
+  }
+}
+@keyframes circleText {
+  0% {
     transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 99.3vw;
+  width: 99.6vw;
   min-height: 100vh;
   height: auto;
   overflow-x: hidden;
@@ -106,7 +137,7 @@ body .btns {
   font-family: "Maven Pro", sans-serif;
   font-size: 1vw;
   font-weight: 700;
-  padding: 0.65vh 1.5vw 0.75vh;
+  padding: 0.55vh 1.5vw 0.65vh;
   border-radius: 10vw;
   background-color: #EA6637;
   color: #ECECEC;
@@ -294,6 +325,7 @@ body main {
   width: 100%;
   min-height: 100vh;
   height: auto;
+  position: relative;
 }
 body main section {
   width: 100%;
@@ -310,26 +342,14 @@ body main #textura {
   mix-blend-mode: hard-light;
   top: 0;
   left: 0;
-  opacity: 0.025;
-}
-@keyframes Anc_caindo {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(25vh);
-    opacity: 0;
-  }
+  opacity: 0.035;
 }
 body main .toTop {
-  display: none;
   position: fixed;
-  right: 1vw;
+  right: 2vw;
   bottom: 2vh;
-  z-index: 998;
-  cursor: pointer;
-  width: 3vw;
+  z-index: 999;
+  width: 2.75vw;
   height: 11vh;
 }
 body main .toTop .Anc {
@@ -342,7 +362,8 @@ body main .toTop .Anc path {
 body main .toTop .Anc_Q {
   width: 100%;
   height: 80%;
-  margin-top: 2.5vh;
+  margin-top: auto;
+  transition: all ease-in-out 2s;
 }
 body main .toTop .Anc_Q path {
   fill: #ECECEC;
@@ -413,7 +434,7 @@ body footer #resume #redes a img, body footer #resume #redes a svg {
   height: 100%;
 }
 body footer #resume #redes a img path, body footer #resume #redes a svg path {
-  stroke-width: 6px;
+  stroke-width: 10px;
 }
 body footer #resume #redes a img:hover, body footer #resume #redes a svg:hover {
   animation: flikIcon 1s infinite;
@@ -467,52 +488,233 @@ body footer p span {
   font-weight: 700;
 }
 body #Main_index #home {
-  height: 200vh;
+  width: 100%;
+  height: 100vh;
   position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
 }
-body #Main_index #home #test {
-  position: sticky;
-  width: 20vw;
+body #Main_index #home #background_home {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+body #Main_index #home #astronauta {
+  margin-top: auto;
+  width: 30vw;
+  padding: 0 1.5vw;
+  animation: float infinite 3s ease-in-out;
+  z-index: 2;
+}
+body #Main_index #home #TitleBlock {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 5vw;
+}
+body #Main_index #home #TitleBlock h1 {
+  width: 100%;
+  font-family: "Now", sans-serif;
+  font-weight: 900;
+  color: #ECECEC;
+  font-size: 4vw;
+  line-height: 6.5vh;
+  animation: float infinite 2.5s ease-in-out;
+}
+body #Main_index #home #TitleBlock h2 {
+  width: 100%;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 400;
+  color: #ECECEC;
+  font-size: 1.35vw;
+  line-height: 3.5vh;
+  padding-right: 15vw;
+  margin: 5vh 0 7.5vh;
+  animation: float infinite 2.5s ease-in-out;
+}
+body #Main_index #home #TitleBlock .btn_homePortfolio {
+  margin-right: 1.5vw;
+  padding: 0.6vh 2vw 0.65vh;
+}
+body #Main_index #home::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   height: 10vh;
-  top: 70px;
-  left: 50%;
+  z-index: 10;
+  background: linear-gradient(180deg, rgba(1, 17, 46, 0) 0%, rgb(1, 17, 46) 90%);
 }
-body #Main_index #home #test #astronauta {
+body #Main_index #cases {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7.5vh 0 10vh;
+}
+body #Main_index #cases h2 {
+  width: 90%;
+  margin: 0 5%;
+  font-family: "Now", sans-serif;
+  font-size: 2.5vw;
+  font-weight: 900;
+  color: #ECECEC;
+  letter-spacing: 0.1vw;
+}
+body #Main_index #cases h3 {
+  width: 90%;
+  margin: 0.5vh 5%;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1.1vw;
+  font-weight: 400;
+  color: #ECECEC;
+}
+body #Main_index #cases .caseBlock {
   width: 100%;
   height: auto;
+  margin: 5vh 0 2vh;
+  display: flex;
 }
-body #Main_index #CircularText {
+body #Main_index #cases .caseBlock .infos {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 10vw;
+}
+body #Main_index #cases .caseBlock .infos p {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 2vw;
+  font-weight: 400;
+  color: #ECECEC;
+  line-height: 4vh;
+  animation: float infinite 3s ease-in-out;
+}
+body #Main_index #cases .caseBlock .infos h3 {
+  all: unset;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1.4vw;
+  font-weight: 700;
+  color: #ECECEC;
+  margin: 3vh 0 8vh;
+  animation: float infinite 3s ease-in-out;
+}
+body #Main_index #cases .caseBlock .infos .btns {
+  padding: 0.45vh 3.5vw 0.55vh;
+}
+body #Main_index #cases .caseBlock .InfoRight {
+  align-items: flex-end;
+  padding-left: 0;
+  padding-right: 10vw;
+}
+body #Main_index #cases .caseBlock img {
+  width: 50%;
+  height: auto;
+}
+body #Main_index #cases .btn_case {
+  font-size: 1.25vw;
+  margin-top: 10vh;
+}
+body #Main_index #fluxo {
+  width: 87.5%;
+  min-height: 100vh;
+  height: auto;
+  margin: 0 7.5% 0 5%;
+  display: flex;
+  padding: 10vh 0;
+}
+body #Main_index #fluxo #stickyHead {
+  top: 20vh;
+  width: 50%;
+  height: 23vh;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  position: -webkit-sticky;
+}
+body #Main_index #fluxo #stickyHead h2 {
+  font-family: "Now", sans-serif;
+  font-size: 2.5vw;
+  font-weight: 900;
+  color: #ECECEC;
+  letter-spacing: 0.1vw;
+  padding-right: 8vw;
+  margin-bottom: 3vh;
+}
+body #Main_index #fluxo #stickyHead h3 {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1.1vw;
+  font-weight: 400;
+  color: #ECECEC;
+  line-height: 3.5vh;
+  padding-right: 15vw;
+}
+body #Main_index #fluxo #cardsFluxo {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+body #Main_index #fluxo #cardsFluxo .cardFluxo {
+  overflow: hidden;
+  width: 100%;
+  height: 45vh;
+  background-color: #ECECEC;
+  border-radius: 1vw;
+  padding: 4vh 2vw;
+  margin-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+body #Main_index #fluxo #cardsFluxo .cardFluxo img, body #Main_index #fluxo #cardsFluxo .cardFluxo svg {
+  width: 6vw;
+  height: auto;
+  animation: flikIcon 2s infinite ease-in-out;
+}
+body #Main_index #fluxo #cardsFluxo .cardFluxo img path, body #Main_index #fluxo #cardsFluxo .cardFluxo svg path {
+  stroke: #EA6637;
+}
+body #Main_index #fluxo #cardsFluxo .cardFluxo h3 {
+  font-family: "Now", sans-serif;
+  font-size: 2.25vw;
+  font-weight: 900;
+  color: #0C327B;
+  margin: 3.5vh 0;
+}
+body #Main_index #fluxo #cardsFluxo .cardFluxo p {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1vw;
+  font-weight: 600;
+  color: #0C327B;
+  padding-right: 3vw;
+}
+body #Main_index #faq #CircularText {
   height: 300px;
   width: 300px;
   position: relative;
-  animation: effect 30s linear infinite;
+  animation: circleText 30s linear infinite;
 }
-@keyframes effect {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+body #Main_index #faq span {
+  position: absolute;
+  left: 50%;
+  transform-origin: 0px 150px;
+  font-family: "Now", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1vw;
+  color: #fff;
 }
-body #Main_index .typer {
+body #Main_index #cta .typer {
   color: #EA6637;
 }
-body #Main_index .blink {
+body #Main_index #cta .blink {
   color: #EA6637;
   animation: blink 0.6s infinite alternate;
-}
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  45% {
-    opacity: 1;
-  }
-  55% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
 }/*# sourceMappingURL=style.css.map */

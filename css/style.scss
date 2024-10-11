@@ -2,29 +2,53 @@
 @import 'base';
 
 ::-webkit-scrollbar {
-    width: 0.75vw;
-    background: $Laranja;
+    width: 0.5vw;
+    background: $AzulClaro;
 }
 ::-webkit-scrollbar-thumb {
-    background: $AzulEscuro;
+    background: $Laranja;
 }
 @keyframes flikIcon{
-    0%{transform: rotate(0deg);}
-    16%{transform: rotate(25deg);}
-    32%{transform: rotate(12.5deg);}
-    48%{transform: rotate(0deg);}
-    64%{transform: rotate(-12.5deg);}
-    80%{transform: rotate(-25deg);}
-    100%{transform: rotate(0deg);}
+    0%{transform: rotate(15deg);}
+    50%{transform: rotate(-15deg);}
+    100%{transform: rotate(15deg);}
 
 }
-
+@keyframes Anc_caindo {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(25vh);
+        opacity: 0;
+    }
+}
+@keyframes circleText {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes blink {
+    0% {opacity: 1;}
+    45% {opacity: 1;}
+    55% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes float {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY(0);}
+}
 
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 99.3vw;
+    width: 99.6vw;
     min-height: 100vh;
     height: auto;
     overflow-x: hidden;
@@ -34,7 +58,7 @@ body {
         font-family: $Second-font;
         font-size: 1vw;
         font-weight: 700;
-        padding: 0.65vh 1.5vw 0.75vh;
+        padding: 0.55vh 1.5vw 0.65vh;
         border-radius: 10vw;
         background-color: $Laranja;
         color: $Branco;
@@ -220,6 +244,7 @@ body {
         width: 100%;
         min-height: 100vh;
         height: auto;
+        position: relative;
         section{
             width: 100%;
             min-height: 100vh;
@@ -235,48 +260,35 @@ body {
             mix-blend-mode: hard-light;
             top: 0;
             left: 0;
-            opacity: 0.025;
+            opacity: 0.035;
         }
-        @keyframes Anc_caindo {
-            from {
-              transform: translateY(0);
-              opacity: 1;
-            }
-          
-            to {
-              transform: translateY(25vh);
-              opacity: 0;
-            }
-          }
         .toTop {
-            display: none;
             position: fixed;
-            right: 1vw;
+            right: 2vw;
             bottom: 2vh;
-            z-index: 998;
-            cursor: pointer;
-            width: 3vw;
+            z-index: 999;
+            width: 2.75vw;
             height: 11vh;
             .Anc{
-              width: 100%;
-              height: 100%;
-              path{
-                fill: $Branco;
-              }
+                width: 100%;
+                height: 100%;
+                path{
+                    fill: $Branco;
+                }
             }
             .Anc_Q{
                 width: 100%;
                 height: 80%;
-                margin-top: 2.5vh;
+                margin-top: auto;
+                transition: all ease-in-out 2s;
                 path{
-                  fill: $Branco;
+                    fill: $Branco;
                 }
-              }
-            .caindo{
-              animation: Anc_caindo 1.5s;
             }
-          }
-          
+            .caindo{
+                animation: Anc_caindo 1.5s;
+            }
+        }
     }
     footer{
         width: 100%;
@@ -336,7 +348,7 @@ body {
                         width: auto;
                         height: 100%;
                         path{
-                            stroke-width: 6px;
+                            stroke-width: 10px;
                         }
                         &:hover{
                             animation: flikIcon 1s infinite;
@@ -395,64 +407,251 @@ body {
 
     #Main_index{
         #home{
-            height: 200vh;
+            width: 100%;
+            height: 100vh;
             position: relative;
-
-
-            #test{
-                position: sticky;
-                width: 20vw;
-                height: 10vh;
-                top: 70px;
-                left: 50%;
-                
-                #astronauta{
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            #background_home{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1;
+            }
+            #astronauta{
+                margin-top: auto;
+                width: 30vw;
+                padding: 0 1.5vw;
+                animation: float infinite 3s ease-in-out;
+                z-index: 2;
+            }
+            #TitleBlock{
+                display: flex;
+                flex-wrap: wrap;
+                padding-left: 5vw;
+                h1{
                     width: 100%;
+                    font-family: $Main-font;
+                    font-weight: 900;
+                    color: $Branco;
+                    font-size: 4vw;
+                    line-height: 6.5vh;
+                    animation: float infinite 2.5s ease-in-out;
+                }
+                h2{
+                    width: 100%;
+                    font-family: $Second-font;
+                    font-weight: 400;
+                    color: $Branco;
+                    font-size: 1.35vw;
+                    line-height: 3.5vh;
+                    padding-right: 15vw;
+                    margin: 5vh 0 7.5vh;
+                    animation: float infinite 2.5s ease-in-out;
+                }
+                .btn_homePortfolio{
+                    margin-right: 1.5vw;
+                    padding: 0.6vh 2vw 0.65vh;
+                }
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 10vh;
+                z-index: 10;
+                background: linear-gradient(180deg, rgba(1,17,46,0) 0%, rgba(1,17,46,1) 90%);
+            }
+        }
+        #cases{
+            width: 100%;
+            min-height: 100vh;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 7.5vh 0 10vh;
+            h2{
+                width: 90%;
+                margin: 0 5%;
+                font-family: $Main-font;
+                font-size: 2.5vw;
+                font-weight: 900;
+                color: $Branco;
+                letter-spacing: 0.1vw;
+            }
+            h3{
+                width: 90%;
+                margin: 0.5vh 5%;
+                font-family: $Second-font;
+                font-size: 1.1vw;
+                font-weight: 400;
+                color: $Branco;
+            }
+            .caseBlock{
+                width: 100%;
+                height: auto;
+                margin: 5vh 0 2vh;
+                display: flex;
+                .infos{
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    padding-left: 10vw;
+                    p{
+                        font-family: $Second-font;
+                        font-size: 2vw;
+                        font-weight: 400;
+                        color: $Branco;
+                        line-height: 4vh;
+                        animation: float infinite 3s ease-in-out;
+                    }
+                    h3{
+                        all: unset;
+                        font-family: $Second-font;
+                        font-size: 1.4vw;
+                        font-weight: 700;
+                        color: $Branco;
+                        margin: 3vh 0 8vh;
+                        animation: float infinite 3s ease-in-out;
+                    }
+                    .btns{
+                        padding: 0.45vh 3.5vw 0.55vh;
+                    }
+                }
+                .InfoRight{
+                    align-items: flex-end;
+                    padding-left: 0;
+                    padding-right: 10vw;
+
+                }
+                img{
+                    width: 50%;
                     height: auto;
+                }
+            }
+            .btn_case{
+                font-size: 1.25vw;
+                margin-top: 10vh;
+            }
+        }
+        #fluxo{
+            width: 87.5%;
+            min-height: 100vh;
+            height: auto;
+            margin: 0 7.5% 0 5%;
+            display: flex;
+            padding: 10vh 0;
+            #stickyHead{
+                top: 20vh;
+                width: 50%;
+                height: 23vh;
+                display: flex;
+                flex-direction: column;
+                position: sticky;
+                position: -webkit-sticky;
+                h2{
+                    font-family: $Main-font;
+                    font-size: 2.5vw;
+                    font-weight: 900;
+                    color: $Branco;
+                    letter-spacing: 0.1vw;
+                    padding-right: 8vw;
+                    margin-bottom: 3vh;
+                }
+                h3{
+                    font-family: $Second-font;
+                    font-size: 1.1vw;
+                    font-weight: 400;
+                    color: $Branco;
+                    line-height: 3.5vh;
+                    padding-right: 15vw;
+                }
+            }
+            #cardsFluxo{
+                width: 50%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                .cardFluxo{
+                    overflow: hidden;
+                    width: 100%;
+                    height: 45vh;
+                    background-color: $Branco;
+                    border-radius: 1vw;
+                    padding: 4vh 2vw;
+                    margin-bottom: 5vh;
+                    display: flex;
+                    flex-direction: column;
+                    img, svg{
+                        width: 6vw;
+                        height: auto;
+                        animation: flikIcon 2s infinite ease-in-out;
+                        path{
+                            stroke: $Laranja;
+                        }
+                    }
+                    h3{
+                        font-family: $Main-font;
+                        font-size: 2.25vw;
+                        font-weight: 900;
+                        color: $AzulClaro;
+                        margin: 3.5vh 0;
+                    }
+                    p{
+                        font-family: $Second-font;
+                        font-size: 1vw;
+                        font-weight: 600;
+                        color: $AzulClaro;
+                        padding-right: 3vw;
+                    }
                 }
             }
         }
 
-
-        #CircularText{
-            height: 300px;
-            width: 300px;
-            position: relative;
-            animation: effect 30s linear infinite;
+        #entrega{
+            
         }
-        @keyframes effect {
-            0%{
-                transform: rotate(0deg);
+        #nos{
+            
+        }
+        #contato{
+            
+        }
+        #faq{
+            #CircularText{
+                height: 300px;
+                width: 300px;
+                position: relative;
+                animation: circleText 30s linear infinite;
             }
-            100%{
-                transform: rotate(360deg);
+            
+            span{
+                position: absolute;
+                left: 50%;
+                transform-origin: 0px 150px;
+                font-family: $Main-font;
+                text-transform: uppercase;
+                font-weight: 900;
+                font-size: 1vw;
+                color: #fff;
             }
         }
-        // span{
-        //     position: absolute;
-        //     left: 50%;
-        //     transform-origin: 0px 150px;
-        //     font-family: $Main-font;
-        //     text-transform: uppercase;
-        //     font-weight: 900;
-        //     font-size: 1vw;
-        //     color: #fff;
-        // }
-
-       
-          .typer {
-            color: $Laranja;
-          }
-          .blink {
-            color: $Laranja;
-            animation: blink 0.6s infinite alternate;
-          }
-          @keyframes blink {
-            0% {opacity: 1;}
-            45% {opacity: 1;}
-            55% {opacity: 0;}
-            100% {opacity: 0;}
-          }
+        #cta{
+            .typer {
+                color: $Laranja;
+            }
+            .blink {
+                color: $Laranja;
+                animation: blink 0.6s infinite alternate;
+            }
+        }
     }
     
 }
