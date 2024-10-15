@@ -22,3 +22,17 @@ button{
     display: none !important;
     user-select: none !important;
 }
+.modal-backdrop{ 
+    opacity: 0.7 !important; 
+}
+.modal{
+    --bs-modal-width: auto;
+    --bs-modal-padding: none;
+    --bs-modal-margin: none;
+    --bs-modal-color: $Branco;
+    .modal-dialog{
+        .modal-content{
+            border: none;
+        }
+    }
+}
