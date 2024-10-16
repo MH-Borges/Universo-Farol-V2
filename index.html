@@ -41,7 +41,7 @@
     <header>
         <a href="#home" id="logo" class="links" aria-label="logo universo farol"><img src="assets/Logo_Horizontal.svg" onload="SVGInject(this)"></a>
         <a href="https://wa.me/5541995080219?text=Olá,%20tudo%20bem!?%20Gostaria%20de%20agendar%20uma%20conversa%20com%20vocês%20para%20falar%20sobre%20o%20meu%20projeto!%20Vocês%20tem%20um%20horário%20disponível%20para%20que%20possamos%20conversar?" class="btns" target="_blank">Agendar uma conversa!</a>
-        <button onclick="sideMenu()" alt-text="menu lateral"><span></span></button>
+        <button onclick="sideMenu()" aria-label="Menu lateral"><span></span></button>
         <span id="background_SideMenu" class="hide" onclick="sideMenu()"></span>
 
         <div id="sideMenu" class="hide">
@@ -189,23 +189,19 @@
 
                 <form id="formulario" method="POST">
                     <div class="BlockBox">
-                        <label for="nome">Campo de nome completo</label>
-                        <input type="text" name="nome" id="nome" required>
+                        <input type="text" name="nome" id="nome" aria-label="Campo de nome completo" required >
                         <p>Nome completo</p><span>*</span>
                     </div>
                     <div class="BlockBox">
-                        <label for="email">Campo de email</label>
-                        <input type="text" name="email" id="email" required>
+                        <input type="text" name="email" id="email" aria-label="Campo de email" required>
                         <p>E-mail</p><span>*</span>
                     </div>
                     <div class="BlockBox">
-                        <label for="telefone">Campo de telefone de contato</label>
-                        <input type="text" name="telefone" id="telefone" required>
+                        <input type="text" name="telefone" id="telefone" aria-label="Campo de telefone de contato" required>
                         <p>Telefone de contato</p>
                     </div>
                     <div class="BlockBox">
-                        <label for="mensagem">Campo de mensagem</label>
-                        <textarea type="text" name="mensagem" id="mensagem" required></textarea>
+                        <textarea type="text" name="mensagem" id="mensagem" aria-label="Campo de mensagem" required></textarea>
                         <p>Como posso te ajudar?</p>
                     </div>
                     <button id="btn_form" class="btns" type="submit">Enviar mensagem</button>
@@ -295,7 +291,7 @@
     </main>
     <footer>
         <div id="resume">
-            <a href="#home" id="logo_foot" class="links"><img src="assets/Logo_Horizontal.svg" onload="SVGInject(this)"></a>
+            <a aria-label="logo universo farol" href="#home" id="logo_foot" class="links"><img src="assets/Logo_Horizontal.svg" onload="SVGInject(this)"></a>
             <h4>Agência criativa especializada na criação de visuais memoráveis e sites únicos para impulsionar o seu negócio.</h4>
             <div id="redes">
                 <a aria-label="instagram universo farol" href="https://www.instagram.com/universofarol/" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"></a>

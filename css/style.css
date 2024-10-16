@@ -1023,7 +1023,9 @@ body #Main_index #contato #formBlock form .BlockBox {
   margin: 2vh 0;
 }
 body #Main_index #contato #formBlock form .BlockBox label {
-  display: none;
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
 }
 body #Main_index #contato #formBlock form .BlockBox input, body #Main_index #contato #formBlock form .BlockBox textarea {
   width: 100% !important;

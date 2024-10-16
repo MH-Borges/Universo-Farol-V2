@@ -933,7 +933,9 @@ body {
                         justify-content: center;
                         margin: 2vh 0;
                         label{
-                            display: none;
+                            opacity: 0;
+                            z-index: -1;
+                            position: absolute;
                         }
                         input, textarea{
                             width: 100% !important;
