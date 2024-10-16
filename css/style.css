@@ -866,15 +866,16 @@ body #Main_index #nos p {
   margin: 6vh 25% 7.5vh;
 }
 body #Main_index #nos #imgNosBlock {
-  width: 60%;
+  width: 70%;
   height: auto;
-  margin: 0 20%;
+  margin: 0 15%;
   position: relative;
 }
 body #Main_index #nos #imgNosBlock img {
   width: 100%;
   height: auto;
   mix-blend-mode: plus-lighter;
+  border-radius: 1vw;
 }
 body #Main_index #nos #imgNosBlock #textDescrJulia, body #Main_index #nos #imgNosBlock #textDescrMatheus {
   position: absolute;
