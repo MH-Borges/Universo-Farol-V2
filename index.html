@@ -39,9 +39,9 @@
 
 <body>
     <header>
-        <a href="#home" id="logo" class="links"><img src="assets/Logo_Horizontal.svg" onload="SVGInject(this)"></a>
+        <a href="#home" id="logo" class="links" aria-label="logo universo farol"><img src="assets/Logo_Horizontal.svg" onload="SVGInject(this)"></a>
         <a href="https://wa.me/5541995080219?text=Olá,%20tudo%20bem!?%20Gostaria%20de%20agendar%20uma%20conversa%20com%20vocês%20para%20falar%20sobre%20o%20meu%20projeto!%20Vocês%20tem%20um%20horário%20disponível%20para%20que%20possamos%20conversar?" class="btns" target="_blank">Agendar uma conversa!</a>
-        <button onclick="sideMenu()"><span></span></button>
+        <button onclick="sideMenu()" alt-text="menu lateral"><span></span></button>
         <span id="background_SideMenu" class="hide" onclick="sideMenu()"></span>
 
         <div id="sideMenu" class="hide">
@@ -179,28 +179,32 @@
             <h2>Fale com a gente!</h2>
             <h3>Nos mande uma mensagem! Conheça também todas nossas redes sociais!</h3>
             <div id="redesContato">
-                <a href="https://www.instagram.com/universofarol/" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"><p>@universofarol</p></a>
-                <a href="https://wa.me/5541995080219?text=Olá,%20tudo%20bem!?%20%20Gostaria%20de%20saber%20mais%20informações%20dos%20seus%20serviços!" target="_blank"><img src="assets/icons/whatsapp.svg" onload="SVGInject(this)"><p>+55 (41) 99508 - 0219</p></a>
-                <a href="https://www.linkedin.com/company/universo-farol/" target="_blank"><img src="assets/icons/linkedin.svg" onload="SVGInject(this)"><p>universo-farol</p></a>
-                <a href="malito:contato@universofarol.com.br" target="_blank"><img src="assets/icons/email.svg" onload="SVGInject(this)"><p>contato@universofarol.com.br</p></a>
+                <a aria-label="instagram universo farol" href="https://www.instagram.com/universofarol/" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"><p>@universofarol</p></a>
+                <a aria-label="whatsapp universo farol" href="https://wa.me/5541995080219?text=Olá,%20tudo%20bem!?%20%20Gostaria%20de%20saber%20mais%20informações%20dos%20seus%20serviços!" target="_blank"><img src="assets/icons/whatsapp.svg" onload="SVGInject(this)"><p>+55 (41) 99508 - 0219</p></a>
+                <a aria-label="linkedin universo farol" href="https://www.linkedin.com/company/universo-farol/" target="_blank"><img src="assets/icons/linkedin.svg" onload="SVGInject(this)"><p>universo-farol</p></a>
+                <a aria-label="E-mail universo farol" href="malito:contato@universofarol.com.br" target="_blank"><img src="assets/icons/email.svg" onload="SVGInject(this)"><p>contato@universofarol.com.br</p></a>
             </div>
             <div id="formBlock">
                 <h3> Se preferir, nos envie <br> uma mensagem direta! </h3>
 
                 <form id="formulario" method="POST">
                     <div class="BlockBox">
+                        <label for="nome">Campo de nome completo</label>
                         <input type="text" name="nome" id="nome" required>
                         <p>Nome completo</p><span>*</span>
                     </div>
                     <div class="BlockBox">
+                        <label for="email">Campo de email</label>
                         <input type="text" name="email" id="email" required>
                         <p>E-mail</p><span>*</span>
                     </div>
                     <div class="BlockBox">
+                        <label for="telefone">Campo de telefone de contato</label>
                         <input type="text" name="telefone" id="telefone" required>
                         <p>Telefone de contato</p>
                     </div>
                     <div class="BlockBox">
+                        <label for="mensagem">Campo de mensagem</label>
                         <textarea type="text" name="mensagem" id="mensagem" required></textarea>
                         <p>Como posso te ajudar?</p>
                     </div>
@@ -294,10 +298,10 @@
             <a href="#home" id="logo_foot" class="links"><img src="assets/Logo_Horizontal.svg" onload="SVGInject(this)"></a>
             <h4>Agência criativa especializada na criação de visuais memoráveis e sites únicos para impulsionar o seu negócio.</h4>
             <div id="redes">
-                <a href="https://www.instagram.com/universofarol/" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"></a>
-                <a href="https://wa.me/5541995080219?text=Olá,%20tudo%20bem!?%20%20Gostaria%20de%20saber%20mais%20informações%20dos%20seus%20serviços!" target="_blank"><img src="assets/icons/whatsapp.svg" onload="SVGInject(this)"></a>
-                <a href="https://www.linkedin.com/company/universo-farol/" target="_blank"><img src="assets/icons/linkedin.svg" onload="SVGInject(this)"></a>
-                <a href="malito:contato@universofarol.com.br" target="_blank"><img src="assets/icons/email.svg" onload="SVGInject(this)"></a>
+                <a aria-label="instagram universo farol" href="https://www.instagram.com/universofarol/" target="_blank"><img src="assets/icons/instagram.svg" onload="SVGInject(this)"></a>
+                <a aria-label="Whatsapp universo farol" href="https://wa.me/5541995080219?text=Olá,%20tudo%20bem!?%20%20Gostaria%20de%20saber%20mais%20informações%20dos%20seus%20serviços!" target="_blank"><img src="assets/icons/whatsapp.svg" onload="SVGInject(this)"></a>
+                <a aria-label="linkedin universo farol" href="https://www.linkedin.com/company/universo-farol/" target="_blank"><img src="assets/icons/linkedin.svg" onload="SVGInject(this)"></a>
+                <a aria-label="E-mail universo farol" href="malito:contato@universofarol.com.br" target="_blank"><img src="assets/icons/email.svg" onload="SVGInject(this)"></a>
             </div>
         </div>
         <div id="LinksRapido">
