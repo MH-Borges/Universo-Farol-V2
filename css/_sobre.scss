@@ -1,0 +1,310 @@
+#Main_sobre{
+    #nos{
+        width: 90%;
+        min-height: 100vh;
+        height: auto;
+        margin: 0 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10vh 0 20vh;
+        h2{
+            width: 100%;
+            font-family: $Main-font;
+            font-size: 2.5vw;
+            font-weight: 900;
+            color: $Branco;
+            letter-spacing: 0.1vw;
+            text-align: center;
+            position: relative;
+            #underline{
+                position: absolute;
+                top: 60%;
+                right: 37.5%;
+                width: 8vw;
+                height: auto;
+                img, svg{
+                    width: 100%;
+                    height: auto;
+                    path{
+                        stroke-dasharray: 1000;
+                        stroke-dashoffset: 1000;
+                    }
+                }
+            }
+            .animateUnderline{
+                img, svg{
+                    path{
+                        animation: Under_line 1s linear alternate forwards;
+                    }
+                }
+            }
+        }
+        p{
+            font-family: $Second-font;
+            font-size: 1.35vw;
+            font-weight: 400;
+            color: $Branco;
+            text-align: center;
+            line-height: 4.5vh;
+            width: 50%;
+            margin: 6vh 25% 7.5vh;
+        }
+        #imgNosBlock{
+            width: 70%;
+            height: auto;
+            margin: 0 15%;
+            position: relative;
+            img{
+                width: 100%;
+                height: auto;
+                mix-blend-mode: plus-lighter;
+                border-radius: 1vw;
+            }
+            #textDescrJulia, #textDescrMatheus{
+                position: absolute;
+                width: 27.5vw;
+                height: 20vh;
+                border-radius: 1vw;
+                background-color: $Branco;
+                padding: 1.5vw 2.4vw;
+                h3{
+                    width: 100%;
+                    font-family: $Main-font;
+                    font-size: 1.5vw;
+                    font-weight: 700;
+                    text-align: center;
+                    color: $Laranja;
+                }
+                p{
+                    all: unset;
+                    display: block;
+                    width: 100%;
+                    font-family: $Second-font;
+                    font-size: 1vw;
+                    font-weight: 400;
+                    color: $AzulEscuro;
+                    text-align: justify;
+                    margin-top: 2.5vh;
+                }
+            }
+            #textDescrJulia{
+                top: 85%;
+                right: 80%;
+            }
+            #textDescrMatheus{
+                top: 65%;
+                left: 80%;
+                p{
+                    font-size: 0.925vw;
+                }
+            }
+        }
+    }
+    #fluxo{
+        width: 87.5%;
+        min-height: 100vh;
+        height: auto;
+        margin: 0 7.5% 0 5%;
+        display: flex;
+        padding: 10vh 0;
+        #stickyHead{
+            top: 20vh;
+            width: 50%;
+            height: 23vh;
+            display: flex;
+            flex-direction: column;
+            position: sticky;
+            position: -webkit-sticky;
+            h2{
+                font-family: $Main-font;
+                font-size: 2.5vw;
+                font-weight: 900;
+                color: $Branco;
+                letter-spacing: 0.1vw;
+                padding-right: 8vw;
+                margin-bottom: 3vh;
+            }
+            h3{
+                font-family: $Second-font;
+                font-size: 1.1vw;
+                font-weight: 400;
+                color: $Branco;
+                line-height: 3.5vh;
+                padding-right: 15vw;
+            }
+        }
+        #cardsFluxo{
+            width: 50%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            .cardFluxo{
+                overflow: hidden;
+                width: 100%;
+                height: 45vh;
+                background-color: $Branco;
+                border-radius: 1vw;
+                padding: 4vh 2vw;
+                margin-bottom: 5vh;
+                display: flex;
+                flex-direction: column;
+                img, svg{
+                    width: 6vw;
+                    height: auto;
+                    animation: flikIcon 2s infinite ease-in-out;
+                    path{
+                        stroke: $Laranja;
+                    }
+                }
+                h3{
+                    font-family: $Main-font;
+                    font-size: 2.25vw;
+                    font-weight: 900;
+                    color: $AzulClaro;
+                    margin: 3.5vh 0;
+                }
+                p{
+                    font-family: $Second-font;
+                    font-size: 1vw;
+                    font-weight: 600;
+                    color: $AzulClaro;
+                    padding-right: 3vw;
+                }
+            }
+        }
+    }
+    #faq{
+        width: 90%;
+        min-height: 100vh;
+        height: auto;
+        margin: 0 5%;
+        display: flex;
+        flex-direction: column;
+        padding: 10vh 0 10vh;
+        position: relative;
+        h2{
+            width: 100%;
+            font-family: $Main-font;
+            font-size: 2.5vw;
+            font-weight: 900;
+            color: $Branco;
+            letter-spacing: 0.1vw;
+            text-align: center;
+        }
+        h3{
+            width: 100%;
+            font-family: $Second-font;
+            font-size: 1.1vw;
+            font-weight: 400;
+            color: $Branco;
+            text-align: center;
+            margin: 1.5vh 0;
+        }
+        .perguntaBlock{
+            width: 50%;
+            margin: 2vh 25%;
+            min-height: 8.5vh;
+            height: auto;
+            border-radius: 1vw;
+            overflow: hidden;
+            &:nth-child(3){
+                margin-top: 10vh;
+            }
+            button{
+                background-color: $Branco;
+                height: 8.5vh;
+                width: 100%;
+                text-align: left;
+                padding: 1.5vw;
+                font-family: $Main-font;
+                font-weight: 700;
+                font-size: 1.3vw;
+                position: relative;
+                box-shadow: 0px 0px 10px 0px rgba(1, 17, 46, 0.5);
+                &::before, &::after{
+                    content: '';
+                    position: absolute;
+                    width: 1.5vw;
+                    height: 5px;
+                    top: 47.5%;
+                    right: 3%;
+                    background-color: $Laranja;
+                    border-radius: 1vw;
+                    transform: rotate(0);
+                    transition: all ease-in-out 0.2s;
+                }
+                &::after{
+                    transform: rotate(90deg);
+                }
+            }
+            .flip{
+                &::before, &::after{
+                    transform: rotate(-45deg);
+                }
+                &::after{
+                    transform: rotate(45deg);
+                }
+            }
+            #FAQ1, #FAQ2, #FAQ3, #FAQ4{
+                background-color: $Cinzinha;
+                padding: 2vh 1.5vw 3vh;
+                padding-right: 3.5vw;
+                font-family: $Second-font;
+                font-size: 1vw;
+                font-weight: 400;
+                color: $AzulClaro;
+            }
+        }
+    }
+    #cta{
+        width: 90%;
+        margin: 0 5%;
+        min-height: 65vh;
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10vh 0;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 115.5%;
+            height: 100%;
+            top: 0;
+            left: -10%;
+            background-color: $AzulClaro;
+            z-index: -2;
+        }
+        h3{
+            width: 100%;
+            font-family: $Main-font;
+            font-size: 2.5vw;
+            font-weight: 900;
+            color: $Branco;
+            text-align: center;
+            .typer {
+                font-weight: 900;
+                color: $Laranja;
+            }
+            .blink {
+                color: $Laranja;
+                animation: blink 0.6s infinite alternate;
+            }
+        }
+        p{
+            width: 100%;
+            font-family: $Second-font;
+            font-size: 1.2vw;
+            font-weight: 400;
+            color: $Branco;
+            text-align: center;
+            margin: 0.5vh 0;
+        }
+        .btns{
+            margin-top: 12.5vh;
+        }
+    }
+}

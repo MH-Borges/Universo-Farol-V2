@@ -64,7 +64,99 @@
             <img class="Anc" src="assets/icons/ancora_corrente.svg" onload="SVGInject(this)" alt="Ancora pendurada por correntes">
             <img class="Anc_Q hide" src="assets/icons/ancora_quebrada.svg" onload="SVGInject(this)" alt="Ancora com corrente quebrada">
         </div>
-       
+
+        <!-- FAZER ALTERAÇÃO NO INICIO DE NÓS E ADICIONAR CARDS FLIPS -->
+        <section id="nos">
+            <h2>Nós somos reais! <span id="underline"><img src="assets/icons/underline.svg" onload="SVGInject(this)"></span></h2>
+            <p>Somos preocupados em transformar e tornar hipnotizante as marcas dos nossos navegantes. Focamos na sua essência, enriquecendo a sua identidade e evoluindo a sua realidade no universo digital.</p>
+            <div id="imgNosBlock">
+                <img src="assets/nos.webp" alt="nós">
+                <div id="textDescrJulia">
+                    <h3>Júlia Vitória</h3>
+                    <p>Nossa <b>Artista e Designer</b>, formada pela PUCPR, com muitos anos de experiência. Ama escrever e criar, é organizada e <b>tem como objetivo inspirar.</b></p>
+                </div>
+                <div id="textDescrMatheus">
+                    <h3>Matheus Borges</h3>
+                    <p>Nosso <b>Tech Lead</b> com muitos anos de experiência em criação. É apaixonado por jogos, D&D, cultura geek, <b>adora uma boa discussão e é apaixonado por criar.</b></p>
+                </div>
+            </div>
+        </section>
+        <section id="fluxo">
+            <div id="stickyHead">
+                <h2>O fluxo que descomplica o nosso trabalho</h2>
+                <h3>Conheça um pouco do processo que nos ajuda a tirar ideias do papel e transformar em projetos hipnotizantes.</h3>
+            </div>
+            <div id="cardsFluxo">
+                <div class="cardFluxo">
+                    <img src="assets/icons/alinhamento.svg" onload="SVGInject(this)">
+                    <h3>1. Alinhamento</h3>
+                    <p>Vamos entender profundamente as suas necessidades, expectativas e o contexto do projeto. Marcamos uma reunião para alinhar o que você espera alcançar com o projeto. O foco é garantir que todos estejam na mesma página sobre o projeto e seus desafios, necessidades e diferenciais.</p>
+                </div>
+                <div class="cardFluxo">
+                    <img src="assets/icons/briefing.svg" onload="SVGInject(this)">
+                    <h3>2. Briefing</h3>
+                    <p>Formalizamos as informações essenciais do projeto através de um formulário. Você fornece detalhes sobre o que precisa ser criado. E nós fazemos perguntas direcionadas para obter informações precisas. Pode incluir coletas de dados e análise de concorrentes e preferências estéticas.</p>
+                </div>
+                <div class="cardFluxo">
+                    <img src="assets/icons/desenvolvimento.svg" onload="SVGInject(this)">
+                    <h3>3. Desenvolvimento</h3>
+                    <p>Criaremos as primeiras versões do projeto com base no briefing e alinhamento. Começamos a desenvolver os conceitos e sketches iniciais. Toda a equipe colabora para criar soluções criativas e funcionais, respeitando o que foi discutido.</p>
+                </div>
+                <div class="cardFluxo">
+                    <img src="assets/icons/refinamento.svg" onload="SVGInject(this)">
+                    <h3>4. Refinamento</h3>
+                    <p>Melhoramos e ajustamos o projeto conforme o seu feedback. Você analisa as propostas e diz o que acha. A equipe de criação revisa os materiais e realiza as alterações necessárias, sempre mantendo o alinhamento com os objetivos e a identidade da marca.</p>
+                </div>
+                <div class="cardFluxo">
+                    <img src="assets/icons/acompanhamento.svg" onload="SVGInject(this)">
+                    <h3>5. Acompanhamento</h3>
+                    <p>Garantimos que o projeto final seja implementado corretamente e continue entregando os resultados esperados. Após a entrega final, acompanhamos a implementação, seja design ou web, verificando o desempenho e corrigindo possíveis problemas e gerando seus resultados desejados.</p>
+                </div>
+            </div>
+        </section>
+        <section id="faq">
+            <h2>Alguma dúvida? Temos as respostas!</h2>
+            <h3>Uma luz para te ajudar a embarcar no nosso universo!</h3>
+
+            <div class="perguntaBlock">
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#FAQ1" aria-expanded="false" aria-controls="FAQ1" onclick="Flip(this)">
+                    Em quanto tempo vocês concluem o meu projeto?
+                </button>
+                <div class="collapse" id="FAQ1">
+                    Não existe um tempo exato para entrega final, como cada projeto é um universo diferente e nosso método de criação envolve diretamente o cliente, dependemos das respostas e de seu nível de engajamento. <b>Então quanto mais rápido o contratante nos responde mais rápido conseguimos entregar o projeto final!!</b>
+                </div>
+            </div>
+            <div class="perguntaBlock">
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#FAQ2" aria-expanded="false" aria-controls="FAQ2" onclick="Flip(this)">
+                    Como funciona o pagamento?
+                </button>
+                <div class="collapse" id="FAQ2">
+                    A maior parte de nossos projetos, <b>trabalhamos com o método de pagamento de 50/50</b>, após o envio dos primeiros rascunhos para o cliente, esperamos sua aprovação. <b>Caso o mesmo não aprove e acabe por preferir cancelar o projeto, não existe a necessidade do pagamento dos 50% finais do projeto e os 50% inicias cobrirão as horas de trabalho já utilizadas.</b> 
+                </div>
+            </div>
+            <div class="perguntaBlock">
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#FAQ3" aria-expanded="false" aria-controls="FAQ3" onclick="Flip(this)"> 
+                    Eu posso sugerir ideias para o design?
+                </button>
+                <div class="collapse" id="FAQ3">
+                    <b>Você faz parte de todo o processo de criação do projeto</b>, e <b>pode pedir quantas alterações</b> achar necessário, durante todo o processo de criação, até a entrega final. <b>Depois de completamente finalizado, dentro de 15 dias de uso dos materiais, disponibilizamos a possibilidade de uma <u>única alteração.</u></b> Caso haja necessidade de mais, <b>depois do tempo estipulado, serão cobradas a parte deste orçamento.</b> 
+                </div>
+            </div>
+            <div class="perguntaBlock">
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#FAQ4" aria-expanded="false" aria-controls="FAQ4" onclick="Flip(this)">
+                    É preciso pagar uma mensalidade?
+                </button>
+                <div class="collapse" id="FAQ4">
+                    Não cobramos mensalidades!! A nossa forma de criação envolve <b>um ciclo de desenvolvimento</b>, normalmente projetamos fases de projeto, que não necessariamente precisam ser executadas uma após a outra, mas é um plano de ação para que você possa ver <b>todos os passos que sua marca pode fazer para alcançar grandes lugares!</b>
+                </div>
+            </div>
+        </section>
+        <section id="cta">
+            <h3>Ainda <span class="typer"></span><span class="blink">|</span></h3>
+            <p>Não perca tempo e entre em contato conosco</p>
+
+            <a href="https://wa.me/5541995080219?text=Olá,%20tudo%20bem!?%20Gostaria%20de%20agendar%20uma%20conversa%20com%20vocês%20para%20falar%20sobre%20o%20meu%20projeto!%20Vocês%20tem%20um%20horário%20disponível%20para%20que%20possamos%20conversar?" class="btns btns_Out" target="_blank">Mande uma mensagem!</a>
+        </section>
        
     </main>
     <footer>

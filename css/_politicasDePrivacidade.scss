@@ -1,0 +1,190 @@
+#Main_PoliticasDePrivacidade{
+    #resumoLGPD{
+        width: 80%;
+        min-height: auto;
+        height: auto;
+        margin: 0 10%;
+        margin-top: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            font-family: $Main-font;
+            font-weight: 900;
+            font-size: 3vw;
+            color: $Branco;
+            margin-bottom: 5vh;
+        }
+        p{
+            font-family: $Second-font;
+            font-weight: 400;
+            font-size: 1vw;
+            color: $Branco;
+            line-height: 3vh;
+        }
+    }
+    #cookies{
+        width: 80%;
+        min-height: auto;
+        height: auto;
+        margin: 0 10%;
+        margin-top: 12.5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            width: 100%;
+            text-align: center;
+            font-family: $Main-font;
+            font-weight: 900;
+            font-size: 3vw;
+            color: $Branco;
+            margin-bottom: 5vh;
+        }
+        .paragrafo{
+            width: 100%;
+            height: auto;
+            margin: 1.5vh 0 3vh;
+            h3{
+                font-family: $Second-font;
+                font-size: 1vw;
+                color: $Branco;
+                font-weight: 300;
+                line-height: 3.5vh;
+                span{
+                    font-size: 1.3vw;
+                    font-weight: 800;
+                    margin-right: 1vw;
+                }
+            }
+        }
+        a{
+            width: 100%;
+            font-family: $Second-font;
+            font-weight: 300;
+            color: $Cinzinha;
+            text-decoration: underline;
+            font-size: 1vw;
+            margin: 0.5vh 0;
+            span{
+                font-weight: 800;
+                font-size: 1.2vw;
+                color: $Branco;
+                margin-right: 0.5vw;
+            }
+            &:hover{
+                color: $Laranja;
+                span{
+                    color: $Branco;
+                }
+            }
+            &:nth-child(9){
+                margin-bottom: 7.5vh;
+            }
+        }
+        .paragrafo_list{
+            width: 100%;
+            height: auto;
+            margin: 1.5vh 0 3vh;
+            h3{
+                font-family: $Second-font;
+                color: $Branco;
+                line-height: 3.5vh;
+                font-size: 1.5vw;
+                font-weight: 800;
+                span{
+                    margin-right: 1vw;
+                    font-weight: 300;
+                    font-size: 1vw;
+                }
+            }
+            p{
+                font-family: $Second-font;
+                color: $Branco;
+                line-height: 3.5vh;
+                font-weight: 300;
+                font-size: 0.9vw;
+                margin: 2vh 0;
+                padding-left: 1vw;
+                position: relative;
+                span{
+                    font-size: 1.1vw;
+                    margin-right: 0.5vw;
+                    font-weight: 700;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 20%;
+                    left: 0;
+                    width: 3px;
+                    height: 3px;
+                    background-color: $Branco;
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+    #finais{
+        width: 80%;
+        min-height: auto;
+        height: auto;
+        margin: 5vh 10% 15vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            width: 100%;
+            text-align: center;
+            font-family: $Main-font;
+            font-weight: 900;
+            font-size: 3vw;
+            color: $Branco;
+            margin-bottom: 5vh;
+        }
+        p{
+            font-family: $Second-font;
+            font-weight: 400;
+            font-size: 1vw;
+            color: $Branco;
+            line-height: 3vh;
+        }
+        .paragrafo_listFinal{
+            width: 100%;
+            height: auto;
+            margin: 1.5vh 0 3vh;
+            h3{
+                font-family: $Second-font;
+                color: $Branco;
+                line-height: 3.5vh;
+                font-size: 1.5vw;
+                font-weight: 800;
+            }
+            p{
+                font-family: $Second-font;
+                color: $Branco;
+                line-height: 3.5vh;
+                font-weight: 300;
+                font-size: 0.9vw;
+                margin: 2vh 0;
+                padding-left: 1vw;
+                position: relative;
+                span{
+                    font-size: 1.1vw;
+                    margin-right: 0.5vw;
+                    font-weight: 700;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 20%;
+                    left: 0;
+                    width: 3px;
+                    height: 3px;
+                    background-color: $Branco;
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+}
