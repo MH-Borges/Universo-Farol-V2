@@ -221,6 +221,9 @@ body {
                     transform: scale(1.05);
                 }
             }
+            .active{
+                color: $Laranja;
+            }
             #foot{
                 width: 90%;
                 height: 5vh;
@@ -932,11 +935,6 @@ body {
                         align-items: center;
                         justify-content: center;
                         margin: 2vh 0;
-                        label{
-                            opacity: 0;
-                            z-index: -1;
-                            position: absolute;
-                        }
                         input, textarea{
                             width: 100% !important;
                             height: 100%;
@@ -1033,7 +1031,7 @@ body {
             margin: 0 5%;
             display: flex;
             flex-direction: column;
-            padding: 7.5vh 0 10vh;
+            padding: 10vh 0 10vh;
             position: relative;
             h2{
                 width: 100%;
@@ -1055,13 +1053,13 @@ body {
             }
             .perguntaBlock{
                 width: 50%;
-                margin: 1.75vh 25%;
+                margin: 2vh 25%;
                 min-height: 8.5vh;
                 height: auto;
                 border-radius: 1vw;
                 overflow: hidden;
                 &:nth-child(3){
-                    margin-top: 6vh;
+                    margin-top: 10vh;
                 }
                 button{
                     background-color: $Branco;
@@ -1106,118 +1104,6 @@ body {
                     font-size: 1vw;
                     font-weight: 400;
                     color: $AzulClaro;
-                }
-            }
-            .btnFAQ{
-                position: absolute;
-                top: 75%;
-                left: 0%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                #QuastionText{
-                    position: absolute;
-                    font-family: $Main-font;
-                    font-weight: 900;
-                    font-size: 6.5vw;
-                    color: $Branco;
-                    top: -3%;
-                }
-                #CircularText{
-                    height: 150px;
-                    width: 150px;
-                    position: relative;
-                    animation: circleText 30s linear infinite;
-                    span{
-                        position: absolute;
-                        left: 50%;
-                        transform-origin: 0px 75px;
-                        font-family: $Main-font;
-                        text-transform: uppercase;
-                        font-weight: 500;
-                        font-size: 0.6vw;
-                        color: $Branco;
-                    }
-                }
-            }
-            #ModalResumoFAQ{
-                background-color: none;
-                .modal-dialog{
-                    width: 75vw;
-                    height: 80vh;
-                    margin: 9vh 0 9vh 15vw;
-                    border-radius: 1vw;
-                    overflow: hidden;
-                    .modal-content{
-                        border-radius: 0;
-                        background-color: $Cinzinha;
-                        width: 75vw;
-                        height: 80vh;
-                        display: flex;
-                        flex-wrap: wrap;
-                        padding: 2vh 2vw;
-                        justify-content: space-around;
-                        flex-direction: unset;
-                        .CloseModal{
-                            position: absolute;
-                            top: 1.5vh;
-                            right: 0.75vw;
-                            width: 2.5vw;
-                            height: 2.5vw;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            transition: all ease-in-out 0.2s;
-                            cursor: pointer;
-                            z-index: 999 !important;
-                            &::before, &::after{
-                                content: '';
-                                position: absolute;
-                                width: 2vw;
-                                height: 5px;
-                                background-color: $Laranja;
-                                border-radius: 1vw;
-                                transform: rotate(-45deg);
-                            }
-                            &::after{
-                                transform: rotate(45deg);
-                            }
-                            &:hover{
-                                transform: scale(1.1);
-                            }
-                        }
-                        h3{
-                            font-family: $Main-font;
-                            font-size: 2.25vw;
-                            font-weight: 900;
-                            line-height: 4.5vh;
-                            color: $AzulEscuro;
-                            width: 100%;
-                            text-align: left;
-                        }
-                        .cardModal{
-                            all: unset;
-                            background-color: $Cinzao;
-                            width: 45%;
-                            height: 27.5vh;
-                            border-radius: 1vw;
-                            padding: 2vw;
-                            h4{
-                                font-family: $Main-font;
-                                font-weight: 900;
-                                font-size: 1.75vw;
-                                color: $AzulEscuro;
-                                margin-bottom: 2vh;
-                            }
-                            p{
-                                font-family: $Second-font;
-                                font-weight: 400;
-                                font-size: 0.85vw;
-                                color: $AzulEscuro;
-                                line-height: 2.5vh;
-                            }
-                        }
-                    }
                 }
             }
         }
@@ -1272,6 +1158,9 @@ body {
             }
         }
     }
+
+    @import 'contato';
+    @import '404';
     
 }
 

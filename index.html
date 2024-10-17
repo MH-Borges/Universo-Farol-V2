@@ -65,8 +65,6 @@
             <img class="Anc_Q hide" src="assets/icons/ancora_quebrada.svg" onload="SVGInject(this)" alt="Ancora com corrente quebrada">
         </div>
        
-
-       
         <section id="home">
             <img src="assets/bg.webp" id="background_home" alt="background">
 
@@ -86,7 +84,7 @@
                 <div class="infos">
                     <p>“Realçar a beleza <br> é um ato de amor”</p>
                     <h3>| Id. Visual I e Materiais Gráficos |</h3>
-                    <a href="aline.html" class="btns btns_Out">Conheça esse case</a>
+                    <a href="projetos/aline.html" class="btns btns_Out">Conheça esse case</a>
                 </div>
                 <img src="assets/aline_home.webp" alt="Banner do case Aline">
             </div>
@@ -95,14 +93,14 @@
                 <div class="infos InfoRight">
                     <p>“O lugar seguro para voltar <br> a aprender a voar sozinho.”</p>
                     <h3>| Id. Visual II e Web Design |</h3>
-                    <a href="sicuro.html" class="btns btns_Out">Conheça esse case</a>
+                    <a href="projetos/sicuro.html" class="btns btns_Out">Conheça esse case</a>
                 </div>
             </div>
             <div class="caseBlock">
                 <div class="infos">
                     <p>“Potência e alto desempenho <br> para o seu veículo.”</p>
                     <h3>| Id. Visual II e Web Design |</h3>
-                    <a href="autoInove.html" class="btns btns_Out">Conheça esse case</a>
+                    <a href="projetos/autoInove.html" class="btns btns_Out">Conheça esse case</a>
                 </div>
                 <img src="assets/autoInove_home.webp" alt="Banner do case Auto inove">
             </div>
@@ -248,41 +246,6 @@
                     Não cobramos mensalidades!! A nossa forma de criação envolve <b>um ciclo de desenvolvimento</b>, normalmente projetamos fases de projeto, que não necessariamente precisam ser executadas uma após a outra, mas é um plano de ação para que você possa ver <b>todos os passos que sua marca pode fazer para alcançar grandes lugares!</b>
                 </div>
             </div>
-
-            <button type="button" class="btnFAQ" data-bs-toggle="modal" data-bs-target="#ModalResumoFAQ">
-                <p id="QuastionText">?</p>
-                <p id="CircularText"></p>
-            </button>
-
-            <!-- Modal -->
-            <div class="modal fade" id="ModalResumoFAQ" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-
-                        <button type="button" class="CloseModal" data-bs-dismiss="modal" aria-label="Close"></button>
-        
-                        <h3>Informações que <br> podem te ajudar!</h3>
-
-                        <div class="cardModal">
-                            <h4>Entregas</h4>
-                            <p><b>São entregues três tipos de arquivos: PNG, PDF e AI</b> (arquivos abertos), dependendo da fase em que se encontra. <b>O contratante</b>, ao iniciar o projeto, <b>pode indicar sua preferência</b> de entrega. Também, <b>é disponibilizado um link no Drive</b> com todas as versões das logos e materiais. E vale lembrar: <b>todas páginas desenvolvidas para Web incluem as versões mobile.</b></p>
-                        </div>
-                        <div class="cardModal">
-                            <h4>Alterações</h4>
-                            <p><b>Você faz parte de todo o processo de criação do seu projeto</b>, e <b>pode pedir quantas alterações</b> achar necessário, durante o projeto, até a entrega final. <b>Depois de completamente finalizado, dentro de 15 dias de uso dos materiais, disponibilizamos a possibilidade de uma <u>única alteração.</u></b> Caso haja necessidade de mais, <b>depois do tempo estipulado, serão cobradas a parte deste orçamento.</b></p>
-                        </div>
-                        <div class="cardModal">
-                            <h4>Quanto tempo</h4>
-                            <p>Não existe um tempo exato para entrega final, como cada projeto é um universo diferente e nosso método de criação envolve diretamente o cliente, dependemos das respostas e de seu nível de engajamento. <b>Então quanto mais rápido o contratante nos responde mais rápido conseguimos entregar o projeto final.</b></p>
-                        </div>
-                        <div class="cardModal">
-                            <h4>Reembolso</h4>
-                            <p>A maior parte de nossos projetos, <b>trabalhamos com o método de pagamento de 50/50</b>, após o envio dos primeiros rascunhos para o cliente, esperamos sua aprovação. <b>Caso o mesmo não aprove e acabe por preferir cancelar o projeto, não existe a necessidade do pagamento dos 50% finais do projeto e os 50% inicias cobrirão as horas de trabalho já utilizadas.</b></p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
         </section>
         <section id="cta">
             <h3>Ainda <span class="typer"></span><span class="blink">|</span></h3>
@@ -345,7 +308,7 @@
                     data: $('form').serialize(),
                     dataType: "text",
                     success: function (msg) {
-                        if (msg.trim() === 'Mensagem enviada com sucesso! Entrarei em contato em breve!') {
+                        if (msg.trim() === 'Mensagem enviada com sucesso! Entraremos em contato em breve!') {
                             $('#msg_form').addClass('text-success');
                             $('#msg_form').text(msg);
                             setTimeout(() => { window.location.reload(); }, 5000)
@@ -355,9 +318,8 @@
                             $('#msg_form').text(msg);
                         }
                         else{
-                            $('#msg_form').removeClass('text-success');
-                            $('#msg_form').addClass('text-danger');
-                            $('#msg_form').text('Erro ao enviar o formulario, provaveis problemas com o servidor, você pode tentar me mandar mensagem via Instagram ou Whatsapp');
+                            $('#msg_form').addClass('text-warning');
+                            $('#msg_form').text('Erro ao enviar o formulario! Ele não pode ser enviado por falhas com a comunicação com o servidor, você pode tentar novamente ou tentar nos contactar via Instagram ou Whatsapp');
                         }
                     }
                 })
@@ -375,18 +337,6 @@
             }
         }
 
-        //TextoCircular
-        $(document).ready(function () {
-            const str = "Informações importantes • Informações importantes •";
-            const text = document.getElementById("CircularText");
-            for (let i = 0; i < str.length; i++) {
-                let span = document.createElement('span');
-                span.innerHTML = str[i] 
-                text.appendChild(span);
-                span.style.transform = `rotate(${6.9*i}deg)`;
-            }
-        });
-   
         //Efeito de escrita CTA
         $(function () {
             var index = 0, count = 0;

@@ -1,0 +1,87 @@
+#Main_404{
+    #textura{
+        z-index: 3 !important;
+    }
+    #body_404{
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 10%;
+        span{
+            font-family: $Main-font;
+            font-size: 35vw;
+            font-weight: 900;
+            color: $Branco;
+            mix-blend-mode: soft-light;
+            opacity: 0.2;
+            position: absolute;
+            left: 5%;
+            top: -7%;
+            z-index: 2;
+        }
+        video{
+            position: absolute;
+            width: auto;
+            height: 100%;
+            right: 0;
+            mix-blend-mode: exclusion;
+            z-index: 1;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 13%;
+            width: 17.5%;
+            height: 100%;
+            z-index: 2;
+            background: linear-gradient(-90deg, rgba(1,17,46,0) 0%, rgba(1,17,46,1) 75%);
+        }
+
+        h1{
+            width: 100%;
+            font-family: $Main-font;
+            font-size: 3vw;
+            font-weight: 900;
+            color: $Branco;
+        }
+        h2{
+            width: 100%;
+            font-family: $Second-font;
+            font-size: 1.25vw;
+            font-weight: 400;
+            color: $Branco;
+            margin-top: 5vh;
+        }
+        #linksPgs{
+            margin: 30vh 0 -15vh;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: auto;
+            h3{
+                width: 100%;
+                font-family: $Main-font;
+                font-weight: 900;
+                font-size: 2vw;
+                color: $Branco;
+                margin-bottom: 4vh;
+            }
+            a{
+                font-size: 1.1vw;
+                padding: 0.55vh 2vw 0.65vh;
+                &:nth-child(2){
+                    margin-right: 3vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+        
+    }
+}

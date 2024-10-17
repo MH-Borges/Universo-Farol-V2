@@ -318,6 +318,9 @@ body header #sideMenu .link_pgs:nth-child(4) {
 body header #sideMenu .link_pgs:hover {
   transform: scale(1.05);
 }
+body header #sideMenu .active {
+  color: #EA6637;
+}
 body header #sideMenu #foot {
   width: 90%;
   height: 5vh;
@@ -1022,11 +1025,6 @@ body #Main_index #contato #formBlock form .BlockBox {
   justify-content: center;
   margin: 2vh 0;
 }
-body #Main_index #contato #formBlock form .BlockBox label {
-  opacity: 0;
-  z-index: -1;
-  position: absolute;
-}
 body #Main_index #contato #formBlock form .BlockBox input, body #Main_index #contato #formBlock form .BlockBox textarea {
   width: 100% !important;
   height: 100%;
@@ -1115,7 +1113,7 @@ body #Main_index #faq {
   margin: 0 5%;
   display: flex;
   flex-direction: column;
-  padding: 7.5vh 0 10vh;
+  padding: 10vh 0 10vh;
   position: relative;
 }
 body #Main_index #faq h2 {
@@ -1138,14 +1136,14 @@ body #Main_index #faq h3 {
 }
 body #Main_index #faq .perguntaBlock {
   width: 50%;
-  margin: 1.75vh 25%;
+  margin: 2vh 25%;
   min-height: 8.5vh;
   height: auto;
   border-radius: 1vw;
   overflow: hidden;
 }
 body #Main_index #faq .perguntaBlock:nth-child(3) {
-  margin-top: 6vh;
+  margin-top: 10vh;
 }
 body #Main_index #faq .perguntaBlock button {
   background-color: #ECECEC;
@@ -1188,118 +1186,6 @@ body #Main_index #faq .perguntaBlock #FAQ1, body #Main_index #faq .perguntaBlock
   font-size: 1vw;
   font-weight: 400;
   color: #0C327B;
-}
-body #Main_index #faq .btnFAQ {
-  position: absolute;
-  top: 75%;
-  left: 0%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-body #Main_index #faq .btnFAQ #QuastionText {
-  position: absolute;
-  font-family: "Now", sans-serif;
-  font-weight: 900;
-  font-size: 6.5vw;
-  color: #ECECEC;
-  top: -3%;
-}
-body #Main_index #faq .btnFAQ #CircularText {
-  height: 150px;
-  width: 150px;
-  position: relative;
-  animation: circleText 30s linear infinite;
-}
-body #Main_index #faq .btnFAQ #CircularText span {
-  position: absolute;
-  left: 50%;
-  transform-origin: 0px 75px;
-  font-family: "Now", sans-serif;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 0.6vw;
-  color: #ECECEC;
-}
-body #Main_index #faq #ModalResumoFAQ {
-  background-color: none;
-}
-body #Main_index #faq #ModalResumoFAQ .modal-dialog {
-  width: 75vw;
-  height: 80vh;
-  margin: 9vh 0 9vh 15vw;
-  border-radius: 1vw;
-  overflow: hidden;
-}
-body #Main_index #faq #ModalResumoFAQ .modal-dialog .modal-content {
-  border-radius: 0;
-  background-color: #C0C0C0;
-  width: 75vw;
-  height: 80vh;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2vh 2vw;
-  justify-content: space-around;
-  flex-direction: unset;
-}
-body #Main_index #faq #ModalResumoFAQ .modal-dialog .modal-content .CloseModal {
-  position: absolute;
-  top: 1.5vh;
-  right: 0.75vw;
-  width: 2.5vw;
-  height: 2.5vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all ease-in-out 0.2s;
-  cursor: pointer;
-  z-index: 999 !important;
-}
-body #Main_index #faq #ModalResumoFAQ .modal-dialog .modal-content .CloseModal::before, body #Main_index #faq #ModalResumoFAQ .modal-dialog .modal-content .CloseModal::after {
-  content: "";
-  position: absolute;
-  width: 2vw;
-  height: 5px;
-  background-color: #EA6637;
-  border-radius: 1vw;
-  transform: rotate(-45deg);
-}
-body #Main_index #faq #ModalResumoFAQ .modal-dialog .modal-content .CloseModal::after {
-  transform: rotate(45deg);
-}
-body #Main_index #faq #ModalResumoFAQ .modal-dialog .modal-content .CloseModal:hover {
-  transform: scale(1.1);
-}
-body #Main_index #faq #ModalResumoFAQ .modal-dialog .modal-content h3 {
-  font-family: "Now", sans-serif;
-  font-size: 2.25vw;
-  font-weight: 900;
-  line-height: 4.5vh;
-  color: #01112E;
-  width: 100%;
-  text-align: left;
-}
-body #Main_index #faq #ModalResumoFAQ .modal-dialog .modal-content .cardModal {
-  all: unset;
-  background-color: #818181;
-  width: 45%;
-  height: 27.5vh;
-  border-radius: 1vw;
-  padding: 2vw;
-}
-body #Main_index #faq #ModalResumoFAQ .modal-dialog .modal-content .cardModal h4 {
-  font-family: "Now", sans-serif;
-  font-weight: 900;
-  font-size: 1.75vw;
-  color: #01112E;
-  margin-bottom: 2vh;
-}
-body #Main_index #faq #ModalResumoFAQ .modal-dialog .modal-content .cardModal p {
-  font-family: "Maven Pro", sans-serif;
-  font-weight: 400;
-  font-size: 0.85vw;
-  color: #01112E;
-  line-height: 2.5vh;
 }
 body #Main_index #cta {
   width: 90%;
@@ -1350,4 +1236,348 @@ body #Main_index #cta p {
 }
 body #Main_index #cta .btns {
   margin-top: 12.5vh;
+}
+body #Main_contato #body_Contato {
+  width: 90%;
+  margin: 0 5%;
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+  padding: 7.5vh 0 0;
+}
+body #Main_contato #body_Contato h1 {
+  width: 50%;
+  font-family: "Now", sans-serif;
+  font-size: 3.25vw;
+  font-weight: 900;
+  color: #ECECEC;
+  margin: 10vh auto 0.5vh 0;
+  line-height: 6vh;
+}
+body #Main_contato #body_Contato h3 {
+  width: 50%;
+  margin: 1.5vh auto 0.5vh 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1.15vw;
+  font-weight: 400;
+  color: #ECECEC;
+  line-height: 3.5vh;
+}
+body #Main_contato #body_Contato #formBlock {
+  margin-left: auto;
+  width: 50%;
+  height: 75vh;
+  right: 0;
+  top: 20%;
+  position: absolute;
+}
+body #Main_contato #body_Contato #formBlock h3 {
+  all: unset;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: "Now", sans-serif;
+  font-weight: 700;
+  color: #ECECEC;
+  font-size: 2vw;
+}
+body #Main_contato #body_Contato #formBlock form {
+  width: 80%;
+  height: 75%;
+  margin: 0 10%;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 1vw;
+  padding: 1vh 3vw;
+  background-color: #818181;
+}
+body #Main_contato #body_Contato #formBlock form .BlockBox {
+  width: 100%;
+  height: 10%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2vh 0;
+}
+body #Main_contato #body_Contato #formBlock form .BlockBox input, body #Main_contato #body_Contato #formBlock form .BlockBox textarea {
+  width: 100% !important;
+  height: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  resize: none;
+  padding: 0 1.25vw;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 300;
+  font-size: 0.9vw;
+  color: #ECECEC;
+  border-bottom: 3px solid #ECECEC;
+}
+body #Main_contato #body_Contato #formBlock form .BlockBox p, body #Main_contato #body_Contato #formBlock form .BlockBox span {
+  position: absolute;
+  left: 1vw;
+  top: 17.5%;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 700;
+  font-size: 1.05vw;
+  color: #ECECEC;
+  transition: 0.5s;
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+}
+body #Main_contato #body_Contato #formBlock form .BlockBox:nth-child(1) {
+  margin-top: 5vh;
+}
+body #Main_contato #body_Contato #formBlock form .BlockBox:nth-child(1) span {
+  font-size: 1.1vw;
+  left: 9.25vw;
+  top: 5%;
+  color: #01112E;
+}
+body #Main_contato #body_Contato #formBlock form .BlockBox:nth-child(2) span {
+  font-size: 1.1vw;
+  left: 4.75vw;
+  top: 5%;
+  color: #01112E;
+}
+body #Main_contato #body_Contato #formBlock form .BlockBox:nth-child(4) {
+  height: 22.5%;
+  margin-top: 1vh;
+}
+body #Main_contato #body_Contato #formBlock form .BlockBox:nth-child(4) input, body #Main_contato #body_Contato #formBlock form .BlockBox:nth-child(4) textarea {
+  height: 80%;
+  padding: 0.75vh 3vw 0.75vh 1.25vw;
+  padding-right: 3vw;
+  line-height: 3vh;
+}
+body #Main_contato #body_Contato #formBlock form .BlockBox:nth-child(4) p {
+  top: 20%;
+}
+body #Main_contato #body_Contato #formBlock form .BlockBox input:focus ~ p, body #Main_contato #body_Contato #formBlock form input:valid ~ p, body #Main_contato #body_Contato #formBlock form textarea:focus ~ p, body #Main_contato #body_Contato #formBlock form textarea:valid ~ p {
+  transform: translate(-0.75vw, -2.5vh);
+  font-size: 0.9vw;
+}
+body #Main_contato #body_Contato #formBlock form .BlockBox input:focus ~ span, body #Main_contato #body_Contato #formBlock form input:valid ~ span {
+  transform: translate(-1.5vw, -2.5vh);
+  font-size: 0.9vw;
+}
+body #Main_contato #body_Contato #formBlock form button {
+  width: 50%;
+  position: absolute;
+  top: 87.5%;
+  left: 25%;
+}
+body #Main_contato #body_Contato #formBlock #msg_form {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 9vh;
+  height: auto;
+  overflow: auto;
+  padding: 1vh 1vw;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 900;
+  font-size: 0.8vw;
+  text-align: center;
+  color: #01112E;
+}
+body #Main_contato #body_Contato .btnFAQ {
+  position: absolute;
+  top: 75%;
+  left: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_contato #body_Contato .btnFAQ #QuastionText {
+  position: absolute;
+  font-family: "Now", sans-serif;
+  font-weight: 900;
+  font-size: 6.5vw;
+  color: #ECECEC;
+  top: -3%;
+}
+body #Main_contato #body_Contato .btnFAQ #CircularText {
+  height: 150px;
+  width: 150px;
+  position: relative;
+  animation: circleText 30s linear infinite;
+}
+body #Main_contato #body_Contato .btnFAQ #CircularText span {
+  position: absolute;
+  left: 50%;
+  transform-origin: 0px 75px;
+  font-family: "Now", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.6vw;
+  color: #ECECEC;
+}
+body #Main_contato #body_Contato #ModalResumoFAQ {
+  background-color: none;
+}
+body #Main_contato #body_Contato #ModalResumoFAQ .modal-dialog {
+  width: 75vw;
+  height: 80vh;
+  margin: 9vh 0 9vh 15vw;
+  border-radius: 1vw;
+  overflow: hidden;
+}
+body #Main_contato #body_Contato #ModalResumoFAQ .modal-dialog .modal-content {
+  border-radius: 0;
+  background-color: #C0C0C0;
+  width: 75vw;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2vh 2vw;
+  justify-content: space-around;
+  flex-direction: unset;
+}
+body #Main_contato #body_Contato #ModalResumoFAQ .modal-dialog .modal-content .CloseModal {
+  position: absolute;
+  top: 1.5vh;
+  right: 0.75vw;
+  width: 2.5vw;
+  height: 2.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+  z-index: 999 !important;
+}
+body #Main_contato #body_Contato #ModalResumoFAQ .modal-dialog .modal-content .CloseModal::before, body #Main_contato #body_Contato #ModalResumoFAQ .modal-dialog .modal-content .CloseModal::after {
+  content: "";
+  position: absolute;
+  width: 2vw;
+  height: 5px;
+  background-color: #EA6637;
+  border-radius: 1vw;
+  transform: rotate(-45deg);
+}
+body #Main_contato #body_Contato #ModalResumoFAQ .modal-dialog .modal-content .CloseModal::after {
+  transform: rotate(45deg);
+}
+body #Main_contato #body_Contato #ModalResumoFAQ .modal-dialog .modal-content .CloseModal:hover {
+  transform: scale(1.1);
+}
+body #Main_contato #body_Contato #ModalResumoFAQ .modal-dialog .modal-content h3 {
+  font-family: "Now", sans-serif;
+  font-size: 2.25vw;
+  font-weight: 900;
+  line-height: 4.5vh;
+  color: #01112E;
+  width: 100%;
+  text-align: left;
+}
+body #Main_contato #body_Contato #ModalResumoFAQ .modal-dialog .modal-content .cardModal {
+  all: unset;
+  background-color: #818181;
+  width: 45%;
+  height: 27.5vh;
+  border-radius: 1vw;
+  padding: 2vw;
+}
+body #Main_contato #body_Contato #ModalResumoFAQ .modal-dialog .modal-content .cardModal h4 {
+  font-family: "Now", sans-serif;
+  font-weight: 900;
+  font-size: 1.75vw;
+  color: #01112E;
+  margin-bottom: 2vh;
+}
+body #Main_contato #body_Contato #ModalResumoFAQ .modal-dialog .modal-content .cardModal p {
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 400;
+  font-size: 0.85vw;
+  color: #01112E;
+  line-height: 2.5vh;
+}
+body #Main_404 #textura {
+  z-index: 3 !important;
+}
+body #Main_404 #body_404 {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
+}
+body #Main_404 #body_404 span {
+  font-family: "Now", sans-serif;
+  font-size: 35vw;
+  font-weight: 900;
+  color: #ECECEC;
+  mix-blend-mode: soft-light;
+  opacity: 0.2;
+  position: absolute;
+  left: 5%;
+  top: -7%;
+  z-index: 2;
+}
+body #Main_404 #body_404 video {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  right: 0;
+  mix-blend-mode: exclusion;
+  z-index: 1;
+}
+body #Main_404 #body_404::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 13%;
+  width: 17.5%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(-90deg, rgba(1, 17, 46, 0) 0%, rgb(1, 17, 46) 75%);
+}
+body #Main_404 #body_404 h1 {
+  width: 100%;
+  font-family: "Now", sans-serif;
+  font-size: 3vw;
+  font-weight: 900;
+  color: #ECECEC;
+}
+body #Main_404 #body_404 h2 {
+  width: 100%;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1.25vw;
+  font-weight: 400;
+  color: #ECECEC;
+  margin-top: 5vh;
+}
+body #Main_404 #body_404 #linksPgs {
+  margin: 30vh 0 -15vh;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+}
+body #Main_404 #body_404 #linksPgs h3 {
+  width: 100%;
+  font-family: "Now", sans-serif;
+  font-weight: 900;
+  font-size: 2vw;
+  color: #ECECEC;
+  margin-bottom: 4vh;
+}
+body #Main_404 #body_404 #linksPgs a {
+  font-size: 1.1vw;
+  padding: 0.55vh 2vw 0.65vh;
+}
+body #Main_404 #body_404 #linksPgs a:nth-child(2) {
+  margin-right: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
