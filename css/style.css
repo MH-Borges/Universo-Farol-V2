@@ -357,7 +357,7 @@ body main section {
   color: #ECECEC;
 }
 body main #textura {
-  width: 100vw;
+  width: 99.4vw;
   height: 100vh;
   position: fixed;
   z-index: -1;
@@ -518,7 +518,7 @@ body #Main_index #home {
 }
 body #Main_index #home #background_home {
   position: absolute;
-  width: 100%;
+  width: 94.5vw;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -726,7 +726,7 @@ body #Main_index #entrega {
 body #Main_index #entrega::before {
   content: "";
   position: absolute;
-  width: 120%;
+  width: 115.5%;
   height: 100%;
   top: 0;
   left: -10%;
@@ -928,7 +928,7 @@ body #Main_index #contato {
 body #Main_index #contato::before {
   content: "";
   position: absolute;
-  width: 120%;
+  width: 115.5%;
   height: 100%;
   top: 0;
   left: -10%;
@@ -1316,7 +1316,7 @@ body #Main_index #cta {
 body #Main_index #cta::before {
   content: "";
   position: absolute;
-  width: 120%;
+  width: 115.5%;
   height: 100%;
   top: 0;
   left: -10%;
