@@ -787,7 +787,7 @@ body {
                 img{
                     width: 100%;
                     height: auto;
-                    mix-blend-mode: plus-lighter;
+                    mix-blend-mode: screen;
                     border-radius: 1vw;
                 }
                 #textDescrJulia, #textDescrMatheus{
@@ -1163,6 +1163,7 @@ body {
     @import '404';
     @import 'politicasDePrivacidade';
     @import 'sobre';
+    @import 'portfolio';
     
 }
 

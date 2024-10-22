@@ -58,7 +58,7 @@
             </div>
         </div>
     </header>
-    <main id="Main_index">
+    <main id="Main_sobre">
         <img src="assets/textura.webp" id="textura" alt="textura de fundo">
         <div class="toTop hide" onclick="ancora()">
             <img class="Anc" src="assets/icons/ancora_corrente.svg" onload="SVGInject(this)" alt="Ancora pendurada por correntes">
@@ -67,8 +67,8 @@
 
         <!-- FAZER ALTERAÇÃO NO INICIO DE NÓS E ADICIONAR CARDS FLIPS -->
         <section id="nos">
-            <h2>Nós somos reais! <span id="underline"><img src="assets/icons/underline.svg" onload="SVGInject(this)"></span></h2>
-            <p>Somos preocupados em transformar e tornar hipnotizante as marcas dos nossos navegantes. Focamos na sua essência, enriquecendo a sua identidade e evoluindo a sua realidade no universo digital.</p>
+            <span>Boas estruturas sustentam seu futuro</span>
+            <h1>Queremos nos conectar contigo! Conheça mais da essência do Universo Farol.</h1>
             <div id="imgNosBlock">
                 <img src="assets/nos.webp" alt="nós">
                 <div id="textDescrJulia">
@@ -80,7 +80,57 @@
                     <p>Nosso <b>Tech Lead</b> com muitos anos de experiência em criação. É apaixonado por jogos, D&D, cultura geek, <b>adora uma boa discussão e é apaixonado por criar.</b></p>
                 </div>
             </div>
+            <p id="textNos">Atendemos e criamos para todos os nichos, o que nos ajuda a ter uma visão mais criativa e diferenciada de cada projeto. Somos <b>preocupados em transformar e tornar hipnotizante</b> as marcas dos nossos navegantes. <b>Focamos na sua essência, enriquecendo a sua identidade e evoluindo a sua realidade</b> no universo digital.</p>
+            <div id="cardsMVVBlock">
+                <div class="card-wrap" onmouseenter="rotate(this)" onmouseleave="rotate(this)">
+                    <div class="flip-card">
+                        <div class="card-front">
+                            <img src="assets/icons/missao.svg" onload="SVGInject(this)">
+                            <h4>Missão</h4>
+                            <p>O que pretendemos alcançar. A nossa missão é o que ajuda a guiar nossas ações e decisões.</p>
+                        </div>
+                        <div class="card-back">
+                            <p>
+                                Com <b>sutileza e impacto</b>, buscamos <b>extrair a essência da sua marca</b> para te dar a chance de prosperar como você merece.
+                                <br><br>
+                                Nós <b>te guiaremos para entender melhor o mercado e como se reposicionar nele</b>, tendo a sua evolução e hipnotismo como prioridade.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-wrap" onmouseenter="rotate(this)" onmouseleave="rotate(this)">
+                    <div class="flip-card">
+                        <div class="card-front">
+                            <img src="assets/icons/visao.svg" style="animation: flikIcon 1.25s infinite ease-in-out;" onload="SVGInject(this)">
+                            <h4>Visão</h4>
+                            <p>Como sonhamos e desejamos estar no futuro e qual o impacto queremos gerar na sua vida.</p>
+                        </div>
+                        <div class="card-back">
+                            <p>
+                                <b>Reforçamos a personalidade da sua marca</b>, com os nossos serviços de Design e Web, <b>para refinar a sua comunicação.</b>
+                                <br><br>
+                                Ampliamos o seu senso de pertencimento, <b>humanizando sua relação com seu público e te fazendo ser visto.</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-wrap" onmouseenter="rotate(this)" onmouseleave="rotate(this)">
+                    <div class="flip-card">
+                        <div class="card-front">
+                            <img src="assets/icons/valores.svg" onload="SVGInject(this)">
+                            <h4>Valores</h4>
+                            <p>É o que nos mantém nos eixos, nossos princípios e crenças. Eles nos orientam em todas as ações e nos ajudam a criar conexão com você.</p>
+                        </div>
+                        <div class="card-back">
+                            <p>
+                                Com <b>transparência nos processos de comunicação e foco no vínculo</b> com nossos navegantes, usamos de <b>muita criatividade</b>, para <b>trazer evolução e movimento para o seu negócio.</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+        
         <section id="fluxo">
             <div id="stickyHead">
                 <h2>O fluxo que descomplica o nosso trabalho</h2>
@@ -179,5 +229,73 @@
         </div>
         <p>© Universo Farol <span id="data_footer"></span> Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        //Efeito de rotacionar cards
+        function rotate(element) {
+            if(element.firstElementChild.classList.contains('rotate')){
+                element.firstElementChild.classList.remove('rotate');
+            }
+            else{
+                element.firstElementChild.classList.add('rotate');
+            }
+        }
+
+        //FAQ
+        function Flip(element) {
+            if(element.classList.contains('flip')){
+                element.classList.remove('flip');
+            }
+            else{
+                element.classList.add('flip');
+            }
+        }
+
+        //Efeito de escrita CTA
+        $(function () {
+            var index = 0, count = 0;
+            var word = "";
+            var words = ["no escuro?", "perdido?", "precisando de ajuda?", "quer saber mais?" ];
+            untype();
+
+            function type(word) {
+                setTimeout(function () {
+                    if (word.length > 0) {
+                        $(".typer").append(word.shift());
+                        type(word);
+                    } else if (word.length === 0) {
+                        pause();
+                    }
+                }, 180);
+            }
+
+            function untype() {
+                setTimeout(function () {
+                    word = $(".typer").html().split("");
+                    word.pop();
+                    if (word.length > 0) {
+                        $(".typer").empty().append(word);
+                        untype();
+                    } else if (word.length === 0) {
+                        $(".typer").empty();
+                        nextWord();
+                    }
+                }, 100);
+            }
+
+            function pause() {
+                setTimeout(function () {
+                    untype();
+                }, 500);
+            }
+
+            function nextWord() {
+                index = count % 4;
+                count++;
+                word = words[index].split("");
+                type(word);
+            }
+        });
+  </script>
 </body>
 </html>
