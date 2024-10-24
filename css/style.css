@@ -3,31 +3,37 @@
   font-family: "Now";
   src: url("../fonts/Now-Thin.otf") format("opentype");
   font-weight: 200;
+  font-display: swap;
 }
 @font-face {
   font-family: "Now";
   src: url("../fonts/Now-Light.otf") format("opentype");
   font-weight: 300;
+  font-display: swap;
 }
 @font-face {
   font-family: "Now";
   src: url("../fonts/Now-Regular.otf") format("opentype");
   font-weight: 400;
+  font-display: swap;
 }
 @font-face {
   font-family: "Now";
   src: url("../fonts/Now-Medium.otf") format("opentype");
   font-weight: 500;
+  font-display: swap;
 }
 @font-face {
   font-family: "Now";
   src: url("../fonts/Now-Bold.otf") format("opentype");
   font-weight: 700;
+  font-display: swap;
 }
 @font-face {
   font-family: "Now";
   src: url("../fonts/Now-Black.otf") format("opentype");
   font-weight: 900;
+  font-display: swap;
 }
 *,
 *::after,
@@ -358,16 +364,6 @@ body main section {
   height: auto;
   font-family: "Now", sans-serif;
   color: #ECECEC;
-}
-body main #textura {
-  width: 99.4vw;
-  height: 100vh;
-  position: fixed;
-  z-index: -1;
-  mix-blend-mode: hard-light;
-  top: 0;
-  left: 0;
-  opacity: 0.035;
 }
 body main .toTop {
   position: fixed;
@@ -883,10 +879,10 @@ body #Main_index #nos #imgNosBlock img {
 body #Main_index #nos #imgNosBlock #textDescrJulia, body #Main_index #nos #imgNosBlock #textDescrMatheus {
   position: absolute;
   width: 27.5vw;
-  height: 20vh;
+  height: auto;
   border-radius: 1vw;
   background-color: #ECECEC;
-  padding: 1.5vw 2.4vw;
+  padding: 3.5vh 2.4vw;
 }
 body #Main_index #nos #imgNosBlock #textDescrJulia h3, body #Main_index #nos #imgNosBlock #textDescrMatheus h3 {
   width: 100%;
@@ -1498,9 +1494,6 @@ body #Main_contato #body_Contato #ModalResumoFAQ .modal-dialog .modal-content .c
   color: #01112E;
   line-height: 2.5vh;
 }
-body #Main_404 #textura {
-  z-index: 3 !important;
-}
 body #Main_404 #body_404 {
   width: 100%;
   min-height: 100vh;
@@ -1809,7 +1802,7 @@ body #Main_sobre #nos #textNos {
   font-weight: 400;
   color: #ECECEC;
   text-align: justify;
-  line-height: 5vh;
+  line-height: 4vh;
 }
 body #Main_sobre #nos #imgNosBlock {
   width: 70%;
@@ -1826,12 +1819,12 @@ body #Main_sobre #nos #imgNosBlock img {
 body #Main_sobre #nos #imgNosBlock #textDescrJulia, body #Main_sobre #nos #imgNosBlock #textDescrMatheus {
   position: absolute;
   width: 27.5vw;
-  height: 20vh;
+  height: auto;
   border-radius: 1vw;
   background-color: #ECECEC;
-  padding: 1.5vw 2.4vw;
+  padding: 3.5vh 2.4vw;
 }
-body #Main_sobre #nos #imgNosBlock #textDescrJulia h3, body #Main_sobre #nos #imgNosBlock #textDescrMatheus h3 {
+body #Main_sobre #nos #imgNosBlock #textDescrJulia h2, body #Main_sobre #nos #imgNosBlock #textDescrJulia h3, body #Main_sobre #nos #imgNosBlock #textDescrMatheus h2, body #Main_sobre #nos #imgNosBlock #textDescrMatheus h3 {
   width: 100%;
   font-family: "Now", sans-serif;
   font-size: 1.5vw;
@@ -2313,6 +2306,7 @@ body #Main_apresentacao #apresentacao {
 body #Main_apresentacao #apresentacao h1 {
   position: absolute;
   z-index: -1;
+  opacity: 0.01;
 }
 body #Main_apresentacao #apresentacao img {
   width: 100%;
@@ -2330,7 +2324,7 @@ body #Main_apresentacao #CtaProjeto {
   justify-content: center;
   padding: 10vh 0;
 }
-body #Main_apresentacao #CtaProjeto h4 {
+body #Main_apresentacao #CtaProjeto h2 {
   font-family: "Now", sans-serif;
   font-size: 3.5vw;
   font-weight: 900;
@@ -2338,7 +2332,7 @@ body #Main_apresentacao #CtaProjeto h4 {
   text-align: center;
   line-height: 6.5vh;
 }
-body #Main_apresentacao #CtaProjeto h5 {
+body #Main_apresentacao #CtaProjeto h3 {
   font-family: "Maven Pro", sans-serif;
   font-size: 1.1vw;
   font-weight: 400;

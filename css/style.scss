@@ -263,16 +263,6 @@ body {
             font-family: $Main-font;
             color: $Branco;
         }
-        #textura{
-            width: 99.4vw;
-            height: 100vh;
-            position: fixed;
-            z-index: -1;
-            mix-blend-mode: hard-light;
-            top: 0;
-            left: 0;
-            opacity: 0.035;
-        }
         .toTop {
             position: fixed;
             right: 2vw;
@@ -793,10 +783,10 @@ body {
                 #textDescrJulia, #textDescrMatheus{
                     position: absolute;
                     width: 27.5vw;
-                    height: 20vh;
+                    height: auto;
                     border-radius: 1vw;
                     background-color: $Branco;
-                    padding: 1.5vw 2.4vw;
+                    padding: 3.5vh 2.4vw;
                     h3{
                         width: 100%;
                         font-family: $Main-font;

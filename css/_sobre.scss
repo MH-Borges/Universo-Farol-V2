@@ -37,7 +37,7 @@
             font-weight: 400;
             color: $Branco;
             text-align: justify;
-            line-height: 5vh;
+            line-height: 4vh;
         }
         #imgNosBlock{
             width: 70%;
@@ -53,11 +53,11 @@
             #textDescrJulia, #textDescrMatheus{
                 position: absolute;
                 width: 27.5vw;
-                height: 20vh;
+                height: auto;
                 border-radius: 1vw;
                 background-color: $Branco;
-                padding: 1.5vw 2.4vw;
-                h3{
+                padding: 3.5vh 2.4vw;
+                h2, h3{
                     width: 100%;
                     font-family: $Main-font;
                     font-size: 1.5vw;
