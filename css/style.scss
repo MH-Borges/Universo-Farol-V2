@@ -1169,5 +1169,837 @@ body {
 }
 
 @media only screen and (max-width: 479px){
+    body {
+        width: 100vw;
+        min-height: 100lvh;
+        .btns{
+            width: auto;
+            font-size: 3.5vw;
+            padding: 0.75svh 5vw;
+            border-radius: 10vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header{
+            width: 90%;
+            height: 75px;
+            top: 25px;
+            padding: 5px 0;
+            #logo{ width: 35%; }
+            a{ &:nth-child(2){ display: none; }}
+            button{
+                margin-left: 0;
+                width: 11vw;
+                span{ height: 4.5px; }
+            }
+            #sideMenu{
+                top: -25px;
+                right: -100vw;
+                width: 100vw;
+                height: 100dvh;
+                &::before{ height: 12lvh; }
+                button{
+                    position: absolute;
+                    top: 15px;
+                    right: 86%;
+                    width: 11.5vw;
+                    height: 11.5vw;
+                }
+                .redes{
+                    position: absolute;
+                    top: 3lvh;
+                    width: 6lvh;
+                    height: 6lvh;
+                    left: 67%;
+                    &:nth-child(2){ display: block; }
+                    &:nth-child(3){
+                        left: 82%;
+                    }
+                }
+                .link_pgs{
+                    &:nth-child(4){ margin-top: 0vh; }
+                    width: 75%;
+                    font-size: 7vw;
+                    margin: 3lvh 0;
+                    justify-content: center;
+                    text-align: center;
+                }
+                #foot{
+                    width: 90%;
+                    min-height: 3.5lvh;
+                    height: auto;
+                    bottom: 2lvh;
+                    a{ font-size: 3.5vw; }
+                }
+            }
+            #background_SideMenu{ height: 100dvh; }
+        }
+        main{
+            min-height: 100lvh;
+            height: auto;
+            overflow-x: hidden;
+            section{
+                min-height: 100svh;
+                height: auto;
+            }
+            .toTop {
+                width: 10vw;
+                height: 12svh;
+            }
+        }
+        footer{
+            min-height: 50svh;
+            height: auto;
+            #resume{
+                width: 100%;
+                min-height: 35svh;
+                height: auto;
+                padding: 5svh 0;
+                #logo_foot{
+                    width: 100%;
+                    height: 10svh;
+                    display: flex;
+                    justify-content: center;
+                }
+                h4{
+                    font-size: 3.5vw;
+                    line-height: auto;
+                    text-align: center;
+                    margin-top: 4svh;
+                    padding: 0 10vw;
+                }
+                #redes{
+                    height: 6svh;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 5svh;
+                    a{
+                        width: 6svh;
+                        margin: 0 2.5vw;
+                        img, svg{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            #LinksRapido{
+                width: 100%;
+                min-height: 30svh;
+                padding: 5svh 0 4.5svh;
+                display: flex;
+                flex-direction: column;
+                h4{
+                    font-size: 6vw;
+                    text-align: center;
+                }
+                a{
+                    &:nth-child(2){ margin-top: 5svh; }
+                    font-size: 3.75vw;
+                    width: 100%;
+                    margin: 2svh 0;
+                    text-align: center;
+                }
+            }
+            p{
+                width: 100%;
+                min-height: 5svh;
+                height: auto;
+                font-size: 2.75vw;
+                span{
+                    margin: 0 1vw;
+                    font-size: 2.75vw;
+                }
+            }
+        }
     
+        #Main_index{
+            #home{
+                height: 100svh;
+                #background_home{
+                    left: 0;
+                    width: 100%;
+                }
+                #astronauta{
+                    position: absolute;
+                    width: auto;
+                    height: 55svh;
+                    bottom: 0;
+                    padding: 0;
+                }
+                #TitleBlock{
+                    margin-top: 15svh;
+                    z-index: 10;
+                    padding: 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    h1{
+                        font-size: 9vw;
+                        line-height: 7svh;
+                        text-align: center;
+                        padding: 0;
+                        br{ display: none; }
+                    }
+                    h2{
+                        text-align: center;
+                        font-size: 4.5vw;
+                        line-height: 5svh;
+                        padding: 0;
+                        margin: 3svh 0 5svh;
+                    }
+                    .btn_homePortfolio{
+                        margin: 4svh 0;
+                        padding: 0.75svh 5vw;
+                    }
+                }
+                &::before{
+                    height: 15svh;
+                }
+            }
+            #cases{
+                min-height: 100svh;
+                padding: 7.5svh 0;
+                h2{
+                    font-size: 8.5vw;
+                    text-align: center;
+                }
+                h3{
+                    text-align: center;
+                    margin: 2svh 5%;
+                    font-size: 3.75vw;
+                }
+                .caseBlock{
+                    margin: 7.5svh 0 4svh;
+                    flex-direction: column;
+                    .infos{
+                        width: 100%;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0;
+                        margin-bottom: 7.5svh;
+                        p{
+                            font-size: 3.5vw;
+                            line-height: 3svh;
+                        }
+                        h3{
+                            font-size: 3.75vw;
+                            margin: 3svh 0 6svh;
+                        }
+                        .btns{
+                            padding: auto 7.5vw;
+                        }
+                    }
+                    .InfoRight{
+                        align-items: center;
+                        padding: 0;
+                    }
+                    img{
+                        width: 75%;
+                        height: auto;
+                        margin-left: auto;
+                    }
+                    .imgToRight{
+                        margin-left: 0;
+                        order: 2;
+                    }
+                }
+                .btn_case{
+                    font-size: 3.75vw;
+                    margin-top: 7.5svh;
+                }
+            }
+            #fluxo{
+                width: 80%;
+                min-height: 100svh;
+                height: auto;
+                margin: 0 10%;
+                flex-direction: column;
+                padding: 7.5svh 0;
+                #stickyHead{
+                    top: auto;
+                    width: 100%;
+                    min-height: 10svh;
+                    height: auto;
+                    flex-direction: column;
+                    position: relative;
+                    margin-bottom: 3svh;
+                    h2{
+                        font-size: 8.5vw;
+                        text-align: center;
+                        padding: 0;
+                        margin-bottom: 2svh;
+                    }
+                    h3{
+                        text-align: center;
+                        font-size: 3.5vw;
+                        line-height: 3.5svh;
+                        padding: 0 2vw;
+                    }
+                }
+                #cardsFluxo{
+                    width: 100%;
+                    height: auto;
+                    .cardFluxo{
+                        overflow: hidden;
+                        width: 100%;
+                        min-height: 25svh;
+                        height: auto;
+                        border-radius: 2vw;
+                        padding: 3.5svh 4vw 5svh;
+                        margin-bottom: 5svh;
+                        img, svg{
+                            width: 17.5vw;
+                        }
+                        h3{
+                            font-size: 6.5vw;
+                            margin: 5svh 0 3.5svh;
+                        }
+                        p{
+                            font-size: 3.5vw;
+                            padding-right: 3vw;
+                        }
+                    }
+                }
+            }
+
+            
+            #entrega{
+                width: 90%;
+                margin: 0 5%;
+                min-height: 75vh;
+                height: auto;
+                position: relative;
+                padding: 10vh 0;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 115.5%;
+                    height: 100%;
+                    top: 0;
+                    left: -10%;
+                    background-color: $AzulClaro;
+                    z-index: -2;
+                }
+                h2{
+                    width: 100%;
+                    font-family: $Main-font;
+                    font-size: 2.5vw;
+                    font-weight: 900;
+                    color: $Branco;
+                    letter-spacing: 0.1vw;
+                    text-align: center;
+                }
+                h3{
+                    width: 100%;
+                    font-family: $Second-font;
+                    font-size: 1.1vw;
+                    font-weight: 400;
+                    color: $Branco;
+                    text-align: center;
+                    margin:  1vh 0;
+                }
+                #cardsEntrega{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 5vh;
+                    .cardEntrega{
+                        width: 25%;
+                        height: 34vh;
+                        background-color: $Branco;
+                        overflow: hidden;
+                        border-radius: 1vw;
+                        position: relative;
+                        padding: 1.5vw;
+                        box-shadow: 0px 0px 15px 0px rgba(1, 17, 46, 0.5);
+                        &:nth-child(2){ 
+                            margin: 0 2vw; 
+                            img,svg{
+                                animation: flikIcon infinite 1.75s ease-in-out;
+                            }
+                        }
+                        &:nth-child(3){ 
+                            img,svg{
+                                animation: flikIcon infinite 1.65s ease-in-out backwards;
+                            }
+                        }
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 40%;
+                            background-color: $Laranja;
+                            z-index: 1;
+                        }
+                        img, svg{
+                            z-index: 5 !important;
+                            width: auto;
+                            height: 9vh;
+                            position: absolute;
+                            top: 2.25vh;
+                            left: 2vw;
+                            animation: flikIcon infinite 1.5s ease-in-out;
+                            path{
+                                stroke: $AzulEscuro;
+                                stroke-width: 7px;
+                            }
+                        }
+                        h4{
+                            font-family: $Main-font;
+                            font-size: 1.35vw;
+                            font-weight: 900;
+                            color: $AzulEscuro;
+                            margin-top: 14vh;
+                            line-height: 3vh;
+                        }
+                        p{
+                            font-family: $Second-font;
+                            font-size: 1vw;
+                            font-weight: 400;
+                            color: $AzulEscuro;
+                            margin-top: 2vh;
+                            padding-right: 3vw;
+    
+                        }
+                    }
+                }
+            }
+            #nos{
+                width: 90%;
+                min-height: 100vh;
+                height: auto;
+                margin: 0 5%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 10vh 0 20vh;
+                h2{
+                    width: 100%;
+                    font-family: $Main-font;
+                    font-size: 2.5vw;
+                    font-weight: 900;
+                    color: $Branco;
+                    letter-spacing: 0.1vw;
+                    text-align: center;
+                    position: relative;
+                    #underline{
+                        position: absolute;
+                        top: 60%;
+                        right: 37.5%;
+                        width: 8vw;
+                        height: auto;
+                        img, svg{
+                            width: 100%;
+                            height: auto;
+                            path{
+                                stroke-dasharray: 1000;
+                                stroke-dashoffset: 1000;
+                            }
+                        }
+                    }
+                    .animateUnderline{
+                        img, svg{
+                            path{
+                                animation: Under_line 1s linear alternate forwards;
+                            }
+                        }
+                    }
+                }
+                p{
+                    font-family: $Second-font;
+                    font-size: 1.35vw;
+                    font-weight: 400;
+                    color: $Branco;
+                    text-align: center;
+                    line-height: 4.5vh;
+                    width: 50%;
+                    margin: 6vh 25% 7.5vh;
+                }
+                #imgNosBlock{
+                    width: 70%;
+                    height: auto;
+                    margin: 0 15%;
+                    position: relative;
+                    img{
+                        width: 100%;
+                        height: auto;
+                        mix-blend-mode: screen;
+                        border-radius: 1vw;
+                    }
+                    #textDescrJulia, #textDescrMatheus{
+                        position: absolute;
+                        width: 27.5vw;
+                        height: auto;
+                        border-radius: 1vw;
+                        background-color: $Branco;
+                        padding: 3.5vh 2.4vw;
+                        h3{
+                            width: 100%;
+                            font-family: $Main-font;
+                            font-size: 1.5vw;
+                            font-weight: 700;
+                            text-align: center;
+                            color: $Laranja;
+                        }
+                        p{
+                            all: unset;
+                            display: block;
+                            width: 100%;
+                            font-family: $Second-font;
+                            font-size: 1vw;
+                            font-weight: 400;
+                            color: $AzulEscuro;
+                            text-align: justify;
+                            margin-top: 2.5vh;
+                        }
+                    }
+                    #textDescrJulia{
+                        top: 85%;
+                        right: 80%;
+                    }
+                    #textDescrMatheus{
+                        top: 65%;
+                        left: 80%;
+                        p{
+                            font-size: 0.925vw;
+                        }
+                    }
+                }
+            }
+            #contato{
+                width: 90%;
+                margin: 0 5%;
+                min-height: 80vh;
+                height: auto;
+                position: relative;
+                padding: 7.5vh 0;
+                display: flex;
+                flex-wrap: wrap;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 115.5%;
+                    height: 100%;
+                    top: 0;
+                    left: -10%;
+                    background-color: $Cinzinha;
+                    z-index: -2;
+                }
+                h2{
+                    width: 100%;
+                    font-family: $Main-font;
+                    font-size: 2.5vw;
+                    font-weight: 900;
+                    color: $AzulEscuro;
+                    letter-spacing: 0.1vw;
+                }
+                h3{
+                    width: 100%;
+                    margin: 0.5vh 0;
+                    font-family: $Second-font;
+                    font-size: 1.1vw;
+                    font-weight: 400;
+                    color: $AzulEscuro;
+                }
+                #redesContato{
+                    width: 60%;
+                    height: 50vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    a{
+                        display: flex;
+                        width: 100%;
+                        margin: 1.75vh 0;
+                        align-items: center;
+                        img,svg{    
+                            width: 2.5vw;
+                            height: auto;
+                            path{
+                                stroke: $AzulClaro;
+                                stroke-width: 10px;
+                            }
+                        }
+                        p{
+                            font-family: $Second-font;
+                            font-size: 1.1vw;
+                            font-weight: 500;
+                            margin-left: 1.25vw;
+                            color: $AzulClaro;
+                        }
+                        &:hover{
+                            img,svg{
+                                animation: flikIcon 0.75s infinite;
+                            }
+                            p{
+                                color: $Laranja;
+                            }
+                        }
+                    }
+                }
+                #formBlock{
+                    transform: translateY(-10vh);
+                    width: 40%;
+                    height: 50vh;
+                    position: relative;
+                    h3{
+                        all: unset;
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+                        font-family: $Main-font;
+                        font-weight: 700;
+                        color: $AzulEscuro;
+                        font-size: 1.25vw;
+                    }
+                    form{
+                        width: 75%;
+                        height: 100%;
+                        margin: 0 12.5%;
+                        margin-top: 2vh;
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        border-radius: 1vw;
+                        padding: 1vh 2.5vw;
+                        background-color: $Cinzao;
+                        .BlockBox{
+                            width: 100%;
+                            height: 10%;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 2vh 0;
+                            input, textarea{
+                                width: 100% !important;
+                                height: 100%;
+                                border: none;
+                                background: none;
+                                outline: none;
+                                resize: none;
+                                padding: 0 1.25vw;
+                                font-family: $Second-font;
+                                font-weight: 300;
+                                font-size: 0.9vw;
+                                color: $Branco;
+                                border-bottom: 3px solid $Branco;
+                            }
+                            p, span{
+                                position: absolute;
+                                left: 1vw;
+                                top: 10%;
+                                font-family: $Second-font;
+                                font-weight: 700;
+                                font-size: 1.05vw;
+                                color: $Branco;
+                                transition: 0.5s;
+                                pointer-events: none;
+                                display: flex;
+                                flex-direction: row;
+                            }
+                            &:nth-child(1){
+                                span{
+                                    font-size: 1.1vw;
+                                    left: 9.25vw;
+                                    top: 5%;
+                                    color: $AzulEscuro;
+                                }
+                            }
+                            &:nth-child(2){
+                                span{
+                                    font-size: 1.1vw;
+                                    left: 4.75vw;
+                                    top: 5%;
+                                    color: $AzulEscuro;
+                                }
+                            }
+                            &:nth-child(4){
+                                height: 22.5%;
+                                margin-top: 1vh;
+                                input, textarea{
+                                    height: 90%;
+                                    padding: 0.75vh 3vw 0.75vh 1.25vw;
+                                    padding-right: 3vw;
+                                    line-height: 3vh;
+                                }
+                                p{
+                                    top: 20%;
+                                }
+                            }
+                        }
+                        .BlockBox input:focus ~ p, input:valid ~ p, textarea:focus ~ p, textarea:valid ~ p{
+                            transform:translate(-0.75vw, -2.5vh);
+                            font-size: 0.9vw;
+                        }
+                        .BlockBox input:focus ~ span, input:valid ~ span{
+                            transform:translate(-1.5vw, -2.5vh);
+                            font-size: 0.9vw;
+                        }
+                        button{
+                            width: 60%;
+                            position: absolute;
+                            top: 87.5%;
+                            left: 20%;
+                        }
+                    }
+                    #msg_form{
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 100%;
+                        max-height: 9vh;
+                        height: auto;
+                        overflow: auto;
+                        padding: 1vh 1vw;
+                        font-family: $Second-font;
+                        font-weight: 900;
+                        font-size: 0.8vw;
+                        text-align: center;
+                        color: $AzulEscuro;
+                    }
+                }
+            }
+            #faq{
+                width: 90%;
+                min-height: 100vh;
+                height: auto;
+                margin: 0 5%;
+                display: flex;
+                flex-direction: column;
+                padding: 10vh 0 10vh;
+                position: relative;
+                h2{
+                    width: 100%;
+                    font-family: $Main-font;
+                    font-size: 2.5vw;
+                    font-weight: 900;
+                    color: $Branco;
+                    letter-spacing: 0.1vw;
+                    text-align: center;
+                }
+                h3{
+                    width: 100%;
+                    font-family: $Second-font;
+                    font-size: 1.1vw;
+                    font-weight: 400;
+                    color: $Branco;
+                    text-align: center;
+                    margin: 1.5vh 0;
+                }
+                .perguntaBlock{
+                    width: 50%;
+                    margin: 2vh 25%;
+                    min-height: 8.5vh;
+                    height: auto;
+                    border-radius: 1vw;
+                    overflow: hidden;
+                    &:nth-child(3){
+                        margin-top: 10vh;
+                    }
+                    button{
+                        background-color: $Branco;
+                        height: 8.5vh;
+                        width: 100%;
+                        text-align: left;
+                        padding: 1.5vw;
+                        font-family: $Main-font;
+                        font-weight: 700;
+                        font-size: 1.3vw;
+                        position: relative;
+                        box-shadow: 0px 0px 10px 0px rgba(1, 17, 46, 0.5);
+                        &::before, &::after{
+                            content: '';
+                            position: absolute;
+                            width: 1.5vw;
+                            height: 5px;
+                            top: 47.5%;
+                            right: 3%;
+                            background-color: $Laranja;
+                            border-radius: 1vw;
+                            transform: rotate(0);
+                            transition: all ease-in-out 0.2s;
+                        }
+                        &::after{
+                            transform: rotate(90deg);
+                        }
+                    }
+                    .flip{
+                        &::before, &::after{
+                            transform: rotate(-45deg);
+                        }
+                        &::after{
+                            transform: rotate(45deg);
+                        }
+                    }
+                    #FAQ1, #FAQ2, #FAQ3, #FAQ4{
+                        background-color: $Cinzinha;
+                        padding: 2vh 1.5vw 3vh;
+                        padding-right: 3.5vw;
+                        font-family: $Second-font;
+                        font-size: 1vw;
+                        font-weight: 400;
+                        color: $AzulClaro;
+                    }
+                }
+            }
+            #cta{
+                width: 90%;
+                margin: 0 5%;
+                min-height: 65vh;
+                height: auto;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 10vh 0;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 115.5%;
+                    height: 100%;
+                    top: 0;
+                    left: -10%;
+                    background-color: $AzulClaro;
+                    z-index: -2;
+                }
+                h3{
+                    width: 100%;
+                    font-family: $Main-font;
+                    font-size: 2.5vw;
+                    font-weight: 900;
+                    color: $Branco;
+                    text-align: center;
+                    .typer {
+                        font-weight: 900;
+                        color: $Laranja;
+                    }
+                    .blink {
+                        color: $Laranja;
+                        animation: blink 0.6s infinite alternate;
+                    }
+                }
+                p{
+                    width: 100%;
+                    font-family: $Second-font;
+                    font-size: 1.2vw;
+                    font-weight: 400;
+                    color: $Branco;
+                    text-align: center;
+                    margin: 0.5vh 0;
+                }
+                .btns{
+                    margin-top: 12.5vh;
+                }
+            }
+        }
+    }
 }

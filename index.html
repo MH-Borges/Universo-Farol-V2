@@ -92,7 +92,7 @@
                 <img data-aos="fade-left" data-aos-duration="1000" src="assets/aline_home.webp" width="720" height="450" alt="Banner do case Aline">
             </div>
             <div class="caseBlock">
-                <img data-aos="fade-right" data-aos-duration="1000" src="assets/sicuro_home.webp" width="720" height="450" alt="Banner do case Sicuro">
+                <img class="imgToRight" data-aos="fade-right" data-aos-duration="1000" src="assets/sicuro_home.webp" width="720" height="450" alt="Banner do case Sicuro">
                 <div data-aos="fade-left" data-aos-duration="1000" class="infos InfoRight">
                     <p>“O lugar seguro para voltar <br> a aprender a voar sozinho.”</p>
                     <h3>| Id. Visual II e Web Design |</h3>
@@ -297,6 +297,7 @@
             setStyles(astronauta, 0, '0 0');
             setTimeout(() => { setStyles(titleMain, 1, '0vw 0'); }, 500);
             setTimeout(() => { setStyles(astronauta, 1, '0 0'); }, 350);
+            if(mobileCheck() === true){ setTimeout(() => { setStyles(astronauta, 0.4, '0 0'); }, 350); }
             setTimeout(() => { setStyles(titleSub, 1, '0vw 0'); }, 750);
             setTimeout(() => { setStyles(btnHomePortfolio, 1, '0vw 0'); }, 1100);
             setTimeout(() => { setStyles(btnHomePortfolio2, 1, '0vw 0'); }, 1200);
