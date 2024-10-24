@@ -1250,7 +1250,7 @@ body #Main_contato #body_Contato h1 {
   margin: 10vh auto 0.5vh 0;
   line-height: 6vh;
 }
-body #Main_contato #body_Contato h3 {
+body #Main_contato #body_Contato h2 {
   width: 50%;
   margin: 1.5vh auto 0.5vh 0;
   font-family: "Maven Pro", sans-serif;
@@ -2222,7 +2222,8 @@ body #Main_portfolio #body_Portfolio .filter a {
   position: relative;
 }
 body #Main_portfolio #body_Portfolio .filter a img {
-  width: 100%;
+  width: 40vw;
+  min-height: 40vh;
   height: auto;
 }
 body #Main_portfolio #body_Portfolio .filter a p {
@@ -2270,14 +2271,14 @@ body #Main_portfolio #ctaSimp #mensagem {
   width: 75%;
   height: auto;
 }
-body #Main_portfolio #ctaSimp #mensagem h4 {
+body #Main_portfolio #ctaSimp #mensagem h3 {
   font-family: "Now", sans-serif;
   font-size: 2vw;
   color: #ECECEC;
   font-weight: 900;
   margin: 0 0 2vh;
 }
-body #Main_portfolio #ctaSimp #mensagem h5 {
+body #Main_portfolio #ctaSimp #mensagem h4 {
   font-family: "Maven Pro", sans-serif;
   font-size: 1.1vw;
   color: #ECECEC;
@@ -2309,7 +2310,8 @@ body #Main_apresentacao #apresentacao h1 {
   opacity: 0.01;
 }
 body #Main_apresentacao #apresentacao img {
-  width: 100%;
+  width: 100vw;
+  min-height: 25vh;
   height: auto;
   margin: -0.5vh 0;
 }

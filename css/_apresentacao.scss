@@ -24,7 +24,8 @@
             opacity: 0.01;
         }
         img{
-            width: 100%;
+            width: 100vw;
+            min-height: 25vh;
             height: auto;
             margin: -0.5vh 0;
         }

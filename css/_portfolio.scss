@@ -64,7 +64,8 @@
                 margin: 2vh 2.5%;
                 position: relative;
                 img{
-                    width: 100%;
+                    width: 40vw;
+                    min-height: 40vh;
                     height: auto;
                 }
                 p{
@@ -115,14 +116,14 @@
         #mensagem{
             width: 75%;
             height: auto;
-            h4{
+            h3{
                 font-family: $Main-font;
                 font-size: 2vw;
                 color: $Branco;
                 font-weight: 900;
                 margin: 0 0 2vh;
             }
-            h5{
+            h4{
                 font-family: $Second-font;
                 font-size: 1.1vw;
                 color: $Branco;
