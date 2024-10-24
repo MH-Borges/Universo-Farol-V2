@@ -25,6 +25,10 @@
     <!-- SVG Inject -->
     <script src="js/svg-inject.min.js"></script>
 
+    <!-- Fade animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- Main files -->
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/Base_script.js"></script>
@@ -58,8 +62,8 @@
         </div>
 
         <section id="resumoLGPD">
-            <h1>Política de Privacidade</h1>
-            <p>
+            <h1 id="titleMain">Política de Privacidade</h1>
+            <p id="titleSub">
                 A sua privacidade é importante para nós, é política do Universo Farol respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no nosso site.
                 <br><br>
                 Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemos por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.
@@ -74,58 +78,58 @@
             </p>
         </section>
         <section id="cookies">
-            <h2>Política de Cookies do Universo Farol</h2>
+            <h2 id="secondTitle">Política de Cookies do Universo Farol</h2>
 
-            <div class="paragrafo">
+            <div data-aos="zoom-in-up" data-aos-duration="500" class="paragrafo">
                 <h3><span>O que são cookies?:</span>Como é prática comum em quase todos os sites profissionais, também utilizamos cookies para este site, que são pequenos arquivos baixados no seu computador, para melhorar sua experiência. Esta página descreve quais informações eles coletam, como as usamos e por que às vezes precisamos armazenar esses cookies. Também compartilharemos como você pode impedir que esses cookies sejam armazenados, no entanto, isso pode fazer o downgrade ou ‘quebrar’ certos elementos da funcionalidade do nosso site.</h3>
             </div>
 
-            <div class="paragrafo">
+            <div data-aos="zoom-in-up" data-aos-duration="500" class="paragrafo">
                 <h3><span>Como usamos os cookies?:</span>Utilizamos cookies por vários motivos, detalhados abaixo. Infelizmente, na maioria dos casos, não existem opções padrão do setor para desativar os cookies sem desativar completamente a funcionalidade e os recursos que eles adicionam a este site. É recomendável que você deixe todos os cookies se não tiver certeza se precisa ou não deles, caso sejam usados para fornecer um serviço que você usa.</h3>
             </div>
 
-            <div class="paragrafo">
+            <div data-aos="zoom-in-up" data-aos-duration="500" class="paragrafo">
                 <h3><span>Gestão e desativação de Cookies:</span>Você pode impedir a configuração de cookies ajustando as configurações do seu navegador, esteja ciente de que a desativação de cookies afetará a funcionalidade deste e de muitos outros sites que você visita. A desativação de cookies geralmente resultará na desativação de determinadas funcionalidades e recursos deste site. Portanto, é recomendável que você não desative os cookies. Para mais informação sobre como desativar os cookies em alguns dos principais navegadores utilizados hoje, você pode acessar a partir dos seguintes links:</h3>
             </div>
 
-            <a href="https://support.microsoft.com/pt-br/topic/excluir-e-gerenciar-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" aria-label=""><span>Internet Explorer:</span>https://support.microsoft.com/pt-br/topic/excluir-e-gerenciar-cookies-168dab11-0753-043d-7c16-ede5947fc64d</a>
-            <a href="https://support.apple.com/pt-br/guide/safari/sfri11471/mac" target="_blank" aria-label=""><span>Safari:</span>https://support.apple.com/pt-br/guide/safari/sfri11471/mac</a>
-            <a href="https://support.google.com/chrome/answer/95647" target="_blank" aria-label=""><span>Google Chrome:</span>https://support.google.com/chrome/answer/95647</a>
-            <a href="https://support.mozilla.org/pt-BR/kb/cookies-informacoes-sites-armazenam-no-computador#w_configuracoes-de-cookies" target="_blank" aria-label=""><span>Mozila Firefox:</span>https://support.mozilla.org/pt-BR/kb/cookies-informacoes-sites-armazenam-no-computador#w_configuracoes-de-cookies</a>
-            <a href="https://www.opera.com/pt/secure-private-browser" target="_blank" aria-label=""><span>Opera:</span> https://www.opera.com/pt/secure-private-browser</a>
+            <a data-aos="zoom-in-up" data-aos-duration="500" href="https://support.microsoft.com/pt-br/topic/excluir-e-gerenciar-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" aria-label=""><span>Internet Explorer:</span>https://support.microsoft.com/pt-br/topic/excluir-e-gerenciar-cookies-168dab11-0753-043d-7c16-ede5947fc64d</a>
+            <a data-aos="zoom-in-up" data-aos-duration="500" href="https://support.apple.com/pt-br/guide/safari/sfri11471/mac" target="_blank" aria-label=""><span>Safari:</span>https://support.apple.com/pt-br/guide/safari/sfri11471/mac</a>
+            <a data-aos="zoom-in-up" data-aos-duration="500" href="https://support.google.com/chrome/answer/95647" target="_blank" aria-label=""><span>Google Chrome:</span>https://support.google.com/chrome/answer/95647</a>
+            <a data-aos="zoom-in-up" data-aos-duration="500" href="https://support.mozilla.org/pt-BR/kb/cookies-informacoes-sites-armazenam-no-computador#w_configuracoes-de-cookies" target="_blank" aria-label=""><span>Mozila Firefox:</span>https://support.mozilla.org/pt-BR/kb/cookies-informacoes-sites-armazenam-no-computador#w_configuracoes-de-cookies</a>
+            <a data-aos="zoom-in-up" data-aos-duration="500" href="https://www.opera.com/pt/secure-private-browser" target="_blank" aria-label=""><span>Opera:</span> https://www.opera.com/pt/secure-private-browser</a>
 
             <div class="paragrafo_list">
-                <h3>Cookies que definimos:</h3>
-                <p><span>Pedidos processando cookies relacionados:</span> Este site oferece facilidades de comércio eletrônico ou pagamento e alguns cookies são essenciais para garantir que seu pedido seja lembrado entre as páginas, para que possamos processá-lo adequadamente.</p>
-                <p><span>Cookies relacionados a pesquisas:</span> Periodicamente, oferecemos pesquisas e questionários para fornecer informações interessantes, ferramentas úteis ou para entender nossa base de usuários com mais precisão. Essas pesquisas podem usar cookies para lembrar quem já participou numa pesquisa ou para fornecer resultados precisos após a alteração das páginas.</p>
-                <p><span>Cookies relacionados a formulários:</span> Quando você envia dados por meio de um formulário como os encontrados nas páginas de contato, os cookies podem ser configurados para lembrar os detalhes do usuário para correspondência futura.</p>
-                <p><span>Cookies de preferências do site:</span> Para proporcionar uma ótima experiência neste site, fornecemos a funcionalidade para definir suas preferências de como esse site é executado quando você o usa. Para lembrar suas preferências, precisamos definir cookies para que essas informações possam ser chamadas sempre que você interagir com uma página for afetada por suas preferências.</p>
+                <h3 data-aos="zoom-in-up" data-aos-duration="500">Cookies que definimos:</h3>
+                <p data-aos="zoom-in-up" data-aos-duration="500"><span>Pedidos processando cookies relacionados:</span> Este site oferece facilidades de comércio eletrônico ou pagamento e alguns cookies são essenciais para garantir que seu pedido seja lembrado entre as páginas, para que possamos processá-lo adequadamente.</p>
+                <p data-aos="zoom-in-up" data-aos-duration="500"><span>Cookies relacionados a pesquisas:</span> Periodicamente, oferecemos pesquisas e questionários para fornecer informações interessantes, ferramentas úteis ou para entender nossa base de usuários com mais precisão. Essas pesquisas podem usar cookies para lembrar quem já participou numa pesquisa ou para fornecer resultados precisos após a alteração das páginas.</p>
+                <p data-aos="zoom-in-up" data-aos-duration="500"><span>Cookies relacionados a formulários:</span> Quando você envia dados por meio de um formulário como os encontrados nas páginas de contato, os cookies podem ser configurados para lembrar os detalhes do usuário para correspondência futura.</p>
+                <p data-aos="zoom-in-up" data-aos-duration="500"><span>Cookies de preferências do site:</span> Para proporcionar uma ótima experiência neste site, fornecemos a funcionalidade para definir suas preferências de como esse site é executado quando você o usa. Para lembrar suas preferências, precisamos definir cookies para que essas informações possam ser chamadas sempre que você interagir com uma página for afetada por suas preferências.</p>
             </div>
 
             <div class="paragrafo_list">
-                <h3>Cookies de Terceiros: <span>Em alguns casos especiais, também usamos cookies fornecidos por terceiros. A seção a seguir detalha quais cookies de terceiros você pode encontrar através deste site.</span></h3>
-                <p>Este site usa o Google Analytics, que é uma das soluções de análise mais difundidas e confiáveis da Web, para nos ajudar a entender como você usa o site e como podemos melhorar sua experiência. Esses cookies podem rastrear itens como quanto tempo você gasta no site e as páginas visitadas, para que possamos continuar produzindo conteúdo atraente.</p>
-                <p>Periodicamente, testamos novos recursos e fazemos alterações sutis na maneira como o site se apresenta. Quando ainda estamos testando novos recursos, esses cookies podem ser usados para garantir que você receba uma experiência consistente enquanto estiver no site, enquanto entendemos quais otimizações os nossos usuários mais apreciam.</p>
-                <p>À medida que vendemos produtos, é importante entendermos as estatísticas sobre quantos visitantes de nosso site realmente compram e, portanto, esse é o tipo de dados que esses cookies rastrearão. Isso é importante para você, pois significa que podemos fazer previsões de negócios com precisão que nos permitem analisar nossos custos de publicidade e produtos para garantir o melhor preço possível.</p>
-                <p>O serviço Google AdSense que usamos para veicular publicidade usa um cookie DoubleClick para veicular anúncios mais relevantes em toda a Web e limitar o número de vezes que um determinado anúncio é exibido para você. Para mais informações sobre o Google AdSense, consulte as FAQs oficiais sobre privacidade do Google AdSense.</p>
+                <h3 data-aos="zoom-in-up" data-aos-duration="500">Cookies de Terceiros: <span>Em alguns casos especiais, também usamos cookies fornecidos por terceiros. A seção a seguir detalha quais cookies de terceiros você pode encontrar através deste site.</span></h3>
+                <p data-aos="zoom-in-up" data-aos-duration="500">Este site usa o Google Analytics, que é uma das soluções de análise mais difundidas e confiáveis da Web, para nos ajudar a entender como você usa o site e como podemos melhorar sua experiência. Esses cookies podem rastrear itens como quanto tempo você gasta no site e as páginas visitadas, para que possamos continuar produzindo conteúdo atraente.</p>
+                <p data-aos="zoom-in-up" data-aos-duration="500">Periodicamente, testamos novos recursos e fazemos alterações sutis na maneira como o site se apresenta. Quando ainda estamos testando novos recursos, esses cookies podem ser usados para garantir que você receba uma experiência consistente enquanto estiver no site, enquanto entendemos quais otimizações os nossos usuários mais apreciam.</p>
+                <p data-aos="zoom-in-up" data-aos-duration="500">À medida que vendemos produtos, é importante entendermos as estatísticas sobre quantos visitantes de nosso site realmente compram e, portanto, esse é o tipo de dados que esses cookies rastrearão. Isso é importante para você, pois significa que podemos fazer previsões de negócios com precisão que nos permitem analisar nossos custos de publicidade e produtos para garantir o melhor preço possível.</p>
+                <p data-aos="zoom-in-up" data-aos-duration="500">O serviço Google AdSense que usamos para veicular publicidade usa um cookie DoubleClick para veicular anúncios mais relevantes em toda a Web e limitar o número de vezes que um determinado anúncio é exibido para você. Para mais informações sobre o Google AdSense, consulte as FAQs oficiais sobre privacidade do Google AdSense.</p>
             </div>
 
             <div class="paragrafo_list">
-                <h3>Compromisso do Usuário: <span>O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o Universo Farol oferece no site e com caráter enunciativo, mas não limitativo:</span></h3>
-                <p>Não se envolver em atividades que sejam ilegais ou contrárias à boa fé a à ordem pública;</p>
-                <p>Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, qualquer tipo de pornografia ilegal, de apologia ao terrorismo ou contra os direitos humanos;</p>
-                <p>Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) do Universo Farol, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados</p>
+                <h3 data-aos="zoom-in-up" data-aos-duration="500">Compromisso do Usuário: <span>O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o Universo Farol oferece no site e com caráter enunciativo, mas não limitativo:</span></h3>
+                <p data-aos="zoom-in-up" data-aos-duration="500">Não se envolver em atividades que sejam ilegais ou contrárias à boa fé a à ordem pública;</p>
+                <p data-aos="zoom-in-up" data-aos-duration="500">Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, qualquer tipo de pornografia ilegal, de apologia ao terrorismo ou contra os direitos humanos;</p>
+                <p data-aos="zoom-in-up" data-aos-duration="500">Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) do Universo Farol, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados</p>
             </div>
         </section>
         <section id="finais">
-            <h2>Informações finais</h2>
-            <p>Esperamos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso interaja com um dos recursos que você usa em nosso site. Esta política é efetiva a partir de Outubro/2024.</p>
+            <h2 data-aos="zoom-in-up" data-aos-duration="500">Informações finais</h2>
+            <p data-aos="zoom-in-up" data-aos-duration="500">Esperamos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso interaja com um dos recursos que você usa em nosso site. Esta política é efetiva a partir de Outubro/2024.</p>
 
             <div class="paragrafo_listFinal">
-                <h3>Descrição dos Cookies:</h3>
-                <p><span>Google Adwords Conversion:</span> Os cookies de rastreamento Google Adwords Conversion fazem com que possamos entender se você completa certas ações no(s) nosso(s) website(s) depois de você ter visualizado ou clicado em algum dos nossos anúncios providenciados através do Google.</p>
-                <p><span>Google Analytics: </span> Utilizamos Google Analytics para entender como as nossas campanhas de mídia funcionam e como você interage com o nosso website de modo a melhorar a experiência do usuário.</p>
-                <p><span>Google (Remarketing):</span> O Google utiliza este cookie para entender qual o conteúdo que você acessou nos nossos websites, de modo que eles possam prover anúncios baseados no conteúdo com que você interagiu no(s) nosso(s) website(s) e para que possam prover anúncios direcionados em outros websites parceiros.</p>
+                <h3 data-aos="zoom-in-up" data-aos-duration="500">Descrição dos Cookies:</h3>
+                <p data-aos="zoom-in-up" data-aos-duration="500"><span>Google Adwords Conversion:</span> Os cookies de rastreamento Google Adwords Conversion fazem com que possamos entender se você completa certas ações no(s) nosso(s) website(s) depois de você ter visualizado ou clicado em algum dos nossos anúncios providenciados através do Google.</p>
+                <p data-aos="zoom-in-up" data-aos-duration="500"><span>Google Analytics: </span> Utilizamos Google Analytics para entender como as nossas campanhas de mídia funcionam e como você interage com o nosso website de modo a melhorar a experiência do usuário.</p>
+                <p data-aos="zoom-in-up" data-aos-duration="500"><span>Google (Remarketing):</span> O Google utiliza este cookie para entender qual o conteúdo que você acessou nos nossos websites, de modo que eles possam prover anúncios baseados no conteúdo com que você interagiu no(s) nosso(s) website(s) e para que possam prover anúncios direcionados em outros websites parceiros.</p>
             </div>
         </section>
     </main>
@@ -149,5 +153,25 @@
         </div>
         <p>© Universo Farol <span id="data_footer"></span> Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        document.addEventListener( 'DOMContentLoaded', function() {
+            const titleMain = document.getElementById('titleMain');
+            const titleSub = document.getElementById('titleSub');
+            const secondTitle = document.getElementById('secondTitle');
+
+            function setStyles(element, opacity, translate) {
+                element.style.opacity = opacity;
+                element.style.translate = translate;
+            }
+
+            setStyles(titleMain, 0, '0 50vh');
+            setStyles(titleSub, 0, '0 50vh');
+            setStyles(secondTitle, 0, '0 50vh');
+            setTimeout(() => { setStyles(titleMain, 1, '0 0vh'); }, 500);
+            setTimeout(() => { setStyles(titleSub, 1, '0 0vh'); }, 750);
+            setTimeout(() => { setStyles(secondTitle, 1, '0 0vh'); }, 950);
+        });
+    </script>
 </body>
 </html>

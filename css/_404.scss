@@ -44,6 +44,8 @@
             font-size: 3vw;
             font-weight: 900;
             color: $Branco;
+            transition: 0.75s ease-in-out all;
+            opacity: 0;
         }
         h2{
             width: 100%;
@@ -52,6 +54,8 @@
             font-weight: 400;
             color: $Branco;
             margin-top: 5vh;
+            transition: 0.75s ease-in-out all;
+            opacity: 0;
         }
         #linksPgs{
             margin: 30vh 0 -15vh;
@@ -67,10 +71,14 @@
                 font-size: 2vw;
                 color: $Branco;
                 margin-bottom: 4vh;
+                transition: 0.75s ease-in-out all;
+                opacity: 0;
             }
             a{
                 font-size: 1.1vw;
                 padding: 0.55vh 2vw 0.65vh;
+                transition: 0.75s ease-in-out all;
+                opacity: 0;
                 &:nth-child(2){
                     margin-right: 3vw;
                     display: flex;

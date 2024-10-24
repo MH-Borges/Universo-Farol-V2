@@ -60,8 +60,8 @@
     </header>
     <main id="Main_contato">
         <section id="body_Contato">
-            <h1>Que tal marcamos <br> uma conversa?</h1>
-            <h2>Preencha o formulário com as suas informações, assim <br>
+            <h1 id="titleMain">Que tal marcamos <br> uma conversa?</h1>
+            <h2 id="titleSub">Preencha o formulário com as suas informações, assim <br>
                 você pode pedir uma proposta ou um agendamento <br>
                 de horário para conversarmos sobre seu projeto.</h2>
             
@@ -91,7 +91,7 @@
                 <div id="msg_form"></div> 
             </div>
 
-            <button type="button" class="btnFAQ" data-bs-toggle="modal" data-bs-target="#ModalResumoFAQ">
+            <button id="btnFAQ" type="button" class="btnFAQ" data-bs-toggle="modal" data-bs-target="#ModalResumoFAQ">
                 <p id="QuastionText">?</p>
                 <p id="CircularText"></p>
             </button>
@@ -149,8 +149,29 @@
     </footer>
 
     <script>
-        //TextoCircular
-        $(document).ready(function () {
+        document.addEventListener( 'DOMContentLoaded', function() {
+            //animação
+            const titleMain = document.getElementById('titleMain');
+            const titleSub = document.getElementById('titleSub');
+            const form = document.getElementById('formBlock');
+            const btnFAQ = document.getElementById('btnFAQ');
+
+            function setStyles(element, opacity, translate) {
+                element.style.opacity = opacity;
+                element.style.translate = translate;
+            }
+
+            setStyles(titleMain, 0, '-35vw 0');
+            setStyles(titleSub, 0, '-35vw 0');
+            setStyles(btnFAQ, 0, '-35vw 0');
+            setStyles(form, 0, '0 0');
+            setTimeout(() => { setStyles(titleMain, 1, '0vw 0'); }, 500);
+            setTimeout(() => { setStyles(form, 1, '0 0'); }, 500);
+            setTimeout(() => { setStyles(titleSub, 1, '0vw 0'); }, 750);
+            setTimeout(() => { setStyles(btnFAQ, 1, '0vw 0'); }, 850);
+
+
+            //TextoCircular
             const str = "Informações importantes • Informações importantes •";
             const text = document.getElementById("CircularText");
             for (let i = 0; i < str.length; i++) {

@@ -13,6 +13,8 @@
             letter-spacing: 0.1vw;
             text-align: center;
             position: relative;
+            transition: 0.75s ease-in-out all;
+            opacity: 0;
         }
         h2{
             font-family: $Second-font;
@@ -23,6 +25,8 @@
             line-height: 3vh;
             width: 75%;
             margin: 2vh 12.5% 5vh;
+            transition: 0.75s ease-in-out all;
+            opacity: 0;
         }
         .controls{
             width: 70%;
@@ -30,6 +34,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            transition: 0.75s ease-in-out all;
+            opacity: 0;
             li{
                 padding: 0.5vh 2vw;
                 border: 2px solid $Laranja;
@@ -63,6 +69,10 @@
                 justify-content: center;
                 margin: 2vh 2.5%;
                 position: relative;
+                &:nth-child(1), &:nth-child(2){
+                    transition: 0.75s ease-in-out all;
+                    opacity: 0;
+                }
                 img{
                     width: 100%;
                     height: auto;

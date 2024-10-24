@@ -55,13 +55,13 @@
         <section id="body_404">
             <span>404</span>
             <video src="assets/contato.mp4" preload="metadata" autoplay="autoplay" loop muted></video>
-            <h1> Ops! acho que você se perdeu :( </h1>
-            <h2>Infelizmente não foi possível localizar a página.</h2>
+            <h1 id="titleMain"> Ops! acho que você se perdeu :( </h1>
+            <h2 id="titleSub">Infelizmente não foi possível localizar a página.</h2>
 
             <div id="linksPgs">
-                <h3>Esses links podem te ajudar!</h3>
-                <a href="index.html" class="btns">Página inicial</a>
-                <a href="portfolio.html" class="btns btns_Out">Veja nosso portfólio</a>
+                <h3 id="titleLinks">Esses links podem te ajudar!</h3>
+                <a id="btnHome" href="index.html" class="btns">Página inicial</a>
+                <a id="btnPortfolio" href="portfolio.html" class="btns btns_Out">Veja nosso portfólio</a>
             </div>
         </section>
     </main>
@@ -85,5 +85,35 @@
         </div>
         <p>© Universo Farol <span id="data_footer"></span> Todos os direitos reservados.</p>
     </footer>
+
+
+    <script>
+
+        document.addEventListener( 'DOMContentLoaded', function() {
+            //animação
+            const titleMain = document.getElementById('titleMain');
+            const titleSub = document.getElementById('titleSub');
+            const titleLinks = document.getElementById('titleLinks');
+            const btnHome = document.getElementById('btnHome');
+            const btnPortfolio = document.getElementById('btnPortfolio');
+
+            function setStyles(element, opacity, translate) {
+                element.style.opacity = opacity;
+                element.style.translate = translate;
+            }
+
+            setStyles(titleMain, 0, '-35vw 0');
+            setStyles(titleSub, 0, '-35vw 0');
+            setStyles(titleLinks, 0, '-35vw 0');
+            setStyles(btnHome, 0, '-35vw 0');
+            setStyles(btnPortfolio, 0, '-35vw 0');
+            setTimeout(() => { setStyles(titleMain, 1, '0vw 0'); }, 500);
+            setTimeout(() => { setStyles(titleSub, 1, '0vw 0'); }, 750);
+            setTimeout(() => { setStyles(titleLinks, 1, '0vw 0'); }, 1000);
+            setTimeout(() => { setStyles(btnHome, 1, '0vw 0'); }, 1150);
+            setTimeout(() => { setStyles(btnPortfolio, 1, '0vw 0'); }, 1250);
+        });
+
+    </script>
 </body>
 </html>

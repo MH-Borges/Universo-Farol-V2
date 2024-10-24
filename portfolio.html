@@ -28,6 +28,10 @@
     <!-- Mixitup -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
 
+    <!-- Fade animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- Main files -->
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/Base_script.js"></script>
@@ -61,11 +65,11 @@
         </div>
 
         <section id="body_Portfolio">
-            <h1>Conheça nossos cases</h1>
-            <h2>Criamos para marcas que buscam ser hipnotizantes. Confira todos os projetos que já produzimos!
+            <h1 id="titleMain">Conheça nossos cases</h1>
+            <h2 id="titleSub">Criamos para marcas que buscam ser hipnotizantes. Confira todos os projetos que já produzimos!
                 <br>Dê uma olhada, a sua marca pode ser a próxima a entrar em nosso Universo Brilhante!</h2>
         
-            <ul class="controls"> 
+            <ul id="controls" class="controls"> 
                 <li class="active" data-filter="*">Todos</li>
                 <li data-filter=".logos">Logos</li>
                 <li data-filter=".lps">Landing pages</li>
@@ -76,39 +80,39 @@
                 <li data-filter=".ids">Identidades visuais</li>
             </ul>
             <div class="filter" class="animsition-overlay" data-animsition-overlay="true">
-                <a class="mix insta ids logos" href="projetos/aline.html">
+                <a id="firstCard" class="mix insta ids logos" href="projetos/aline.html">
                     <img src="assets/Projetos/Capa_AlineCristineII.webp" width="893" height="477" alt="Banner de projeto para marca aline cristine, contendo a logo da marca, mockups de computadores e a palheta de cores">
                     <p>Logo • Instagram • Identidade visual</p>
                 </a>
-                <a class="mix sistema ids" href="projetos/autoInove.html">
+                <a id="secondCard" class="mix sistema ids" href="projetos/autoInove.html">
                     <img src="assets/Projetos/Capa_AutoInove.webp" width="893" height="477" alt="Banner de projeto para marca auto inove, contendo a logo da marca, mockups de computadores e a palheta de cores">
                     <p>Identidade visual • Sistema</p>
                 </a>
-                <a class="mix lps" href="projetos/villagio.html">
+                <a data-aos="zoom-in-up" data-aos-duration="500" class="mix lps" href="projetos/villagio.html">
                     <img src="assets/Projetos/Capa_VillaggioShangrilá.webp" width="893" height="477" alt="Banner de projeto para marca villagio shangrilá, contendo a logo da marca, mockups de computadores e a palheta de cores">
                     <p>Landing page</p>
                 </a>
-                <a class="mix sistema ids logos" href="projetos/sicuro.html">
+                <a data-aos="zoom-in-up" data-aos-duration="750" class="mix sistema ids logos" href="projetos/sicuro.html">
                     <img src="assets/Projetos/Capa_Sicuro.webp" width="893" height="477" alt="Banner de projeto para marca sicuro, contendo a logo da marca, mockups de computadores e a palheta de cores">
                     <p>Logo • Identidade visual • Sistema</p>
                 </a>
-                <a class="mix sistema" href="projetos/oneMedical.html">
+                <a data-aos="zoom-in-up" data-aos-duration="500" class="mix sistema" href="projetos/oneMedical.html">
                     <img src="assets/Projetos/Capa_OneMedical.webp" width="893" height="477" alt="Banner de projeto para marca One medical group, contendo a logo da marca, mockups de computadores e a palheta de cores">
                     <p>Sistema</p>
                 </a>
-                <a class="mix sistema ids logos insta animsition-link" href="projetos/helenMoreno.html">
+                <a data-aos="zoom-in-up" data-aos-duration="750" class="mix sistema ids logos insta animsition-link" href="projetos/helenMoreno.html">
                     <img src="assets/Projetos/Capa_HelenMoreno.webp" width="893" height="477" alt="Banner de projeto para marca Helen moreno, contendo a logo da marca, mockups de computadores e a palheta de cores">
                     <p>Logo • Instagram • Identidade visual</p>
                 </a>
-                <a class="mix editoriais" href="projetos/alma.html">
+                <a data-aos="zoom-in-up" data-aos-duration="500" class="mix editoriais" href="projetos/alma.html">
                     <img src="assets/Projetos/Capa_alma.webp" width="893" height="477" alt="Banner de projeto para marca alma, contendo a logo da marca, mockups de computadores e a palheta de cores">
                     <p>Design editorial</p>
                 </a>
-                <a class="mix Insti" href="projetos/vitor.html">
+                <a data-aos="zoom-in-up" data-aos-duration="750" class="mix Insti" href="projetos/vitor.html">
                     <img src="assets/Projetos/Capa_Vitor.webp" width="893" height="477" alt="Banner de projeto para marca vitor (v1town), contendo a logo da marca, mockups de computadores e a palheta de cores">
                     <p>Site institucional</p>
                 </a>
-                <a class="mix insta ids logos" href="projetos/bellaDiva.html">
+                <a data-aos="zoom-in-up" data-aos-duration="500" class="mix insta ids logos" href="projetos/bellaDiva.html">
                     <img src="assets/Projetos/Capa_BellaDiva.webp" width="893" height="477" alt="Banner de projeto para marca bella diva, contendo a logo da marca, mockups de computadores e a palheta de cores">
                     <p>Logo • Instagram • Identidade visual</p>
                 </a>
@@ -116,10 +120,10 @@
         </section>
         <section id="ctaSimp">
             <div id="mensagem">
-                <h3>Gostou dos nossos projetos? Garanta um para sua marca!</h3>
-                <h4>Que tal marcarmos uma conversa? podemos te ajudar achar a melhor solução para sua marca!</h4>
+                <h3 data-aos="fade-right" data-aos-duration="650">Gostou dos nossos projetos? Garanta um para sua marca!</h3>
+                <h4 data-aos="fade-right" data-aos-duration="750">Que tal marcarmos uma conversa? podemos te ajudar achar a melhor solução para sua marca!</h4>
             </div>
-            <div id="btnCTA">
+            <div data-aos="fade-left" data-aos-duration="750" id="btnCTA">
                 <a class="btns" href="https://wa.me/5541995080219?text=Olá,%20tudo%20bem!?%20Gostaria%20de%20agendar%20uma%20conversa%20com%20vocês%20para%20falar%20sobre%20o%20meu%20projeto!%20Vocês%20tem%20um%20horário%20disponível%20para%20que%20possamos%20conversar?" target="_blank">Agendar uma conversa!</a>
             </div>
         </section>
@@ -146,6 +150,30 @@
     </footer>
 
     <script>
+        document.addEventListener( 'DOMContentLoaded', function() {
+            const titleMain = document.getElementById('titleMain');
+            const titleSub = document.getElementById('titleSub');
+            const controls = document.getElementById('controls');
+            const firstCard = document.getElementById('firstCard');
+            const secondCard = document.getElementById('secondCard');
+
+            function setStyles(element, opacity, translate) {
+                element.style.opacity = opacity;
+                element.style.translate = translate;
+            }
+
+            setStyles(titleMain, 0, '0 50vh');
+            setStyles(titleSub, 0, '0 50vh');
+            setStyles(controls, 0, '0 50vh');
+            setStyles(firstCard, 0, '0 50vh');
+            setStyles(secondCard, 0, '0 50vh');
+            setTimeout(() => { setStyles(titleMain, 1, '0 0vh'); }, 500);
+            setTimeout(() => { setStyles(titleSub, 1, '0 0vh'); }, 750);
+            setTimeout(() => { setStyles(controls, 1, '0 0vh'); }, 950);
+            setTimeout(() => { setStyles(firstCard, 1, '0 0vh'); }, 1150);
+            setTimeout(() => { setStyles(secondCard, 1, '0 0vh'); }, 1250);
+        });
+
         //FILTRO
         $('.controls li').on('click', function () {
             $('.controls li').removeClass('active');
@@ -156,7 +184,6 @@
             var containerEl = document.querySelector('.filter');
             var mixer = mixitup(containerEl);
         }
-
     </script>
 </body>
 </html>

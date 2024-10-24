@@ -530,7 +530,7 @@ body #Main_index #home #astronauta {
   padding: 0 1.5vw;
   animation: float infinite 3s ease-in-out;
   z-index: 2;
-  transition: 1.5s ease-in-out all;
+  transition: 0.75s ease-in-out all;
   opacity: 0;
 }
 body #Main_index #home #TitleBlock {
@@ -546,7 +546,7 @@ body #Main_index #home #TitleBlock h1 {
   font-size: 4vw;
   line-height: 6.5vh;
   animation: float infinite 2.5s ease-in-out;
-  transition: 1.25s ease-in-out all;
+  transition: 0.75s ease-in-out all;
   opacity: 0;
 }
 body #Main_index #home #TitleBlock h2 {
@@ -559,7 +559,7 @@ body #Main_index #home #TitleBlock h2 {
   padding-right: 15vw;
   margin: 5vh 0 7.5vh;
   animation: float infinite 2.5s ease-in-out;
-  transition: 1.25s ease-in-out all;
+  transition: 0.75s ease-in-out all;
   opacity: 0;
 }
 body #Main_index #home #TitleBlock .btn_homePortfolio {
@@ -568,7 +568,7 @@ body #Main_index #home #TitleBlock .btn_homePortfolio {
 }
 body #Main_index #home #TitleBlock a {
   opacity: 0;
-  transition: 1.25s ease-in-out all;
+  transition: 0.75s ease-in-out all;
 }
 body #Main_index #home::before {
   content: "";
@@ -1260,6 +1260,8 @@ body #Main_contato #body_Contato h1 {
   color: #ECECEC;
   margin: 10vh auto 0.5vh 0;
   line-height: 6vh;
+  transition: 0.75s ease-in-out all;
+  opacity: 0;
 }
 body #Main_contato #body_Contato h2 {
   width: 50%;
@@ -1269,6 +1271,8 @@ body #Main_contato #body_Contato h2 {
   font-weight: 400;
   color: #ECECEC;
   line-height: 3.5vh;
+  transition: 0.75s ease-in-out all;
+  opacity: 0;
 }
 body #Main_contato #body_Contato #formBlock {
   margin-left: auto;
@@ -1277,6 +1281,8 @@ body #Main_contato #body_Contato #formBlock {
   right: 0;
   top: 20%;
   position: absolute;
+  transition: 0.75s ease-in-out all;
+  opacity: 0;
 }
 body #Main_contato #body_Contato #formBlock h3 {
   all: unset;
@@ -1400,6 +1406,8 @@ body #Main_contato #body_Contato .btnFAQ {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 1.25s ease-in-out all;
+  opacity: 0;
 }
 body #Main_contato #body_Contato .btnFAQ #QuastionText {
   position: absolute;
@@ -1551,6 +1559,8 @@ body #Main_404 #body_404 h1 {
   font-size: 3vw;
   font-weight: 900;
   color: #ECECEC;
+  transition: 0.75s ease-in-out all;
+  opacity: 0;
 }
 body #Main_404 #body_404 h2 {
   width: 100%;
@@ -1559,6 +1569,8 @@ body #Main_404 #body_404 h2 {
   font-weight: 400;
   color: #ECECEC;
   margin-top: 5vh;
+  transition: 0.75s ease-in-out all;
+  opacity: 0;
 }
 body #Main_404 #body_404 #linksPgs {
   margin: 30vh 0 -15vh;
@@ -1575,10 +1587,14 @@ body #Main_404 #body_404 #linksPgs h3 {
   font-size: 2vw;
   color: #ECECEC;
   margin-bottom: 4vh;
+  transition: 0.75s ease-in-out all;
+  opacity: 0;
 }
 body #Main_404 #body_404 #linksPgs a {
   font-size: 1.1vw;
   padding: 0.55vh 2vw 0.65vh;
+  transition: 0.75s ease-in-out all;
+  opacity: 0;
 }
 body #Main_404 #body_404 #linksPgs a:nth-child(2) {
   margin-right: 3vw;
@@ -1602,6 +1618,8 @@ body #Main_PoliticasDePrivacidade #resumoLGPD h1 {
   font-size: 3vw;
   color: #ECECEC;
   margin-bottom: 5vh;
+  transition: 0.75s ease-in-out all;
+  opacity: 0;
 }
 body #Main_PoliticasDePrivacidade #resumoLGPD p {
   font-family: "Maven Pro", sans-serif;
@@ -1609,6 +1627,8 @@ body #Main_PoliticasDePrivacidade #resumoLGPD p {
   font-size: 1vw;
   color: #ECECEC;
   line-height: 3vh;
+  transition: 0.75s ease-in-out all;
+  opacity: 0;
 }
 body #Main_PoliticasDePrivacidade #cookies {
   width: 80%;
@@ -1628,6 +1648,8 @@ body #Main_PoliticasDePrivacidade #cookies h2 {
   font-size: 3vw;
   color: #ECECEC;
   margin-bottom: 5vh;
+  transition: 0.75s ease-in-out all;
+  opacity: 0;
 }
 body #Main_PoliticasDePrivacidade #cookies .paragrafo {
   width: 100%;
@@ -1793,6 +1815,8 @@ body #Main_sobre #nos span {
   letter-spacing: 0.1vw;
   text-align: center;
   position: relative;
+  transition: 0.75s ease-in-out all;
+  opacity: 0;
 }
 body #Main_sobre #nos h1 {
   font-family: "Maven Pro", sans-serif;
@@ -1803,17 +1827,8 @@ body #Main_sobre #nos h1 {
   line-height: 4.5vh;
   width: 100%;
   margin: 0 0 7.5vh;
-}
-body #Main_sobre #nos #textNos {
-  margin: 20vh 0 10vh;
-  margin-left: 30%;
-  width: 40%;
-  font-family: "Maven Pro", sans-serif;
-  font-size: 1.15vw;
-  font-weight: 400;
-  color: #ECECEC;
-  text-align: justify;
-  line-height: 4vh;
+  transition: 0.75s ease-in-out all;
+  opacity: 0;
 }
 body #Main_sobre #nos #imgNosBlock {
   width: 70%;
@@ -1826,6 +1841,8 @@ body #Main_sobre #nos #imgNosBlock img {
   height: auto;
   mix-blend-mode: screen;
   border-radius: 1vw;
+  transition: 0.75s ease-in-out all;
+  opacity: 0;
 }
 body #Main_sobre #nos #imgNosBlock #textDescrJulia, body #Main_sobre #nos #imgNosBlock #textDescrMatheus {
   position: absolute;
@@ -1834,6 +1851,8 @@ body #Main_sobre #nos #imgNosBlock #textDescrJulia, body #Main_sobre #nos #imgNo
   border-radius: 1vw;
   background-color: #ECECEC;
   padding: 3.5vh 2.4vw;
+  transition: 0.75s ease-in-out all;
+  opacity: 0;
 }
 body #Main_sobre #nos #imgNosBlock #textDescrJulia h2, body #Main_sobre #nos #imgNosBlock #textDescrJulia h3, body #Main_sobre #nos #imgNosBlock #textDescrMatheus h2, body #Main_sobre #nos #imgNosBlock #textDescrMatheus h3 {
   width: 100%;
@@ -1864,6 +1883,17 @@ body #Main_sobre #nos #imgNosBlock #textDescrMatheus {
 }
 body #Main_sobre #nos #imgNosBlock #textDescrMatheus p {
   font-size: 0.925vw;
+}
+body #Main_sobre #nos #textNos {
+  margin: 20vh 0 10vh;
+  margin-left: 30%;
+  width: 40%;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1.15vw;
+  font-weight: 400;
+  color: #ECECEC;
+  text-align: justify;
+  line-height: 4vh;
 }
 body #Main_sobre #nos #cardsMVVBlock {
   width: 100%;
@@ -2180,6 +2210,8 @@ body #Main_portfolio #body_Portfolio h1 {
   letter-spacing: 0.1vw;
   text-align: center;
   position: relative;
+  transition: 0.75s ease-in-out all;
+  opacity: 0;
 }
 body #Main_portfolio #body_Portfolio h2 {
   font-family: "Maven Pro", sans-serif;
@@ -2190,6 +2222,8 @@ body #Main_portfolio #body_Portfolio h2 {
   line-height: 3vh;
   width: 75%;
   margin: 2vh 12.5% 5vh;
+  transition: 0.75s ease-in-out all;
+  opacity: 0;
 }
 body #Main_portfolio #body_Portfolio .controls {
   width: 70%;
@@ -2197,6 +2231,8 @@ body #Main_portfolio #body_Portfolio .controls {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  transition: 0.75s ease-in-out all;
+  opacity: 0;
 }
 body #Main_portfolio #body_Portfolio .controls li {
   padding: 0.5vh 2vw;
@@ -2231,6 +2267,10 @@ body #Main_portfolio #body_Portfolio .filter a {
   justify-content: center;
   margin: 2vh 2.5%;
   position: relative;
+}
+body #Main_portfolio #body_Portfolio .filter a:nth-child(1), body #Main_portfolio #body_Portfolio .filter a:nth-child(2) {
+  transition: 0.75s ease-in-out all;
+  opacity: 0;
 }
 body #Main_portfolio #body_Portfolio .filter a img {
   width: 100%;

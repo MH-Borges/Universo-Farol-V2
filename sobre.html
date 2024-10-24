@@ -13,14 +13,11 @@
     <meta name="description" content="Conecte-se com o Universo Farol! Oferecemos soluções criativas em design, tecnologia e branding, com foco em evoluir a identidade e a presença digital da sua marca.">
     <meta name="keywords" content="design, branding, tech lead, evolução digital, soluções criativas, identidade visual, marketing digital, designer, artista, desenvolvimento de marca, web, marcas hipnotizantes">
 
-
     <meta property="og:locale" content="pt_BR">
     <meta name="og:title" property="og:title" content="Sobre nós | Universo Farol">
     <meta name="og:type" property="og:type" content="website">
     <meta name="og:image" property="og:image" content="assets/Banner_share.webp">
     <meta property="og:description" content="Conheça o Universo Farol e descubra como transformar a essência da sua marca com design inovador e soluções tecnológicas criativas. Nossa missão é evoluir sua presença digital com foco no sucesso.">
-
-
 
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -32,8 +29,9 @@
     <!-- SVG Inject -->
     <script src="js/svg-inject.min.js"></script>
 
-    <!-- Mask -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <!-- Fade animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Main files -->
     <link rel="stylesheet" href="css/style.css">
@@ -68,10 +66,10 @@
         </div>
 
         <section id="nos">
-            <span>Boas estruturas sustentam seu futuro</span>
-            <h1>Queremos nos conectar contigo! Conheça mais da essência do Universo Farol.</h1>
+            <span id="titleMain">Boas estruturas sustentam seu futuro</span>
+            <h1 id="titleSub">Queremos nos conectar contigo! Conheça mais da essência do Universo Farol.</h1>
             <div id="imgNosBlock">
-                <img src="assets/nos.webp" width="960" height="600" alt="nós">
+                <img id="imgNos" src="assets/nos.webp" width="960" height="600" alt="nós">
                 <div id="textDescrJulia">
                     <h2>Júlia Vitória</h2>
                     <p>Nossa <b>Artista e Designer</b>, formada pela PUCPR, com muitos anos de experiência. Ama escrever e criar, é organizada e <b>tem como objetivo inspirar.</b></p>
@@ -81,9 +79,9 @@
                     <p>Nosso <b>Tech Lead</b> com muitos anos de experiência em criação. É apaixonado por jogos, D&D, cultura geek, <b>adora uma boa discussão e é apaixonado por criar.</b></p>
                 </div>
             </div>
-            <p id="textNos">Atendemos e criamos para todos os nichos, o que nos ajuda a ter uma visão mais criativa e diferenciada de cada projeto. Somos <b>preocupados em transformar e tornar hipnotizante</b> as marcas dos nossos navegantes. <b>Focamos na sua essência, enriquecendo a sua identidade e evoluindo a sua realidade</b> no universo digital.</p>
+            <p data-aos="zoom-in-up" data-aos-duration="500" id="textNos">Atendemos e criamos para todos os nichos, o que nos ajuda a ter uma visão mais criativa e diferenciada de cada projeto. Somos <b>preocupados em transformar e tornar hipnotizante</b> as marcas dos nossos navegantes. <b>Focamos na sua essência, enriquecendo a sua identidade e evoluindo a sua realidade</b> no universo digital.</p>
             <div id="cardsMVVBlock">
-                <div class="card-wrap" onmouseenter="rotate(this)" onmouseleave="rotate(this)">
+                <div data-aos="zoom-in-up" data-aos-duration="750" class="card-wrap" onmouseenter="rotate(this)" onmouseleave="rotate(this)">
                     <div class="flip-card">
                         <div class="card-front">
                             <img src="assets/icons/missao.svg" onload="SVGInject(this)">
@@ -99,7 +97,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-wrap" onmouseenter="rotate(this)" onmouseleave="rotate(this)">
+                <div data-aos="zoom-in-up" data-aos-duration="1000" class="card-wrap" onmouseenter="rotate(this)" onmouseleave="rotate(this)">
                     <div class="flip-card">
                         <div class="card-front">
                             <img src="assets/icons/visao.svg" style="animation: flikIcon 1.25s infinite ease-in-out;" onload="SVGInject(this)">
@@ -115,7 +113,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-wrap" onmouseenter="rotate(this)" onmouseleave="rotate(this)">
+                <div data-aos="zoom-in-up" data-aos-duration="1250" class="card-wrap" onmouseenter="rotate(this)" onmouseleave="rotate(this)">
                     <div class="flip-card">
                         <div class="card-front">
                             <img src="assets/icons/valores.svg" onload="SVGInject(this)">
@@ -133,31 +131,31 @@
         </section>
         <section id="fluxo">
             <div id="stickyHead">
-                <h2>O fluxo que descomplica o nosso trabalho</h2>
-                <h3>Conheça um pouco do processo que nos ajuda a tirar ideias do papel e transformar em projetos hipnotizantes.</h3>
+                <h2 data-aos="fade-up-right" data-aos-duration="500">O fluxo que descomplica o nosso trabalho</h2>
+                <h3 data-aos="fade-up-right" data-aos-duration="750">Conheça um pouco do processo que nos ajuda a tirar ideias do papel e transformar em projetos hipnotizantes.</h3>
             </div>
             <div id="cardsFluxo">
-                <div class="cardFluxo">
+                <div data-aos="fade-left" data-aos-duration="750" class="cardFluxo">
                     <img src="assets/icons/alinhamento.svg" onload="SVGInject(this)">
                     <h3>1. Alinhamento</h3>
                     <p>Vamos entender profundamente as suas necessidades, expectativas e o contexto do projeto. Marcamos uma reunião para alinhar o que você espera alcançar com o projeto. O foco é garantir que todos estejam na mesma página sobre o projeto e seus desafios, necessidades e diferenciais.</p>
                 </div>
-                <div class="cardFluxo">
+                <div data-aos="fade-left" data-aos-duration="750" class="cardFluxo">
                     <img src="assets/icons/briefing.svg" onload="SVGInject(this)">
                     <h3>2. Briefing</h3>
                     <p>Formalizamos as informações essenciais do projeto através de um formulário. Você fornece detalhes sobre o que precisa ser criado. E nós fazemos perguntas direcionadas para obter informações precisas. Pode incluir coletas de dados e análise de concorrentes e preferências estéticas.</p>
                 </div>
-                <div class="cardFluxo">
+                <div data-aos="fade-left" data-aos-duration="750" class="cardFluxo">
                     <img src="assets/icons/desenvolvimento.svg" onload="SVGInject(this)">
                     <h3>3. Desenvolvimento</h3>
                     <p>Criaremos as primeiras versões do projeto com base no briefing e alinhamento. Começamos a desenvolver os conceitos e sketches iniciais. Toda a equipe colabora para criar soluções criativas e funcionais, respeitando o que foi discutido.</p>
                 </div>
-                <div class="cardFluxo">
+                <div data-aos="fade-left" data-aos-duration="750" class="cardFluxo">
                     <img src="assets/icons/refinamento.svg" onload="SVGInject(this)">
                     <h3>4. Refinamento</h3>
                     <p>Melhoramos e ajustamos o projeto conforme o seu feedback. Você analisa as propostas e diz o que acha. A equipe de criação revisa os materiais e realiza as alterações necessárias, sempre mantendo o alinhamento com os objetivos e a identidade da marca.</p>
                 </div>
-                <div class="cardFluxo">
+                <div data-aos="fade-left" data-aos-duration="750" class="cardFluxo">
                     <img src="assets/icons/acompanhamento.svg" onload="SVGInject(this)">
                     <h3>5. Acompanhamento</h3>
                     <p>Garantimos que o projeto final seja implementado corretamente e continue entregando os resultados esperados. Após a entrega final, acompanhamos a implementação, seja design ou web, verificando o desempenho e corrigindo possíveis problemas e gerando seus resultados desejados.</p>
@@ -165,10 +163,10 @@
             </div>
         </section>
         <section id="faq">
-            <h2>Alguma dúvida? Temos as respostas!</h2>
-            <h3>Uma luz para te ajudar a embarcar no nosso universo!</h3>
+            <h2 data-aos="zoom-in-up" data-aos-duration="500">Alguma dúvida? Temos as respostas!</h2>
+            <h3 data-aos="zoom-in-up" data-aos-duration="750">Uma luz para te ajudar a embarcar no nosso universo!</h3>
 
-            <div class="perguntaBlock">
+            <div data-aos="zoom-in-up" data-aos-duration="750" class="perguntaBlock">
                 <button type="button" data-bs-toggle="collapse" data-bs-target="#FAQ1" aria-expanded="false" aria-controls="FAQ1" onclick="Flip(this)">
                     Em quanto tempo vocês concluem o meu projeto?
                 </button>
@@ -176,7 +174,7 @@
                     Não existe um tempo exato para entrega final, como cada projeto é um universo diferente e nosso método de criação envolve diretamente o cliente, dependemos das respostas e de seu nível de engajamento. <b>Então quanto mais rápido o contratante nos responde mais rápido conseguimos entregar o projeto final!!</b>
                 </div>
             </div>
-            <div class="perguntaBlock">
+            <div data-aos="zoom-in-up" data-aos-duration="750" class="perguntaBlock">
                 <button type="button" data-bs-toggle="collapse" data-bs-target="#FAQ2" aria-expanded="false" aria-controls="FAQ2" onclick="Flip(this)">
                     Como funciona o pagamento?
                 </button>
@@ -184,7 +182,7 @@
                     A maior parte de nossos projetos, <b>trabalhamos com o método de pagamento de 50/50</b>, após o envio dos primeiros rascunhos para o cliente, esperamos sua aprovação. <b>Caso o mesmo não aprove e acabe por preferir cancelar o projeto, não existe a necessidade do pagamento dos 50% finais do projeto e os 50% inicias cobrirão as horas de trabalho já utilizadas.</b> 
                 </div>
             </div>
-            <div class="perguntaBlock">
+            <div data-aos="zoom-in-up" data-aos-duration="750" class="perguntaBlock">
                 <button type="button" data-bs-toggle="collapse" data-bs-target="#FAQ3" aria-expanded="false" aria-controls="FAQ3" onclick="Flip(this)"> 
                     Eu posso sugerir ideias para o design?
                 </button>
@@ -192,7 +190,7 @@
                     <b>Você faz parte de todo o processo de criação do projeto</b>, e <b>pode pedir quantas alterações</b> achar necessário, durante todo o processo de criação, até a entrega final. <b>Depois de completamente finalizado, dentro de 15 dias de uso dos materiais, disponibilizamos a possibilidade de uma <u>única alteração.</u></b> Caso haja necessidade de mais, <b>depois do tempo estipulado, serão cobradas a parte deste orçamento.</b> 
                 </div>
             </div>
-            <div class="perguntaBlock">
+            <div data-aos="zoom-in-up" data-aos-duration="750" class="perguntaBlock">
                 <button type="button" data-bs-toggle="collapse" data-bs-target="#FAQ4" aria-expanded="false" aria-controls="FAQ4" onclick="Flip(this)">
                     É preciso pagar uma mensalidade?
                 </button>
@@ -202,10 +200,10 @@
             </div>
         </section>
         <section id="cta">
-            <h3>Ainda <span class="typer"></span><span class="blink">|</span></h3>
-            <p>Não perca tempo e entre em contato conosco</p>
+            <h3 data-aos="zoom-in-up" data-aos-duration="500">Ainda <span class="typer"></span><span class="blink">|</span></h3>
+            <p data-aos="zoom-in-up" data-aos-duration="750">Não perca tempo e entre em contato conosco</p>
 
-            <a href="https://wa.me/5541995080219?text=Olá,%20tudo%20bem!?%20Gostaria%20de%20agendar%20uma%20conversa%20com%20vocês%20para%20falar%20sobre%20o%20meu%20projeto!%20Vocês%20tem%20um%20horário%20disponível%20para%20que%20possamos%20conversar?" class="btns btns_Out" target="_blank">Mande uma mensagem!</a>
+            <a data-aos="zoom-in-up" data-aos-duration="750" href="https://wa.me/5541995080219?text=Olá,%20tudo%20bem!?%20Gostaria%20de%20agendar%20uma%20conversa%20com%20vocês%20para%20falar%20sobre%20o%20meu%20projeto!%20Vocês%20tem%20um%20horário%20disponível%20para%20que%20possamos%20conversar?" class="btns btns_Out" target="_blank">Mande uma mensagem!</a>
         </section>
     </main>
     <footer>
@@ -230,6 +228,31 @@
     </footer>
 
     <script>
+        document.addEventListener( 'DOMContentLoaded', function() {
+            
+            const titleMain = document.getElementById('titleMain');
+            const titleSub = document.getElementById('titleSub');
+            const imgNos = document.getElementById('imgNos');
+            const textDescrJulia = document.getElementById('textDescrJulia');
+            const textDescrMatheus = document.getElementById('textDescrMatheus');
+
+            function setStyles(element, opacity, translate) {
+                element.style.opacity = opacity;
+                element.style.translate = translate;
+            }
+
+            setStyles(titleMain, 0, '0 50vh');
+            setStyles(titleSub, 0, '0 50vh');
+            setStyles(imgNos, 0, '0 50vh');
+            setStyles(textDescrMatheus, 0, '0 50vh');
+            setStyles(textDescrJulia, 0, '0 50vh');
+            setTimeout(() => { setStyles(titleMain, 1, '0 0vh'); }, 500);
+            setTimeout(() => { setStyles(titleSub, 1, '0 0vh'); }, 750);
+            setTimeout(() => { setStyles(imgNos, 1, '0 0vh'); }, 950);
+            setTimeout(() => { setStyles(textDescrMatheus, 1, '0 0vh'); }, 1150);
+            setTimeout(() => { setStyles(textDescrJulia, 1, '0 0vh'); }, 1350);
+        });
+
         //Efeito de rotacionar cards
         function rotate(element) {
             if(element.firstElementChild.classList.contains('rotate')){

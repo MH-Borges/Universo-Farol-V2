@@ -14,6 +14,8 @@
             font-size: 3vw;
             color: $Branco;
             margin-bottom: 5vh;
+            transition: 0.75s ease-in-out all;
+            opacity: 0;
         }
         p{
             font-family: $Second-font;
@@ -21,6 +23,8 @@
             font-size: 1vw;
             color: $Branco;
             line-height: 3vh;
+            transition: 0.75s ease-in-out all;
+            opacity: 0;
         }
     }
     #cookies{
@@ -40,6 +44,8 @@
             font-size: 3vw;
             color: $Branco;
             margin-bottom: 5vh;
+            transition: 0.75s ease-in-out all;
+            opacity: 0;
         }
         .paragrafo{
             width: 100%;
