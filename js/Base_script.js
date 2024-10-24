@@ -1,5 +1,8 @@
 document.addEventListener( 'DOMContentLoaded', function() {
     document.getElementById("data_footer").textContent = new Date().getFullYear() + ".";
+
+    // fade animation
+    AOS.init();
 });
 
 function mobileCheck() {

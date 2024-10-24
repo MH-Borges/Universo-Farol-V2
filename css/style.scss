@@ -427,6 +427,8 @@ body {
                 padding: 0 1.5vw;
                 animation: float infinite 3s ease-in-out;
                 z-index: 2;
+                transition: 1.5s ease-in-out all;
+                opacity: 0;
             }
             #TitleBlock{
                 display: flex;
@@ -440,6 +442,8 @@ body {
                     font-size: 4vw;
                     line-height: 6.5vh;
                     animation: float infinite 2.5s ease-in-out;
+                    transition: 1.25s ease-in-out all;
+                    opacity: 0;
                 }
                 h2{
                     width: 100%;
@@ -451,10 +455,16 @@ body {
                     padding-right: 15vw;
                     margin: 5vh 0 7.5vh;
                     animation: float infinite 2.5s ease-in-out;
+                    transition: 1.25s ease-in-out all;
+                    opacity: 0;
                 }
                 .btn_homePortfolio{
                     margin-right: 1.5vw;
                     padding: 0.6vh 2vw 0.65vh;
+                }
+                a{
+                    opacity: 0;
+                    transition: 1.25s ease-in-out all;
                 }
             }
             &::before{
@@ -1156,8 +1166,6 @@ body {
     @import 'sobre';
     @import 'portfolio';
     @import 'apresentacao';
-
-    
 }
 
 @media only screen and (max-width: 479px){
