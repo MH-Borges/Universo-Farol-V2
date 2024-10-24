@@ -526,6 +526,7 @@ body #Main_index #home #background_home {
 body #Main_index #home #astronauta {
   margin-top: auto;
   width: 30vw;
+  height: auto;
   padding: 0 1.5vw;
   animation: float infinite 3s ease-in-out;
   z-index: 2;
@@ -2222,8 +2223,7 @@ body #Main_portfolio #body_Portfolio .filter a {
   position: relative;
 }
 body #Main_portfolio #body_Portfolio .filter a img {
-  width: 40vw;
-  min-height: 40vh;
+  width: 100%;
   height: auto;
 }
 body #Main_portfolio #body_Portfolio .filter a p {
@@ -2310,8 +2310,7 @@ body #Main_apresentacao #apresentacao h1 {
   opacity: 0.01;
 }
 body #Main_apresentacao #apresentacao img {
-  width: 100vw;
-  min-height: 25vh;
+  width: 100%;
   height: auto;
   margin: -0.5vh 0;
 }
